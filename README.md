@@ -15,11 +15,11 @@ Welcome! This is the repository of official website development of the Brothers 
 
 **Officially Published by:**
 
-Milana Gabbassova - Project Manager
-Timothy Bryle Flores - Front-End Developer
-Isaac Bilyea - Back-End Developer
-Bernardo Macapagal - Graphic Designer
-Apapat Juntarattanakamol - Motion Designer
+- Milana Gabbassova - Project Manager
+- Timothy Bryle Flores - Front-End Developer
+- Isaac Bilyea - Back-End Developer
+- Bernardo Macapagal - Graphic Designer
+- Apapat Juntarattanakamol - Motion Designer
 
 ## History :clock8:
 
