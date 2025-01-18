@@ -21,12 +21,6 @@ Welcome! This is the repository of official website development of the Brothers 
 - Bernardo Macapagal - Graphic Designer
 - Apapat Juntarattanakamol - Motion Designer
 
-## History :clock8:
-
-**Created on December 07, 2025**
-
-- December 10, 2025
-
 ## Usage :gear:
 
 Download the zipped code folder or fork the cloned repository to open the full file and view the website output with all associated code. The index.html file can be opened directly or the whole folder can be opened via VS Code.
