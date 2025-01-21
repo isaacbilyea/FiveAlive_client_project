@@ -2,20 +2,29 @@
 
 #main-header {
 
-    background-color: lightgray;
+    background-color: #4E4E4E;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+
+    .logo {
+
+        color: white;
+        font-size: 2rem;
+    }
 
     #hamburger-menu {
         width: 2rem;
         height: 1.5rem;
         position: absolute;
-        top: 1rem;
-        right: 4rem;
+        top: 1.25rem;
+        right: 1rem;
         z-index: 5;
 
         div {
         width: 100%;
         height: 0.15rem;
-        background-color: darkgray;
+        background-color: white;
         position: absolute;
         transition: 0.3s ease;
         border-radius: 1rem;
@@ -23,19 +32,16 @@
 
         #line1 {
         margin: 0;
-        left: 25%;
         }
 
         #line2 {
         margin-top: 0.625rem;
-        left: 25%;
         transform-origin: center;
         transform: scaleX(1);
         }
 
         #line3 {
         margin-top: 1.25rem;
-        left: 25%;
         }
 
         &.activate #line1 {
