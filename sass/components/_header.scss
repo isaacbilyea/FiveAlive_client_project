@@ -88,3 +88,38 @@
             display: none;
         }
 }
+
+@media screen and (min-width: 1200px) {
+
+    #main-header {
+        height: 6rem;
+        justify-content: space-between;
+
+        .logo {
+            font-size: 3rem;
+        }
+
+        #hamburger-menu {
+            display: none;
+        }
+
+        #main-nav {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 0 auto;
+
+            ul {
+                @include a.center;
+                gap: 2rem;
+
+                li {
+                    a {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

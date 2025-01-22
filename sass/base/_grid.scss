@@ -94,8 +94,8 @@
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 40px;
-       padding-left: 60px;
-       padding-right: 60px;
+       padding-left: 40px;
+       padding-right: 40px;
     }
  
     .l-col-span-1	{grid-column: span 1 / span 1;}
