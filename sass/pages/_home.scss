@@ -3,3 +3,20 @@
 section {
     padding-bottom: 2rem;
 }
+
+.video-con {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    overflow: hidden;
+    
+    .plyr--video {
+        --plyr-color-main: red;
+        --plyr-control-icon-size: 1rem;
+        --plyr-control-radius: 1.25rem;
+        --plyr-font-family: Arial, Georgia, sans-serif;
+        --plyr-control-spacing: 1rem;
+        --plyr-range-fill-background: #fff;
+        --plyr-range-thumb-background: red;
+    }
+}     

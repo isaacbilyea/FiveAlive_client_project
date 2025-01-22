@@ -2,15 +2,27 @@
     border: none;
     background-color: #4E4E4E;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 #donate-con {
     background-color: lightgray;
+    display: grid;
+
     #donate {
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .donate-btn {
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+        margin: 3.5rem 0 2rem 0;
     }
 }
