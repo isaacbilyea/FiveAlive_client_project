@@ -1,0 +1,38 @@
+#victoria-crosses-con {
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #victoria-crosses {
+
+        p {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 95%;
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #victoria-crosses-con {
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        #victoria-crosses {
+
+    
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

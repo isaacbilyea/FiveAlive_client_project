@@ -4,12 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script defer src="js/main.js"></script>
-    <title>Title</title>
+    <title>Brothers in Arms Memorial</title>
 </head>
 
 <body>
+    <!--Header-->
+    <h1 class="hidden">Brothers in Arms Memorial</h1>
+    <header id="main-header" class="grid-con">
+
+        <div>
+            <div class="logo">LOGO</div>
+        </div>
+
+        <div id="hamburger-menu">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </div>
+
+        <div>
+            <nav id="main-nav">
+                <h2 class="hidden">Main Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <button class="donate-btn">DONATE</button>
+
+    </header>
+
+    <!--Hero-->
+    <section id="hero-con" class="full-width-grid-con">
+        <h2 class="hidden">Hero Section</h2>
+        <div>
+            <h3 class="hidden" id="hero-text">Brothers in Arms Memorial</h3>
+            <img src="images/placeholder.webp" alt="placeholder">
+        </div>
+    </section>
+
+    <!--Intro-->
+    <section id="intro-con" class="grid-con">
+        <div id="intro-text-con" class="col-span-full">
+            <h2 id="intro-header" class="hidden">Introduction</h2>
+            <p>Welcome to the Brothers In Arms Memorial Website. This is just some random text that involves the
+                introduction part of the website and section. Feel free to input the complete content here once ready.
+                This section has a lot of summaries and information about the project. This is a text justifying that.
+                So that’s the text part of this website. Cheerios.</p>
+        </div>
+
+        <div class="video-con col-span-full">
+            <video class="player" preload="metadata" poster="images/video-poster.png">
+                <source src="videos/test.mp4" type="video/mp4">
+                <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
+            </video>
+        </div>
+    </section>
+
+    <!--Timeline-->
+    <section id="timeline">
+        <div class="timeline-line">
+            <div id="timeline-progress"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-text">
+                    <h3><span>2</span>ND YPRES</h3>
+                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
+                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
+                        information that should be placed in this box of text.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/placeholder.webp" alt="placeholder image">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-text">
+                    <h3>ST JULIEN</h3>
+                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
+                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
+                        information that should be placed in this box of text.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/placeholder.webp" alt="placeholder image">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-text">
+                    <h3>FESTUBERT</h3>
+                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
+                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
+                        information that should be placed in this box of text.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/placeholder.webp" alt="placeholder image">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-text">
+                    <h3>THE SOMME</h3>
+                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
+                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
+                        information that should be placed in this box of text.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/placeholder.webp" alt="placeholder image">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-text">
+                    <h3>VIMY</h3>
+                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
+                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
+                        information that should be placed in this box of text.</p>
+                </div>
+                <div class="timeline-image">
+                    <img src="images/placeholder.webp" alt="placeholder image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Letters-->
+    <section id="letters-con" class="grid-con">
+        <h2 class="col-span-full">Letters</h2>
+        <div id="letters" class="col-span-full">
+            <p>This explains this section of soldiers and letters.
+                So this is that section of the letters and soldiers.</p>
+            <img src="images/placeholder.webp" alt="placeholder">
+        </div>
+    </section>
+
+    <!--Victoria Crosses-->
+    <section id="victoria-crosses-con" class="grid-con">
+        <h2 class="col-span-full">Victoria Crosses</h2>
+        <div id="victoria-crosses" class="col-span-full">
+            <p>This explains this section of victoria crosses.
+                So this is that section of the victoria crosses.</p>
+            <img src="images/placeholder.webp" alt="placeholder">
+        </div>
+    </section>
+
+    <!--About Memorial-->
+    <section id="about-con" class="grid-con">
+        <h2 class="col-span-full">About the Memorial</h2>
+        <div id="about" class="col-span-full">
+            <img src="images/placeholder.webp" alt="placeholder">
+            <p>This section covers information about the project and memorial. Additionally, how it started, why it
+                started, where it is located, and how to contribute. This is the part where we put details about the
+                memorial design, trees concept, and many more. This is though some more random text that I actually
+                write because why not. But wait there’s more. Yeah, more text.</p>
+        </div>
+    </section>
+
+    <!--Donate-->
+    <section id="donate-con" class="grid-con">
+        <h2 class="hidden">Donate</h2>
+        <div class="video-con col-span-full">
+            <video class="player" preload="metadata" poster="images/video-poster.png">
+                <source src="videos/test.mp4" type="video/mp4">
+                <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
+            </video>
+        </div>
+        <div id="donate" class="col-span-full">
+            <button class="donate-btn">DONATE NOW</button>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer id="main-footer" class="grid-con">
+
+        <div id="footer-con">
+            <div>
+                <div class="logo">LOGO</div>
+            </div>
+
+            <div>
+                <nav id="footer-nav">
+                    <h2 class="hidden">Footer Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <p>(c) Brothers In Arms Memorial 2025.</p>
+    </footer>
 
 </body>
 

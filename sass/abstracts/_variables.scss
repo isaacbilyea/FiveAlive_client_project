@@ -1,8 +1,11 @@
-$primary-color: white;
-$secondary-color: black;
-$accent-color: white;
-$body-text-color: black;
-$heading-font-family: Arial, sans-serif;
-$body-font-family: Arial, sans-serif;
+@use 'fonts';
+
+$primary-color: #16231A;
+$secondary-color: #294023;
+$accent-color: #B91A17;
+$heading-text-color: #BC9D51;
+$body-text-color: #F6F8EE;
+$heading-font-family: 'Maragsa', Inter, serif;
+$body-font-family: Inter, Arial, sans-serif;
 $base-font-size: 14px;
 $base-font-weight: 400;

@@ -1,0 +1,38 @@
+#letters-con {
+    background-color: lightgray;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #letters {
+
+        p {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 95%;
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #letters-con {
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        #letters {
+    
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

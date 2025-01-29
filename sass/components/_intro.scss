@@ -1,0 +1,28 @@
+#intro-con {
+    text-align: center;
+    padding-bottom: 0;
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    p {
+        width: 95%;
+        margin: 0 auto;
+    }
+     
+}
+
+@media screen and (min-width: 768px) {
+
+    #intro-con {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
