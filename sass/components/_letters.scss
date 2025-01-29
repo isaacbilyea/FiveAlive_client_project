@@ -1,5 +1,7 @@
+@use '../abstracts' as a;
+
 #letters-con {
-    background-color: lightgray;
+    background-color: a.$secondary-color;
     text-align: center;
 
     h2 {
