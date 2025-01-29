@@ -1,15 +1,10 @@
 #intro-con {
     text-align: center;
-    padding-bottom: 0;
-
-    h2 {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
 
     p {
-        width: 95%;
-        margin: 0 auto;
+        width: 90%;
+        font-size: 1.15rem;
+        margin: 5rem auto 2rem auto;
     }
      
 }
@@ -17,12 +12,21 @@
 @media screen and (min-width: 768px) {
 
     #intro-con {
-        h2 {
-            font-size: 3rem;
-        }
 
         p {
-            font-size: 1.2rem;
+            width: 75%;
+            font-size: 1.75rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #intro-con {
+
+        p {
+            width: 55%;
+            font-size: 2.25rem;
         }
     }
 }
