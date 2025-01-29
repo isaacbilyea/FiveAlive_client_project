@@ -6,7 +6,8 @@ Welcome! This is the repository of official website development of the Brothers 
 
 ## Technologies :desktop_computer:
 
-- Coding Languages: HTML, CSS, SCSS, JavaScript, PHP, SQL, GSAP
+- Front-End: HTML, CSS (SASS), JavaScript, Vue.js, GreenSock, AJAX, Three.js
+- Back-End: PHP, MySQL, Lumen
 - Design Softwares: Adobe Illustrator, Photoshop, Adobe InDesign
 - Motion Applications: Cinema 4D, Adobe Premiere Pro, After Effects
 - Utility Platforms: GitHub, Microsoft Visual Studio Code
@@ -15,9 +16,9 @@ Welcome! This is the repository of official website development of the Brothers 
 
 **Officially Published by:**
 
-- Milana Gabbassova - Project Manager
-- Timothy Bryle Flores - Front-End Developer
-- Isaac Bilyea - Back-End Developer
+- Milana Gabbassova - Project Manager, Back-End Developer
+- Timothy Bryle Flores - Graphic Deisnger, Motion Designer
+- Isaac Bilyea - Front-End Developer, Back-End Developer
 - Bernardo Macapagal - Graphic Designer
 - Apapat Juntarattanakamol - Motion Designer
 
