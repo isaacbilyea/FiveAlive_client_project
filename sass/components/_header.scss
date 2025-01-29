@@ -2,124 +2,93 @@
 
 #main-header {
 
-    background-color: #4E4E4E;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 4rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    .logo {
-
-        color: white;
-        font-size: 2rem;
-        font-weight: 800;
+    
+    .logo svg {
+        width: 5rem;
+        cursor: pointer;
     }
 
-    #hamburger-menu {
-        width: 2rem;
-        height: 1.5rem;
-        position: absolute;
-        top: 1.25rem;
-        right: 1rem;
-        z-index: 5;
+    #menu-button {
+        font-family: a.$heading-font-family;
+        border: a.$heading-text-color 2px solid;
+        padding: 0.25rem 1.5rem;
+        border-radius: 5rem;
+        cursor: pointer;
+    }
 
-        div {
-        width: 100%;
-        height: 0.15rem;
-        background-color: white;
-        position: absolute;
-        transition: 0.3s ease;
-        border-radius: 1rem;
-        }
+    #menu-header {
+        display: none;
+    }
 
-        #line1 {
-        margin: 0;
-        }
+    #main-nav {
+        display: none;
 
-        #line2 {
-        margin-top: 0.625rem;
-        transform-origin: center;
-        transform: scaleX(1);
-        }
+        ul {
+            @include a.center;
+            margin: 0;
+            padding: 0;
 
-        #line3 {
-        margin-top: 1.25rem;
-        }
+            li {
+                list-style-type: none;
 
-        &.activate #line1 {
-        transform: rotate(45deg) translate(0.4375rem, 0.4375rem);
-        width: 2.5rem;
-        background-color: white;
-        }
-
-        &.activate #line2 {
-        transform: scaleX(0);
-        opacity: 0;
-        transition: 0.2s ease-in-out;
-        background-color: white;
-        }
-
-        &.activate #line3 {
-        transform: rotate(-45deg) translate(0.4375rem, -0.4375rem);
-        width: 2.5rem;
-        background-color: white;
-        }
-        }
-
-        #main-nav {
-            display: none;
-
-            ul {
-                @include a.center;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    list-style-type: none;
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
+                a {
+                    text-decoration: none;
+                    color: white;
                 }
             }
         }
+    }
 
-        .donate-btn {
-            display: none;
+    .donate-btn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #main-header {
+        padding: 1rem 2rem;
+
+        .logo svg {
+            width: 7rem;
         }
+    
+        #menu-button {
+            font-size: 1.25rem;
+        }
+
+        #menu-header {
+            display: block;
+            font-size: 2rem;
+            font-family: a.$heading-font-family;
+            color: a.$heading-text-color;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
-
+    
     #main-header {
-        height: 6rem;
-        justify-content: space-between;
 
-        .logo {
-            font-size: 3rem;
+        .logo svg {
+            width: 10rem;
         }
 
-        #hamburger-menu {
-            display: none;
+        #menu-button {
+            font-size: 1.5rem;
         }
 
-        #main-nav {
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
-            margin: 0 auto;
-
-            ul {
-                @include a.center;
-                gap: 2rem;
-
-                li {
-                    a {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                    }
-                }
-            }
+        #menu-header {
+            font-size: 2.5rem;
         }
     }
 }
