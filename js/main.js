@@ -18,59 +18,54 @@
 })();
 
 
+//----------------------------------------------------------------------------------//
+
+
+//Timeline
 (() => {
     gsap.registerPlugin(ScrollTrigger);
-  
-    const timelineItems = gsap.utils.toArray('.timeline-item');
-    const progress = document.querySelector('#timeline-progress');
+    
     const timeline = document.querySelector('#timeline');
-  
-    timelineItems.forEach((item, index) => {
+    const progress = document.querySelector('#timeline-progress');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    //Progress bar
+    gsap.to(progress, {
+        height: '100%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: timeline,
+            start: 'top center',
+            end: 'bottom center',
+            scrub: true
+        }
+    });
+
+    //Dot triggers
+    timelineItems.forEach((item) => {
         const dot = item.querySelector('.timeline-dot');
-        const text = item.querySelector('.timeline-text');
-        
-        gsap.set(dot, { y: 0 });
-        
-        const stopPoint = () => {
-            const nextItem = timelineItems[index + 1];
-            if (nextItem) {
-                const nextDot = nextItem.querySelector('.timeline-dot');
-                return nextDot.getBoundingClientRect().top - dot.getBoundingClientRect().top - 48;
-            }
-            return item.offsetHeight - 40;
-        };
+        const content = item.querySelectorAll('.timeline-content div');
 
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: item,
-                start: 'top center',
-                end: 'bottom center',
-                scrub: true,
-                onUpdate: (self) => {
-                    if (self.isActive) {
-                        const maxMove = stopPoint();
-                        const moveY = Math.min(self.progress * maxMove, maxMove);
-                        
-                        const dotRect = dot.getBoundingClientRect();
-                        const timelineRect = timeline.getBoundingClientRect();
-                        const currentDotCenter = dotRect.top + (dotRect.height / 2) + moveY;
-                        const progressHeight = currentDotCenter - timelineRect.top;
-                        
-                        progress.style.height = `${progressHeight}px`;
-
-                        gsap.to(dot, {
-                            y: moveY,
-                            duration: 0.3,
-                            ease: "power2.out"
-                        });
-                        
-                        gsap.to(text, {
-                            y: moveY,
-                            duration: 0.3,
-                            ease: "power2.out"
-                        });
-                    }
-                }
+        ScrollTrigger.create({
+            trigger: dot,
+            start: 'center center',
+            onEnter: () => {
+                gsap.to(content, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.1,
+                    stagger: 0.1
+                });
+                item.classList.add('active');
+            },
+            onLeaveBack: () => {
+                gsap.to(content, {
+                    opacity: 0,
+                    x: 0,
+                    duration: 0.1,
+                    stagger: 0.1
+                });
+                item.classList.remove('active');
             }
         });
     });

@@ -7,16 +7,17 @@ section {
 .video-con {
     width: 95%;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin: 3rem 0;
     overflow: hidden;
+    border-radius: 1rem;
     
     .plyr--video {
-        --plyr-color-main: red;
+        --plyr-color-main: #B91A17;
         --plyr-control-icon-size: 1rem;
         --plyr-control-radius: 1.25rem;
         --plyr-font-family: Arial, Georgia, sans-serif;
         --plyr-control-spacing: 1rem;
         --plyr-range-fill-background: #fff;
-        --plyr-range-thumb-background: red;
+        --plyr-range-thumb-background: #B91A17;
     }
 }     
