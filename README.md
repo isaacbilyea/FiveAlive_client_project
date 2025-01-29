@@ -1,6 +1,6 @@
 # Brothers In Arms Memorial Website :rose:
 
-Welcome! This is the repository of official website development of the Brothers In Arms Memorial Project for the Srishti Foundation. It covers the history and brings awareness to the Indian-Canadian soldiers that fought in WW1. This project consists of full brand development, website programming, video production, and functional interactivity. Thanks for stopping by!
+Welcome! This is the repository of official website development of the Brothers In Arms Memorial Project for the Srishti Foundation. It covers the history and brings awareness to the Indian and Canadian soldiers that fought in WW1. This project consists of full brand development, website programming, video production, and functional interactivity. Thanks for stopping by!
 
 ![Portfolio Readme Photo](/images/BrothersInArms_Readme.png)
 
@@ -17,10 +17,10 @@ Welcome! This is the repository of official website development of the Brothers 
 **Officially Published by:**
 
 - Milana Gabbassova - Project Manager, Back-End Developer
-- Timothy Bryle Flores - Graphic Deisnger, Motion Designer
+- Timothy Bryle Flores - Graphic Designer, Motion Designer
 - Isaac Bilyea - Front-End Developer, Back-End Developer
-- Bernardo Macapagal - Graphic Deisnger, Motion Designer
-- Apapat Juntarattanakamol - Graphic Deisnger, Motion Designer
+- Bernardo Macapagal - Graphic Designer, Motion Designer
+- Apapat Juntarattanakamol - Graphic Designer, Motion Designer
 
 ## Usage :gear:
 
