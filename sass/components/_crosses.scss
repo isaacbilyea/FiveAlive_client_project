@@ -1,5 +1,8 @@
+@use '../abstracts' as a;
+
 #victoria-crosses-con {
     text-align: center;
+    background-color: a.$secondary-color;
 
     h2 {
         font-size: 2rem;

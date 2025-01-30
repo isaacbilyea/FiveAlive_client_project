@@ -1,17 +1,35 @@
+@use '../abstracts' as a;
+
 .donate-btn {
     border: none;
-    background-color: #4E4E4E;
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    margin: 0 auto;
-    margin-top: 2rem;
+    background-color: a.$accent-color;
+    color: a.$body-text-color;
+    font-family: a.$body-font-family;
+    font-size: 1.15rem;
+    padding: 0.5rem 1.75rem;
+    border-radius: 10rem;
+    margin: 2rem auto 5rem auto;
 }
 
 #donate-con {
-    background-color: lightgray;
-    display: grid;
+    background-color: a.$secondary-color;
+
+    #donate-text {
+        margin-top: 5rem;
+
+        p {
+            text-align: center;
+            color: a.$heading-text-color;
+            width: 80%;
+            margin: 0 auto;
+            font-weight: 500;
+            font-size: 1.15rem;
+
+            &:last-of-type {
+                margin-top: 10rem;
+            }
+        }
+    }
 
     #donate {
         margin: 0 auto;
@@ -20,9 +38,22 @@
 
 @media screen and (min-width: 768px) {
 
+    #donate-con {
+
+        #donate-text {
+            p {
+                font-size: 1.5rem;
+                width: 58%;
+            }
+        }
+    
+        #donate {
+            margin: 0 auto;
+        }
+    }
+    
+
     .donate-btn {
-        font-size: 2rem;
-        padding: 1rem 1.5rem;
-        margin: 3.5rem 0 2rem 0;
+        font-size: 1.25rem;
     }
 }
