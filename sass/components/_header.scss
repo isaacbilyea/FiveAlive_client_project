@@ -20,9 +20,21 @@
     #menu-button {
         font-family: a.$heading-font-family;
         border: a.$heading-text-color 2px solid;
-        padding: 0.25rem 1.5rem;
+        padding: 0.25rem 1.25rem;
         border-radius: 5rem;
         cursor: pointer;
+
+        span {
+            @include a.center;
+
+            img {
+                height: 1rem;
+                margin: 0;
+                padding: 0;
+            }
+
+        }
+
     }
 
     #menu-header {
@@ -60,6 +72,13 @@
     
         #menu-button {
             font-size: 1.25rem;
+
+            span {
+    
+                img {
+                    height: 1.25rem;
+                }
+            }
         }
 
         #menu-header {
@@ -81,6 +100,14 @@
 
         #menu-button {
             font-size: 1.5rem;
+
+            
+            span {
+    
+                img {
+                    height: 1.35rem;
+                }
+            }
         }
 
         #menu-header {
