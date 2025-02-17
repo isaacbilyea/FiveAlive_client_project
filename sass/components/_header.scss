@@ -110,54 +110,38 @@
 @media screen and (min-width: 768px) {
 
     #main-header {
-        padding: 1rem 2rem;
+        padding: 0 2rem;
 
-        .logo svg {
-            width: 7rem;
-        }
-    
         #menu-button {
-            font-size: 1.25rem;
 
             span {
-    
-                img {
-                    height: 1.25rem;
-                }
+                margin-left: 2rem;
             }
         }
 
-        #menu-header {
-            display: block;
-            font-size: 1.25rem;
-            font-family: a.$heading-font-family;
-            color: a.$heading-text-color;
-        }
     }
 }
 
 @media screen and (min-width: 1200px) {
     
     #main-header {
+        padding: 0.5rem 2.5rem;
 
-        .logo svg {
-            width: 10rem;
-        }
+        #nav-wrapper {
+            gap: 3rem;
 
-        #menu-button {
-            font-size: 1.5rem;
+            #main-nav {
+                display: flex;
 
-            
-            span {
-    
-                img {
-                    height: 1.35rem;
+                ul {
+                    gap: 3rem;
                 }
+            }
+
+            #menu-button {
+                display: none;
             }
         }
 
-        #menu-header {
-            font-size: 1.5rem;
-        }
     }
 }
