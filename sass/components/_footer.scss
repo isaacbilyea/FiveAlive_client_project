@@ -5,23 +5,27 @@
     margin: 5rem auto;
 
     #footer-con {
+          
+        .logo-anchor {
+            all: unset;
 
-        #logo-con {
+            .logo {
+                height: 4rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
 
-            @include a.center;
-            flex-direction: column;
+                img {
+                    height: 100%;
+                }
 
-            img {       
-                width: 10rem;
+                p {
+                    line-height: 1;
+                    font-weight: 600;
+                    margin-left: 1rem;
+                    color: a.$heading-text-color;
+                }
             }
-
-            p {
-                width: 80%;
-                text-align: center;
-                margin-top: 1rem;
-                font-size: 0.9rem;
-            }
-
         }
 
         #footer-nav {
@@ -54,7 +58,7 @@
         }
     }
 
-    #line-break {
+    .line-break {
         border: a.$heading-text-color solid 1px;
         width: 95%;
         margin: 0 auto;

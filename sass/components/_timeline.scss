@@ -20,7 +20,7 @@
     #timeline-progress {
         position: absolute;
         width: 100%;
-        background: a.$accent-color;
+        background: a.$secondary-accent-color;
         left: 0;
         top: 0;
         height: 0;
@@ -88,7 +88,7 @@
             }
 
             .timeline-year {
-                color: a.$accent-color;
+                color: a.$secondary-accent-color;
                 font-family: La Belle Aurore, cursive;
                 color: a.$heading-text-color;
                 font-size: 1rem;
@@ -107,7 +107,7 @@
     
         &.active {
             .timeline-dot {
-                background: a.$accent-color;
+                background: a.$secondary-accent-color;
                 transform: translate(-50%, -50%) scale(1.05);
                 transition: all 150ms ease;
                 border: a.$body-text-color 5px solid;
