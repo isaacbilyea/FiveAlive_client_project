@@ -70,3 +70,10 @@
         });
     });
 })();
+
+
+const password = "isaacisawesome";
+const userPassword = prompt("Enter password to view this site:");
+if (userPassword !== password) {
+    document.body.innerHTML = "<h1>Access Denied</h1>";
+}
