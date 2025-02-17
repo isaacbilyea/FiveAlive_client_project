@@ -1,0 +1,30 @@
+@use '../abstracts' as a;
+
+.dot-header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    padding-left: 0.75rem;
+    font-weight: 400;
+
+    &::before {
+        content: '';
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        background-color: a.$heading-text-color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+}
+
+.section-header {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: a.$heading-text-color;
+}
