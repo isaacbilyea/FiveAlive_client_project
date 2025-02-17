@@ -2,60 +2,106 @@
 
 #main-header {
 
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 4rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1.5rem;
 
-    
-    .logo {
-        width: 7rem;
-        cursor: pointer;
-    }
+     
+    .logo-anchor {
+        all: unset;
 
-    #menu-button {
-        font-family: a.$heading-font-family;
-        border: a.$heading-text-color 2px solid;
-        padding: 0.25rem 1.25rem;
-        border-radius: 5rem;
-        cursor: pointer;
-
-        span {
-            @include a.center;
+        .logo {
+            height: 4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
 
             img {
-                height: 1rem;
-                margin: 0;
-                padding: 0;
+                height: 100%;
             }
 
+            p {
+                line-height: 1;
+                font-weight: 600;
+                margin-left: 1rem;
+                color: a.$heading-text-color;
+            }
         }
-
     }
 
     #menu-header {
         display: none;
     }
 
-    #main-nav {
-        display: none;
+    #nav-wrapper {
+        @include a.center;
+        
+        #main-nav {
+            display: none;
 
-        ul {
-            @include a.center;
-            margin: 0;
-            padding: 0;
+            ul {
+                @include a.center;
+                margin: 0;
+                padding: 0;
 
-            li {
-                list-style-type: none;
+                li {
+                    list-style-type: none;
 
-                a {
-                    text-decoration: none;
-                    color: white;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
+            }
+        }
+    }
+
+    #menu-button {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 1rem;
+        }
+
+        #hamburger-menu {
+            width: 2rem;
+            margin-left: 1rem;
+
+            div {
+                width: 100%;
+                height: 0.15rem;
+                background-color: a.$heading-text-color;
+                transition: 0.4s ease-in-out;
+            }
+            
+            #line1 { 
+                margin: 0;
+            }
+            
+            #line2 { 
+                margin-top: 0.5rem; 
+            }
+            
+            #line3 { 
+                margin-top: 0.5rem; 
+            }
+            
+            .activate #line1 {
+                transform: rotate(45deg) translate(0.4375rem, 0.4375rem);
+            }
+            
+            .activate #line2 {
+                opacity: 0;
+            }
+            
+            .activate #line3 {
+                transform: rotate(-45deg) translate(0.4375rem, -0.4375rem);
             }
         }
     }
