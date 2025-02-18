@@ -13,7 +13,7 @@
   .faq-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: min-content; // Each row sizes to its own content
+    grid-auto-rows: min-content;
     gap: 1rem;
     margin-top: 2rem;
     width: 100%;
@@ -78,7 +78,7 @@
   #faq-con {
     .faq-grid {
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: min-content; // Ensure each card sizes to its own content
+      grid-auto-rows: min-content; 
     }
   }
 }

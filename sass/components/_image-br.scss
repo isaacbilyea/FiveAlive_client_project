@@ -42,3 +42,14 @@
 .left-br {
     margin-bottom: 2rem;
 }
+
+@media  screen and (min-width: 768px) {
+    .top-br {
+        margin-top: 0rem;
+    }
+
+    .left-br {
+        margin-bottom: 0rem;
+    }
+    
+}
