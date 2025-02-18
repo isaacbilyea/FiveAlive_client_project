@@ -3,7 +3,7 @@
     margin-top: 2rem;
     width: 100%;
     position: relative;
-    padding-bottom: 100%; // Increased aspect ratio for more height
+    padding-bottom: 100%;
     overflow: hidden;
     
     img {
@@ -46,9 +46,9 @@
     border: none;
     padding: 0.5rem 2.5rem;
     border-radius: 2rem;
-    white-space: nowrap;
     text-align: center;
     width: 100%;
+    font-weight: 600;
 }
 
 #donation-stats {
@@ -74,11 +74,9 @@
     text-align: left;
     justify-content: center;
     align-items: center;
-    margin: 3rem auto;
 }
 
 #history-con {
-    margin: 3rem auto;
     
     #history-images {
         display: flex;
@@ -87,5 +85,74 @@
 
 #news-con {
     background-color: a.$secondary-color;
-    margin: 3rem auto;
+}
+
+#contact-con {
+    display: flex;
+    flex-direction: column;
+
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        input, textarea, select {
+            border: none;
+            background: none;
+            border-bottom: 1px solid a.$body-text-color;
+            padding: 0;
+            padding-bottom: 0.5rem;
+            font: inherit;
+            color: a.$body-text-color;
+            text-align: left;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: a.$secondary-accent-color;
+            color: a.$alt-text-color;
+            padding: 0.5rem 1.25rem;
+            border-radius: 2rem;
+        }
+    }
+    
+}
+
+#support-con {
+    background-color: a.$secondary-color;
+    text-align: center;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        background-color: a.$primary-accent-color;
+        padding: 0.5rem 1.25rem;
+    }
+
+}
+
+#partners-con {
+    display: flex;
+    flex-direction: column;
+    background-color: a.$secondary-color;
+
+    #partners {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 3rem;
+       
+        img {
+            width: 40%;
+            aspect-ratio: 1 / 1;
+        }
+    }
 }

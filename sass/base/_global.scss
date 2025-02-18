@@ -25,6 +25,16 @@ a {
     color: inherit;
 }
 
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+input, textarea {
+    color: inherit;
+    font-family: inherit;
+}
+
 @media screen and (min-width: 768px) {
 
     html, body {
