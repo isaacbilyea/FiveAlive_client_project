@@ -20,9 +20,10 @@ html, body {
     background-color: a.$primary-color;
 }
 
-a {
+a, button {
     text-decoration: none;
     color: inherit;
+    font: inherit;
 }
 
 input, textarea {
