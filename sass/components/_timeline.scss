@@ -1,26 +1,32 @@
 @use '../abstracts' as a;
 
+#timeline-wrapper {
+    padding: 10rem 0;
+}
+
 #timeline {
     position: relative;
     width: 95%;
-    margin: 5rem auto;
+    margin: 0 auto;
+    color: a.$alt-text-color;
 
     .timeline-line {
         position: absolute;
         left: 10%;
         top: 0;
         bottom: 0;
-        width: 3px;
-        background-color: a.$body-text-color;
+        width: 4px;
+        background-color: a.$alt-text-color;
         transform: translateX(-50%);
         z-index: 1;
         overflow: hidden;
+        border-radius: 10rem;
     }
 
     #timeline-progress {
         position: absolute;
         width: 100%;
-        background: a.$secondary-accent-color;
+        background: #D0893B;
         left: 0;
         top: 0;
         height: 0;
@@ -37,9 +43,9 @@
             position: absolute;
             left: 10%;
             top: 50%;
-            width: 1.15rem;
-            height: 1.15rem;
-            background: a.$body-text-color;
+            width: 0.8rem;
+            height: 0.8rem;
+            background: a.$alt-text-color;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: all 0.3s ease;
@@ -81,18 +87,16 @@
             h3 {
                 margin: 0;
                 font-size: 1.25rem;
-
-                span {
-                    font-size: 1.5rem;
-                }
+                color: a.$alt-text-color;
+                font-weight: 600;
             }
 
             .timeline-year {
                 color: a.$secondary-accent-color;
-                font-family: La Belle Aurore, cursive;
                 color: a.$heading-text-color;
+                color: a.$alt-text-color;
                 font-size: 1rem;
-                font-weight: 700;
+                font-weight: 400;
             }
            
             p {
@@ -110,7 +114,7 @@
                 background: a.$secondary-accent-color;
                 transform: translate(-50%, -50%) scale(1.05);
                 transition: all 150ms ease;
-                border: a.$body-text-color 5px solid;
+                border: a.$alt-text-color 5px solid;
             }
     
             .timeline-content div {
@@ -121,6 +125,7 @@
 }
 
 @media screen and (min-width: 768px) {
+    
     #timeline {
         width: 95%;
 
@@ -138,10 +143,6 @@
             .timeline-text {
               h3 {
                   font-size: 1.75rem;
-
-                  span {
-                      font-size: 2.25rem;
-                  }
               }
 
               .timeline-year {
@@ -172,31 +173,25 @@
 
             &:nth-child(odd) .timeline-content {
                 flex-direction: row-reverse;
-                .timeline-text { 
-                    text-align: right;
-                }
             }
         }
     }
 }
 
 @media screen and (min-width: 1200px) {
+
   #timeline {
-      width: 90%;
+      width: 80%;
 
       .timeline-item {
 
           .timeline-text {
             h3 {
                 font-size: 2rem;
-  
-                span {
-                    font-size: 2.75rem;
-                }
             }
   
             .timeline-year {
-                font-size: 1.25rem;
+                font-size: 1rem;
             }
         }
   

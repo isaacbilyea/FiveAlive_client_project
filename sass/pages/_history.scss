@@ -1,33 +1,43 @@
 @use '../abstracts' as a;
 
-.video-con {
-    width: 90%;
-    margin: 3rem auto;
-    overflow: hidden;
-    border-radius: 1rem;
-    
-    .plyr--video {
-        --plyr-color-main: #B91A17;
-        --plyr-control-icon-size: 1rem;
-        --plyr-control-radius: 1.25rem;
-        --plyr-font-family: Arial, Georgia, sans-serif;
-        --plyr-control-spacing: 1rem;
-        --plyr-range-fill-background: #fff;
-        --plyr-range-thumb-background: #B91A17;
+#victoria-crosses-con, #regiments-con {
+    display: flex;
+    flex-direction: column-reverse;
+} 
+
+#letters-con {
+
+    #letter-images-con {
+        margin: 0 auto;
+        margin-top: 5rem;
     }
-}     
+    
+}
 
+@media screen and (min-width: 1200px) {
 
-.donate-btn {
-    border: none;
-    background-color: a.$primary-accent-color;
-    color: a.$alt-text-color;
-    font-family: a.$body-font-family;
-    font-size: 1.15rem;
-    padding: 0.5rem 1rem;
-    border-radius: 10rem;
+    #victoria-crosses-con, #regiments-con {
+        flex-direction: row;
+    }
+    
+    #letters-con {
 
-    a {
-        all: unset;
+    
+        #letters-text-con {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+    
+            h4 {
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                width: 60%;
+                margin: 0;
+            }
+        }
+
     }
 }

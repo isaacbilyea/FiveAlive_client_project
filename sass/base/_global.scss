@@ -43,6 +43,58 @@ input, textarea {
     background-color: a.$tertiary-color;
 }
 
+.video-con {
+    width: 90%;
+    margin: 3rem auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    
+    .plyr--video {
+        --plyr-color-main: #B91A17;
+        --plyr-control-icon-size: 1rem;
+        --plyr-control-radius: 1.25rem;
+        --plyr-font-family: Arial, Georgia, sans-serif;
+        --plyr-control-spacing: 1rem;
+        --plyr-range-fill-background: #fff;
+        --plyr-range-thumb-background: #B91A17;
+    }
+}     
+
+.donate-btn {
+    border: none;
+    background-color: a.$primary-accent-color;
+    color: a.$alt-text-color;
+    font-family: a.$body-font-family;
+    font-size: 1.15rem;
+    border-radius: 10rem;
+    margin: 3rem auto;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+
+    a {
+        all: unset;
+    }
+}
+
+#support-con {
+    text-align: center;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: a.$alt-text-color;
+    }
+
+    a {
+        background-color: a.$primary-accent-color;
+        margin: 0 auto;
+        padding: 0.5rem 1.25rem;
+    }
+
+}
+
+
 @media screen and (min-width: 768px) {
 
     html, body {

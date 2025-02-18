@@ -20,212 +20,280 @@
 
 <body>
     <!--Header-->
-    <h1 class="hidden">History</h1>
+    <h1 class="hidden">Home</h1>
     <header id="main-header" class="grid-con">
 
-        <div class="logo">
-            <img src="images/logo-mark.svg" alt="logo">
+        <a href="index.html" class="logo-anchor">
+            <div class="logo">
+                <img src="images/logo.svg" alt="logo">
+                <p>BROTHERS<br>IN ARMS</p>
+            </div>
+        </a>
+
+        <div id="nav-wrapper">
+            <nav id="main-nav">
+                <h2 class="hidden">Main Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News &amp; Events</a></li>
+                </ul>
+            </nav>
+            <a class="donate-btn" href="donate.html">Donate</a>
+            <div id="menu-button">
+                <span>Menu</span>
+                <div id="hamburger-menu">
+                    <div id="line1"></div>
+                    <div id="line2"></div>
+                    <div id="line3"></div>
+                </div>
+            </div>
         </div>
-
-        <div id="menu-header">
-            <span>BROTHERS IN ARMS</span>
-        </div>
-
-        <div id="menu-button">
-            <span>Menu&nbsp;<img src="images/menu-icon.svg" alt="menu-icon"></span>
-        </div>
-
-        <nav id="main-nav">
-            <h2 class="hidden">Main Navigation</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-
     </header>
 
+
     <!--Hero-->
-    <section id="hero-con" class="full-width-grid-con">
+    <section id="hero-con" class="grid-con section-flex">
         <h2 class="hidden">Hero Section</h2>
-        <div>
-            <h3 class="hidden" id="hero-text">Brothers in Arms</h3>
-            <img src="images/hero.png" alt="hero image">
+        <div class="col-span-full section-text-con">
+            <h3 class="dot-header">History</h3>
+            <h4 class="section-header">History</h4>
+            <p class="section-text">Indian and Canadian soldiers stood together in some of the most pivotal battles of
+                World War I. From the trenches of Ypres to the victory at Vimy Ridge, their courage and sacrifice helped
+                shape the course of history.</p>
+            <a class="section-button" href="#">Explore Their Stories</a>
+        </div>
+        <div class="top-br col-span-full section-image-con">
+            <img src="images/placeholder.webp" alt="placeholder image">
         </div>
     </section>
 
-    <!--Intro-->
-    <section id="intro-con" class="grid-con">
-        <div id="intro-text-con" class="col-span-full">
-            <h2 id="intro-header" class="hidden">Introduction</h2>
-            <p>Pay tribute to the courageous soldiers of Canada and India.
-                Discover their stories and join
-                our mission to honour their legacy.</p>
-        </div>
-
-        <div class="video-con col-span-full">
-            <video class="player" preload="metadata" poster="images/poster.png">
-                <source src="videos/test.mp4" type="video/mp4">
-                <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
-            </video>
-        </div>
-    </section>
+    <!--Video-->
+    <div class="bg-secondary">
+        <section id="video-con" class="grid-con section-flex">
+            <h2 class="hidden">Donation Video Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="section-header">The Untold Story of Brotherhood</h3>
+                <p class="section-text">Indian and Canadian soldiers fought together in pivotal World War I battles,
+                    their
+                    bravery shaping history yet often overlooked.</p>
+            </div>
+            <div class="left-br col-span-full section-image-con">
+                <div class="col-span-full">
+                    <video class="player" preload="metadata" poster="images/poster.png">
+                        <source src="videos/test.mp4" type="video/mp4">
+                        <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.
+                        </p>
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!--Timeline-->
-    <section id="timeline">
-        <div class="timeline-line">
-            <div id="timeline-progress"></div>
-        </div>
+    <div class="bg-tertiary" id="timeline-wrapper">
+        <section id="timeline">
+            <div class="timeline-line">
+                <div id="timeline-progress"></div>
+            </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-image">
-                    <img src="images/placeholder.webp" alt="placeholder image">
-                </div>
-                <div class="timeline-text">
-                    <h3><span>2</span>ND YPRES</h3>
-                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
-                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
-                        information that should be placed in this box of text.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-image">
+                        <img src="images/placeholder.webp" alt="placeholder image">
+                    </div>
+                    <div class="timeline-text">
+                        <h3>2nd Battle of Ypres</h3>
+                        <p class="timeline-year">(April 1915 – May 1915)</p>
+                        <p>The first major gas attack on the Western Front, where German forces unleashed chlorine gas.
+                            <br><br>Indian and Canadian soldiers, including the Lahore Division, fought to close gaps in
+                            the
+                            Allied lines, preventing a full German breakthrough despite suffering heavy casualties.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-image">
-                    <img src="images/placeholder.webp" alt="placeholder image">
-                </div>
-                <div class="timeline-text">
-                    <h3>ST JULIEN</h3>
-                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
-                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
-                        information that should be placed in this box of text.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-image">
+                        <img src="images/placeholder.webp" alt="placeholder image">
+                    </div>
+                    <div class="timeline-text">
+                        <h3>Battle of St. Julien</h3>
+                        <p class="timeline-year">(April 1915)</p>
+                        <p>A key engagement during the 2nd Battle of Ypres. Indian and Canadian troops endured some of
+                            the war’s first poison gas attacks while defending their positions. <br><br>Their resistance
+                            helped slow the German advance and prevent the collapse of the Allied front.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-image">
-                    <img src="images/placeholder.webp" alt="placeholder image">
-                </div>
-                <div class="timeline-text">
-                    <h3>FESTUBERT</h3>
-                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
-                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
-                        information that should be placed in this box of text.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-image">
+                        <img src="images/placeholder.webp" alt="placeholder image">
+                    </div>
+                    <div class="timeline-text">
+                        <h3>Battle of Festubert</h3>
+                        <p class="timeline-year">(May 1915)</p>
+                        <p>A prolonged trench battle where Indian and Canadian soldiers launched night assaults against
+                            heavily fortified German defenses.<br><br>
+                            Despite heavy losses, their efforts secured strategic ground and demonstrated the bravery
+                            and resilience of colonial forces in the war.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-image">
-                    <img src="images/placeholder.webp" alt="placeholder image">
-                </div>
-                <div class="timeline-text">
-                    <h3>THE SOMME</h3>
-                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
-                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
-                        information that should be placed in this box of text.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-image">
+                        <img src="images/placeholder.webp" alt="placeholder image">
+                    </div>
+                    <div class="timeline-text">
+                        <h3>Battle of the Somme</h3>
+                        <p class="timeline-year">(July 1916 – November 1916)</p>
+                        <p>One of the bloodiest battles of the war, with over a million casualties. Indian and Canadian
+                            forces played key roles, with the 20th Deccan Horse launching a rare cavalry charge at High
+                            Wood. <br><br>Despite heavy machine gun fire, their attack contributed to the eventual
+                            capture of
+                            the position.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <div class="timeline-image">
-                    <img src="images/placeholder.webp" alt="placeholder image">
-                </div>
-                <div class="timeline-text">
-                    <h3>VIMY</h3>
-                    <p class="timeline-year">(Jan 1914 - Feb 1915)</p>
-                    <p>This is the description of this war and it has a lot of cool elements and key pieces of
-                        information that should be placed in this box of text.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-image">
+                        <img src="images/placeholder.webp" alt="placeholder image">
+                    </div>
+                    <div class="timeline-text">
+                        <h3>Battle of Vimy Ridge</h3>
+                        <p class="timeline-year">(April 1917)</p>
+                        <p>A historic Canadian victory, where all four Canadian divisions fought together for the first
+                            time. <br><br>Sikh artillerymen of the Lahore Division supported the offensive, helping
+                            capture
+                            the ridge, which had resisted previous British and French attacks. The battle became a
+                            defining moment for Canada’s national identity.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!--Victoria Crosses-->
-    <section id="victoria-crosses-con" class="grid-con">
-        <h2 class="col-span-full">Victoria Crosses</h2>
-        <div id="victoria-crosses" class="col-span-full">
-            <p>This explains this section of victoria crosses.
-                So this is that section of the victoria crosses.</p>
-            <img src="images/placeholder.webp" alt="placeholder">
+    <section id="victoria-crosses-con" class="grid-con section-flex">
+        <h2 class="hidden">Victoria Crosses Section</h2>
+        <div class="col-span-full section-text-con">
+            <h3 class="dot-header">Awards</h3>
+            <h4 class="section-header">Victoria Crosses</h4>
+            <p class="section-text">Learn about the soldiers who displayed extraordinary courage and received the
+                highest military honour.</p>
+            <a href="#" class="section-button">Learn More</a>
+        </div>
+        <div class="left-br col-span-full section-image-con">
+            <img src="images/placeholder.webp" alt="placeholder image">
         </div>
     </section>
+
+    <!--Flying Aces-->
+    <div class="bg-secondary">
+        <section id="fyling-aces-con" class="grid-con section-flex">
+            <h2 class="hidden">Flying Aces Section</h2>
+            <div class="left-br col-span-full section-image-con">
+                <img src="images/placeholder.webp" alt="placeholder image">
+            </div>
+            <div class="col-span-full section-text-con">
+                <h3 class="dot-header">Aviators</h3>
+                <h4 class="section-header">Flying Aces</h4>
+                <p class="section-text">Discover the remarkable pilots, including Indian and Canadian aviators, who
+                    dominated the skies.</p>
+                <a href="#" class="section-button">Learn More</a>
+            </div>
+        </section>
+    </div>
+
+
+    <!--Regiments-->
+    <section id="regiments-con" class="grid-con section-flex">
+        <h2 class="hidden">Regiments Section</h2>
+        <div class="col-span-full section-text-con">
+            <h3 class="dot-header">Regiments</h3>
+            <h4 class="section-header">Canadian &amp; Indian Regiments</h4>
+            <p class="section-text">Explore the regiments from Canada and India that fought side by side in key battles.
+            </p>
+            <a href="#" class="section-button">Learn More</a>
+        </div>
+        <div class="left-br col-span-full section-image-con">
+            <img src="images/placeholder.webp" alt="placeholder image">
+        </div>
+    </section>
+
+    <!--Soliders-->
+    <div class="bg-secondary">
+        <section id="soliders-con" class="grid-con section-flex">
+            <h2 class="hidden">Soldiers Section</h2>
+            <div class="left-br col-span-full section-image-con">
+                <img src="images/placeholder.webp" alt="placeholder image">
+            </div>
+            <div class="col-span-full section-text-con">
+                <h3 class="dot-header">Soldiers</h3>
+                <h4 class="section-header">Soldier Section</h4>
+                <p class="section-text">Read about the courage of soldiers like Jemadar Kapur Singh and the Dogras, who
+                    made
+                    the ultimate sacrifice.</p>
+                <a href="#" class="section-button">Learn More</a>
+            </div>
+        </section>
+    </div>
 
     <!--Letters-->
     <section id="letters-con" class="grid-con">
-        <h2 class="col-span-full">Letters</h2>
-        <div id="letters" class="col-span-full">
-            <p>This explains this section of soldiers and letters.
-                So this is that section of the letters and soldiers.</p>
-            <img src="images/placeholder.webp" alt="placeholder">
+        <h2 class="hidden">Letters</h2>
+        <div class="col-span-full section-text-con" id="letters-text-con">
+            <div id="letters-text">
+                <h3 class="dot-header">Letters</h3>
+                <h4 class="section-header">Letters from the Front</h4>
+                <p class="section-text">Experience history through the letters of soldiers who shared their thoughts,
+                    fears, and hopes from the battlefield.</p>
+            </div>
+            <a href="#" class="section-button">See All</a>
+        </div>
+        <div class="left-br col-span-full section-image-con" id="letter-images-con">
+            <img src="images/placeholder.webp" alt="placeholder image">
         </div>
     </section>
 
-    <!--About Memorial-->
-    <section id="about-con" class="grid-con">
-
-        <div id="about-text" class="col-span-full m-col-start-1 m-col-end-8">
-            <h2>The Brothers in Arms Memorial</h2>
-            <p>Over a century ago, Indian and Canadian soldiers stood shoulder to shoulder on the battlefields of World
-                War I, united by courage and sacrifice. These brave souls forged an unbreakable bond across borders,
-                cultures, and continents. Yet, their stories remain untold in the pages of history.
-                <br><br>
-                Through the 'Brothers in Arms' memorial, we aim to illuminate their shared sacrifice and celebrate the
-                unity that shaped a better world. But we need your voice to keep their legacy alive.
-            </p>
-        </div>
-
-        <div id="about-images" class="col-span-full m-col-start-8 m-col-end-13">
-            <img src="images/placeholder.webp" alt="placeholder">
-            <img src="images/placeholder.webp" alt="placeholder">
-            <img src="images/placeholder.webp" alt="placeholder">
-        </div>
-
-    </section>
-
-    <!--Donate-->
-    <section id="donate-con" class="grid-con">
-        <h2 class="hidden">Donate</h2>
-        <div class="video-con col-span-full">
-            <video class="player" preload="metadata" poster="images/video-poster.png">
-                <source src="videos/test.mp4" type="video/mp4">
-                <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
-            </video>
-        </div>
-        <div id="donate-text" class="col-span-full">
-            <p>When you go home tell them of us
-                and say for your tomorrow
-                we gave our today.</p>
-            <p>Be a part of us</p>
-        </div>
-        <div id="donate" class="col-span-full">
-            <button class="donate-btn">DONATE</button>
-        </div>
-    </section>
+    <!--Support Banner-->
+    <div class="bg-tertiary">
+        <section id="support-con" class="grid-con">
+            <h2 class="hidden">Support Banner</h2>
+            <div class="col-span-full">
+                <h3 class="section-header">Support the Memorial</h3>
+                <a class="section-button" href="#">Make a Donation</a>
+            </div>
+        </section>
+    </div>
 
     <!--Footer-->
     <footer id="main-footer">
 
-        <div id="footer-con">
+        <div id="top-footer">
 
-            <div id="logo-con">
-                <img src="images/logo.svg" alt="logo">
-                <p>Making a difference in London, ON, since 2012. Learn more about the impact of
-                    the Srishti Foundation.</p>
+            <div id="logo-wrapper">
+                <a href="index.html" class="logo-anchor">
+                    <div class="logo">
+                        <img src="images/logo-white.svg" alt="logo">
+                        <p>BROTHERS<br>IN ARMS</p>
+                    </div>
+                </a>
+                <p>Honouring the past<br>to inspire tomorrow.</p>
             </div>
 
             <div>
@@ -233,24 +301,27 @@
                     <h2 class="hidden">Footer Navigation</h2>
 
                     <div id="footer-column-1">
-                        <h3>Our Impact</h3>
+                        <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="#">Stories of Change</a></li>
-                            <li><a href="#">Previous Endeavors</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">News &amp; Events</a></li>
                         </ul>
                     </div>
 
                     <div id="footer-column-2">
-                        <h3>Pages</h3>
+                        <h3>How we can help</h3>
                         <ul>
-                            <li><a href="history.html">History</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="news.html">Blog</a></li>
+                            <li><a href="history.html">Donation</a></li>
+                            <li><a href="about.html">Volunteer</a></li>
+                            <li><a href="news.html">Sponsorship</a></li>
+                            <li><a href="news.html">Events</a></li>
                         </ul>
                     </div>
 
                     <div id="footer-column-3">
-                        <h3>Contact</h3>
+                        <h3>Contact Us</h3>
                         <ul>
                             <li><a href="mailto:srishticanada@gmail.com">srishticanada@gmail.com</a></li>
                             <li><a href="tel:+11233455678">+1 123 345 5678</a></li>
@@ -258,12 +329,26 @@
                     </div>
                 </nav>
             </div>
+            <div id="google-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d881.0084319270492!2d-81.13081043035716!3d42.965889879562866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDU3JzU3LjIiTiA4McKwMDcnNDguNiJX!5e1!3m2!1sen!2sca!4v1739819949326!5m2!1sen!2sca"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>London, ON</p>
+            </div>
+        </div>
+        <div id="newsletter-signup">
+            <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+            <form id="newsletter-form" action="#" method="POST">
+                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="section-button">Subscribe</button>
+            </form>
         </div>
 
-        <div id="line-break" class="col-span-full"></div>
+        <div class="line-break col-span-full"></div>
 
-        <div id="bottom-footer" class="col-span-full">
-            <p>&copy; 2025 copyright by Srishti Foundation</p>
+        <div id="middle-footer" class="col-span-full">
+            <h4>Follow Us</h4>
             <div id="sm-icons">
                 <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
                         alt="facebook icon"></a>
@@ -271,7 +356,17 @@
                         alt="instagram icon"></a>
                 <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img src="images/youtube.svg"
                         alt="youtube icon"></a>
+                <a href="#" target="_blank"><img src="images/linkedin.svg" target="_blank" alt="linkedin icon"></a>
+                <a href="#" target="_blank"><img src="images/twitter.svg" target="_blank" alt="twitter icon"></a>
+                <a href="#" target="_blank"><img src="images/tiktok.svg" target="_blank" alt="tiktok icon"></a>
             </div>
+        </div>
+
+        <div class="line-break col-span-full"></div>
+
+        <div id="bottom-footer" class="col-span-full">
+            <p>&copy; 2025 Brothers in Arms Memorial. Managed by Srishti Foundation. All rights reserved.</p>
+            <a class="donate-btn" href="#">Donate</a>
         </div>
 
     </footer>
