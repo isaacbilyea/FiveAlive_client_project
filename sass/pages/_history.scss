@@ -16,3 +16,18 @@
         --plyr-range-thumb-background: #B91A17;
     }
 }     
+
+
+.donate-btn {
+    border: none;
+    background-color: a.$primary-accent-color;
+    color: a.$alt-text-color;
+    font-family: a.$body-font-family;
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+
+    a {
+        all: unset;
+    }
+}

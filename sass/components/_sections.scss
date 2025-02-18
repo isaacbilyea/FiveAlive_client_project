@@ -1,5 +1,10 @@
 @use '../abstracts' as a;
 
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 .dot-header {
     display: flex;
     align-items: center;
@@ -32,4 +37,28 @@
 
 .section-text {
     text-align: left;
+}
+
+.section-button {
+    display: block;
+    width: fit-content;
+    background-color: a.$secondary-accent-color;
+    color: a.$alt-text-color;
+    border: none;
+    padding: 0.5rem 2.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+  
+    .section-text-con {
+        width: 50%;
+    }
+
+    .section-image-con {
+        width: 40%;
+    }
+    
 }
