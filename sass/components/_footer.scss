@@ -2,7 +2,7 @@
 
 #main-footer {
     max-width: 100%;
-    background-color: a.$tertiary-color;
+    background-color: a.$heading-text-color;
     padding: 2rem;
     
     * {
@@ -175,11 +175,14 @@
 
     #main-footer {
         padding: 3rem;
+        margin: 0 auto;
     
         #top-footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
 
             #logo-wrapper {
 
@@ -245,6 +248,8 @@
             width: 50%;
             margin: 0 auto;
             margin-bottom: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
     
             form {
                 
@@ -261,18 +266,25 @@
     
 
         #middle-footer {
+            max-width: 1200px;
+            margin: 0 auto;
             #sm-icons {
                 gap: 2rem;
             }
         }
         
+        .line-break {
+            max-width: 1200px;
+        }
 
     
         #bottom-footer {
             flex-direction: row;
             justify-content: space-between;
+            margin: 0 auto;
             margin-top: 1rem;
             align-items: center;
+            max-width: 1200px;
 
             p {
                 text-align: left;
