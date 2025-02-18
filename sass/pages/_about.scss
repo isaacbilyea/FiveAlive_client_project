@@ -1,1 +1,13 @@
 @use '../abstracts' as a;
+
+#sponsor-con {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 1200px) {
+    #sponsor-con {
+        flex-direction: row;
+    }
+    
+}
