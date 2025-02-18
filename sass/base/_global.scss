@@ -30,12 +30,16 @@ input, textarea {
     font-family: inherit;
 }
 
-.bg-tertiary {
-    background-color: a.$tertiary-color;
+.bg-primary {
+    background-color: a.$primary-color;
 }
 
 .bg-secondary {
     background-color: a.$secondary-color;
+}
+
+.bg-tertiary {
+    background-color: a.$tertiary-color;
 }
 
 @media screen and (min-width: 768px) {

@@ -127,12 +127,6 @@
 
 @media screen and (min-width: 1200px) {
 
-    #hero-con {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
     #donation-stats {
         div {
             flex-direction: row;
@@ -141,7 +135,6 @@
     }
 
     #about-con {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
