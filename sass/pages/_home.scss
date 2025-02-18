@@ -24,6 +24,22 @@
     }
 }
 
+.left-br {
+    overflow: hidden;
+    
+    img {
+
+        -webkit-mask-image: url('../images/left-br.svg');
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url('../images/left-br.svg');
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+}
+
 .section-button {
     background-color: a.$secondary-accent-color;
     color: a.$alt-text-color;
@@ -33,4 +49,43 @@
     white-space: nowrap;
     text-align: center;
     width: 100%;
+}
+
+#donation-stats {
+    text-align: center;
+    background-color: a.$secondary-color;
+    padding: 2rem;
+    font-weight: 700;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        span {
+            font-size: 2rem;
+        }
+    }
+}
+
+#about-con {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+#history-con {
+    margin: 3rem auto;
+    
+    #history-images {
+        display: flex;
+    }
+}
+
+#news-con {
+    background-color: a.$secondary-color;
+    margin: 3rem auto;
 }
