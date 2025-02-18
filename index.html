@@ -109,7 +109,7 @@
         </div>
     </section>
 
-    <!--About-->
+    <!--History-->
     <section id="history-con" class="grid-con">
         <h2 class="hidden">History Section</h2>
         <div id="history-images">
@@ -127,6 +127,51 @@
                 pivotal battles like Ypres, the Somme, and Vimy. Their timely arrival in 1914 helped prevent a German
                 breakthrough, shaping the course of the war.</p>
             <a class="section-button" href="#">Learn More</a>
+        </div>
+    </section>
+
+
+    <!--History-->
+    <section id="partners-con" class="grid-con">
+        <h2 class="section-header">Our Partners</h2>
+        <div id="partners">
+            <img src="images/placeholder.webp" alt="placeholder image">
+            <img src="images/placeholder.webp" alt="placeholder image">
+            <img src="images/placeholder.webp" alt="placeholder image">
+            <img src="images/placeholder.webp" alt="placeholder image">
+        </div>
+    </section>
+
+    <!--Contact-->
+    <section id="contact-con" class="grid-con">
+        <h2 class="hidden">Contact Form</h2>
+        <div class="col-span-full">
+            <h3 class="dot-header">Contact</h3>
+            <h4 class="section-header">Get In Touch</h4>
+            <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or have
+                a general inquiry, fill out the form below, and we'll get back to you soon.</p>
+        </div>
+        <form id="contact-form" action="#" method="POST">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" class="email" name="email" placeholder="Email" required>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Subject</option>
+                <option value="donation">Donation Inquiry</option>
+                <option value="volunteer">Volunteer Opportunities</option>
+                <option value="sponsorship">Sponsorship</option>
+                <option value="general">General Inquiry</option>
+            </select>
+            <textarea id="message" name="message" rows="3" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!--Support Banner-->
+    <section id="support-con" class="grid-con">
+        <h2 class="hidden">Support Banner</h2>
+        <div class="col-span-full">
+            <h3 class="section-header">Support the Memorial</h3>
+            <a class="section-button" href="#">Make a Donation</a>
         </div>
     </section>
 
@@ -189,7 +234,7 @@
         <div id="newsletter-signup">
             <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
             <form id="newsletter-form" action="#" method="POST">
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
                 <button type="submit">Subscribe Now</button>
             </form>
         </div>
