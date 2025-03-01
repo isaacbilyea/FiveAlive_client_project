@@ -40,6 +40,20 @@
     }
 }
 
+.right-br {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    mask-image: url('../images/right-br.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 @media  screen and (min-width: 768px) {
     .top-br {
         margin-top: 0rem;
@@ -49,8 +63,11 @@
         margin-bottom: 0rem;
     }
 
-
     .left-br {
         margin-bottom: 0rem;
     }    
+
+    .right-br {
+        margin-bottom: 0rem;
+    }  
 }

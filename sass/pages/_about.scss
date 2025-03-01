@@ -1,5 +1,34 @@
 @use '../abstracts' as a;
 
+#about-hero-con {
+    .section-image-con {
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 3rem;
+        position: relative;
+
+        
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask-image: url('../images/about-mask.svg');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+    }
+}
+
 #mission-con {
     display: flex;
     flex-direction: column;
@@ -9,19 +38,46 @@
     }
 
     .mission {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
+
         .mission-box {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: lightgray;
-            color: black;
-            height: 20rem;
+            color: a.$alt-text-color;
+            font-weight: 700;
+            font-size: 1.75rem;
+            height: 25rem;
             border-radius: 0.5rem;
             margin-top: 4rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            
+            span {
+                z-index: 2;
+            }
+            
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: rgba(a.$tertiary-color, 0.7);
+                border-radius: 0.5rem;
+                z-index: 1;
+            }
+        }
+        
+        &:nth-child(1) .mission-box {
+            background-image: url('../images/mission-1.png');
+        }
+        
+        &:nth-child(2) .mission-box {
+            background-image: url('../images/mission-2.png');
+        }
+        
+        &:nth-child(3) .mission-box {
+            background-image: url('../images/mission-3.png');
         }
 
         .mission-text-container {
@@ -65,6 +121,7 @@
             border: none;
             cursor: pointer;
             padding: 0;
+            font-weight: 300;
         }
 
         .arrow {
@@ -131,6 +188,34 @@
 }
 
 @media screen and (min-width: 1200px) {
+
+    #about-hero-con {
+        .section-image-con {
+            width: 50%;
+        }
+    }
+
+    #vision-con {
+
+        .section-text-con {
+            width: 45%;
+            margin-left: 2rem;
+        }
+    }
+
+    #mission-con {
+
+        #missions {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .mission {
+            width: 30%;
+        }
+    }
+
     #phases-con {
         align-items: flex-start;
     
@@ -147,17 +232,5 @@
         }
     }
 
-    #mission-con {
-
-        #missions {
-            display: flex;
-            justify-content: space-between;
-            gap: 3rem;
-        }
-
-        .mission {
-            width: 30%;
-        }
-    }
     
 }
