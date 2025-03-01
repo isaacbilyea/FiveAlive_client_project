@@ -12,6 +12,7 @@ section {
     position: relative;
     padding-left: 0.75rem;
     font-weight: 400;
+    margin-bottom: 0.5rem;
 
     &::before {
         content: '';
@@ -28,7 +29,7 @@ section {
 }
 
 .section-header {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
