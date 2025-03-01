@@ -63,7 +63,16 @@ input, textarea {
         --plyr-range-fill-background: #fff;
         --plyr-range-thumb-background: #B91A17;
     }
-}     
+}
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24;
+    cursor: pointer;
+}
 
 .donate-btn {
     border: none;
