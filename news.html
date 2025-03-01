@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -76,6 +78,12 @@
     <div class="bg-secondary">
         <section id="news-filters" class="full-width-grid-con">
             <h2 class="hidden">News Filters</h2>
+            <form class="col-span-full" id="news-search" action="#" method="POST">
+                <input type="text" name="text" placeholder="Search for News and Events">
+                <span class="material-symbols-rounded">
+                    search
+                </span>
+            </form>
             <div id="filter-con" class="col-span-full">
                 <a class="section-button" href="#">All</a>
                 <a class="section-button" href="#">News</a>
