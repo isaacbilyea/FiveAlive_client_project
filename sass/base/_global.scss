@@ -20,6 +20,11 @@ html, body {
     background-color: a.$primary-color;
 }
 
+body.menu-open {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width);
+}
+
 a, button {
     text-decoration: none;
     color: inherit;
