@@ -9,11 +9,37 @@
     color: a.$alt-text-color;
     padding: 2rem;
     font-weight: 700;
+    position: relative;
+    isolation: isolate;
 
-    div{
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('../images/donation-stats-banner.png');
+        background-size: cover;
+        z-index: -1;
+        filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5));
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(a.$tertiary-color, 0.6);
+        z-index: -1;
+    }
+
+    div {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
+        p {
+            line-height: 1.7;
+            filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5));
+        }
 
         span {
             font-size: 2rem;
