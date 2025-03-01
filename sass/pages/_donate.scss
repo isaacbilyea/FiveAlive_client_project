@@ -1,5 +1,12 @@
 @use '../abstracts' as a;
 
+#donate-hero-con {
+
+    .section-image-con {
+        margin-left: 2rem;
+    }
+}
+
 #help-con {
     display: flex;
     flex-direction: column;
