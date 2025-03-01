@@ -229,16 +229,20 @@
                 a general inquiry, fill out the form below, and we'll get back to you soon.</p>
         </div>
         <form id="contact-form" action="#" method="POST">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <input type="email" class="email" name="email" placeholder="Email" required>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" class="email" name="email" required>
+            <label for="name">Subject</label>
             <select id="subject" name="subject" required>
-                <option value="" disabled selected>Subject</option>
+                <option value="" disabled selected></option>
                 <option value="donation">Donation Inquiry</option>
                 <option value="volunteer">Volunteer Opportunities</option>
                 <option value="sponsorship">Sponsorship</option>
                 <option value="general">General Inquiry</option>
             </select>
-            <textarea id="message" name="message" rows="3" placeholder="Message" required></textarea>
+            <label for="name">Message</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>

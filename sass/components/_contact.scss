@@ -7,14 +7,14 @@
     #contact-form {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
 
         input, textarea, select {
             border: none;
             background: none;
-            border-bottom: 1px solid a.$body-text-color;
-            padding: 0;
-            padding-bottom: 0.5rem;
+            border: 1px solid a.$secondary-accent-color;
+            border-radius: 0.25rem;
+            padding: 0 1rem;
+            height: 3rem;
             font: inherit;
             color: a.$body-text-color;
             text-align: left;
@@ -29,12 +29,22 @@
             }
         }
 
+        textarea {
+            min-height: 10rem;
+            padding: 1rem;
+        }
+
+        label {
+            margin: 1rem 0 0.5rem 0;
+        }
+
         button {
             border: none;
             background-color: a.$secondary-accent-color;
             color: a.$alt-text-color;
-            padding: 0.5rem 2rem;
+            padding: 0.5rem 2.5rem;
             border-radius: 2rem;
+            margin-top: 2rem;
             width: fit-content;
             font-weight: 600;
         }
@@ -47,12 +57,17 @@
         flex-direction: row;
         justify-content: space-between;
 
+        p {
+            width: 80%;
+        }
+
         #contact-text {
             width: 40%;
+            margin-top: 1rem;
         }
 
         #contact-form {
-            width: 55%;
+            width: 60%;
         }
     }
     
