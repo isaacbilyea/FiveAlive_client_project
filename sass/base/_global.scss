@@ -48,6 +48,10 @@ input, textarea {
     background-color: a.$tertiary-color;
 }
 
+.bg-accent {
+    background-color: rgba(a.$primary-accent-color,0.9);
+}
+
 .video-con {
     width: 90%;
     margin: 3rem auto;
