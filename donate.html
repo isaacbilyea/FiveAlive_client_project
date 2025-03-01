@@ -68,7 +68,7 @@
             <a class="section-button" href="#">Donate Now</a>
         </div>
         <div class="br-image top-br col-span-full section-image-con">
-            <img src="images/placeholder.webp" alt="placeholder image">
+            <img src="images/donate-hero.png" alt="rakhi celebration group photo">
         </div>
     </section>
 
@@ -85,55 +85,68 @@
     </div>
 
     <!--Donation Video-->
-    <section id="donation-video-con" class="grid-con section-flex">
-        <h2 class="hidden">Donation Video Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="dot-header">Origins</h3>
-            <h4 class="section-header">Behind the Memorial</h4>
-            <p class="section-text">Discover the story behind the Brothers in Arms Memorial. In this interview, explore
-                the inspiration and vision that brought this tribute to life.</p>
-        </div>
-        <div class="br-image left-br col-span-full section-image-con">
-            <div class="col-span-full">
-                <video class="player" preload="metadata" poster="images/poster.png">
-                    <source src="videos/test.mp4" type="video/mp4">
-                    <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.</p>
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!--Volunteer-->
     <div class="bg-secondary">
-        <section id="volunteer-con" class="grid-con section-flex">
-            <h2 class="hidden">Volunteer Section</h2>
-            <div class="br-image left-br col-span-full section-image-con">
-                <img src="images/placeholder.webp" alt="placeholder image">
-            </div>
+        <section id="donation-video-con" class="grid-con section-flex">
+            <h2 class="hidden">Donation Video Section</h2>
             <div class="col-span-full section-text-con">
-                <h3 class="dot-header">Help Us</h3>
-                <h4 class="section-header">Volunteer</h4>
-                <p class="section-text">Help organize events, maintain the park, or spread the word. Every hour makes a
-                    difference.</p>
-                <a class="section-button" href="#">Get Involved</a>
+                <h3 class="dot-header">Origins</h3>
+                <h4 class="section-header">Behind the Memorial</h4>
+                <p class="section-text">Discover the story behind the Brothers in Arms Memorial. In this interview,
+                    explore
+                    the inspiration and vision that brought this tribute to life.</p>
+            </div>
+            <div class="col-span-full">
+                <div class="col-span-full">
+                    <video class="player" preload="metadata" poster="images/poster.png">
+                        <source src="videos/test.mp4" type="video/mp4">
+                        <p>Oops, something went wrong. You may be using an outdated browser or have javascript disabled.
+                        </p>
+                    </video>
+                </div>
             </div>
         </section>
     </div>
 
-    <!--Sponsor-->
-    <section id="sponsor-con" class="grid-con section-flex">
-        <h2 class="hidden">Sponsor Section</h2>
+    <!--Volunteer & Support-->
+    <section id="help-con" class="grid-con section-flex">
+        <h2 class="hidden">Volunteer and Sponsor Section</h2>
         <div class="col-span-full section-text-con">
-            <h3 class="dot-header">Join Us</h3>
-            <h4 class="section-header">Sponsor</h4>
-            <p class="section-text">Partner with us to fund key elements of the memorial, from stone installations to
-                community outreach.</p>
-            <a class="section-button" href="#">Partner With Us</a>
+            <h3 class="dot-header">Get Involved</h3>
+            <h4 class="section-header">Join Us in Making Difference</h4>
+            <p class="section-text">Join us as a sponsor or volunteer to help make a difference.</p>
         </div>
-        <div class="br-image left-br col-span-full section-image-con">
-            <img src="images/placeholder.webp" alt="placeholder image">
+        <div id="help-card-wrapper" class="col-span-full">
+            <div class="help-card">
+                <img src="images/volunteer.png" alt="srishti foundation volunteers">
+                <h4>Volunteer</h4>
+                <p>Help organize events, maintain the park, or spread the word. Every hour makes a difference.</p>
+                <a class="section-button" href="#">Join Us</a>
+            </div>
+            <div class="help-card">
+                <img src="images/sponsor.png" alt="srishti foundation sponsors">
+                <h4>Sponsor</h4>
+                <p>Partner with us to fund key elements of the memorial, from stone installations to community
+                    outreach.</p>
+                <a class="section-button" href="#">Join Us</a>
+            </div>
         </div>
     </section>
+
+    <!--Newsletter-->
+    <div class="bg-accent">
+        <section id="newsletter-con" class="grid-con">
+            <div id="newsletter-text" class="col-span-full">
+                <h3>Subscribe to our Newsletter</h3>
+                <p>Subscribe to receive updates on our memorial, stories of courage, and upcoming events. Don’t miss
+                    out—sign up today!</p>
+            </div>
+
+            <form class="newsletter-form col-span-full" action="#" method="POST">
+                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="section-button">Subscribe</button>
+            </form>
+        </section>
+    </div>
 
     <!--FAQ-->
     <section id="faq-con" class="grid-con">
@@ -141,7 +154,7 @@
             <h3 class="dot-header">Frequently Asked Questions (FAQ)</h3>
             <h4 class="section-header">You must Have a Question</h4>
             <p class="section-text">Here’s some Frequently Asked Question, if you still have a question about us,
-                don’t hesitate to Contact us!</p>
+                don’t hesitate to <a href="#contact">Contact us</a>!</p>
         </div>
 
         <div class="faq-card-con col-span-full">
@@ -219,33 +232,36 @@
     </section>
 
     <!--Contact-->
-    <section id="contact-con" class="grid-con">
-        <h2 class="hidden">Contact Form</h2>
-        <div id="contact-text" class="col-span-full">
-            <h3 class="dot-header">Contact</h3>
-            <h4 class="section-header">Get In Touch</h4>
-            <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or
-                have
-                a general inquiry, fill out the form below, and we'll get back to you soon.</p>
-        </div>
-        <form id="contact-form" action="#" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" class="email" name="email" required>
-            <label for="name">Subject</label>
-            <select id="subject" name="subject" required>
-                <option value="" disabled selected></option>
-                <option value="donation">Donation Inquiry</option>
-                <option value="volunteer">Volunteer Opportunities</option>
-                <option value="sponsorship">Sponsorship</option>
-                <option value="general">General Inquiry</option>
-            </select>
-            <label for="name">Message</label>
-            <textarea id="message" name="message" rows="3" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <div class="bg-secondary">
+        <a id="contact"></a>
+        <section id="contact-con" class="grid-con">
+            <h2 class="hidden">Contact Form</h2>
+            <div id="contact-text" class="col-span-full">
+                <h3 class="dot-header">Contact</h3>
+                <h4 class="section-header">Get In Touch</h4>
+                <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or
+                    have
+                    a general inquiry, fill out the form below, and we'll get back to you soon.</p>
+            </div>
+            <form id="contact-form" action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" class="email" name="email" required>
+                <label for="name">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected></option>
+                    <option value="donation">Donation Inquiry</option>
+                    <option value="volunteer">Volunteer Opportunities</option>
+                    <option value="sponsorship">Sponsorship</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+                <label for="name">Message</label>
+                <textarea id="message" name="message" rows="3" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
 
     <!--Support Banner-->
     <div class="bg-tertiary">

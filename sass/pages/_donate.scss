@@ -1,0 +1,57 @@
+@use '../abstracts' as a;
+
+#help-con {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+
+    .section-text-con {
+        width: 100%;
+    }
+
+    #help-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 3rem;
+
+        .help-card {
+            padding: 2rem;
+            background-color: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+            h4 {
+                font-size: 1.5rem;
+                margin: 0;
+                margin-top: 1rem;
+            }
+
+            p {
+                margin-top: 0.25rem;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &:last-child .section-button {
+                background-color: a.$primary-accent-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #help-con {
+        padding: 5rem 0 5rem 0;
+
+        #help-card-wrapper {
+            flex-direction: row;
+        }
+    }
+}
