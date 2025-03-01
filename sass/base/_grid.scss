@@ -40,8 +40,8 @@
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 20px;
-       padding-left: 16px;
-       padding-right: 16px;
+       padding-left: 30px;
+       padding-right: 30px;
     }
  
     .m-col-span-1	{grid-column: span 1 / span 1;}
