@@ -146,6 +146,15 @@
     }
 }
 
+#donation-video-con {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .section-text-con {
+        margin-bottom: 1rem;
+    }
+}
 
 #phases-con {
     display: flex;
@@ -172,6 +181,10 @@
         .dot-header {
             margin-top: 1rem;
         }
+
+        .section-image-con {
+            margin-top: 3rem;
+        }
     }
 
     #phase-2 {
@@ -180,10 +193,22 @@
     }
 }
 
+#sristhi-con {
+    .section-text-con {
+        margin-top: 2rem;
+    }
+}
+
 #location-con {
     iframe {
         width: 100%;
         height: 20rem;
+    }
+}
+
+#location-con {
+    .section-text-con {
+        margin-bottom: 2rem;
     }
 }
 
@@ -216,6 +241,14 @@
         }
     }
 
+    #features-con {
+
+        .section-text-con {
+            width: 45%;
+            margin-left: 2rem;
+        }
+    }
+
     #phases-con {
         align-items: flex-start;
     
@@ -224,13 +257,60 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin-top: 2rem;
+            margin-top: 5rem;
+
+            .dot-header {
+                margin-top: 0;
+            }
+
+            .section-image-con {
+                margin-top: 0;
+            }
+
+            p {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        #phase-1, #phase-3 {
+            .section-text-con {
+                width: 45%;
+                margin-left: 5rem;
+
+                .section-text {
+                    width: 95%;
+                }
+            }
         }
 
         #phase-2 {
             flex-direction: row;
+            .section-text-con {
+                width: 40%;
+                margin-right: 5rem;
+            }
+        }
+        
+        .section-image-con {
+            width: 50%;
         }
     }
 
+    #sristhi-con {
+
+        .section-text-con {
+            margin-top: 3rem;
+            width: 45%;
+            margin-left: 4rem;
+        }
+    }
+
+    #location-con {
+        .section-text-con {
+            margin-bottom: 0rem;
+            width: 45%;
+            margin-right: 2rem;
+        }
+    }
     
 }
