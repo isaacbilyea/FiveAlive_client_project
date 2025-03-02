@@ -1,0 +1,17 @@
+@use '../abstracts' as a;
+
+.battle-section:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+#battle-start {
+    font-size: 1.25rem;
+}
+
+.bg-tertiary .battle-section {
+    color: a.$alt-text-color;
+
+    .section-header {
+        color: a.$alt-text-color;
+    }
+}

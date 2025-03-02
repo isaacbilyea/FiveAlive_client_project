@@ -132,15 +132,49 @@
     }
 }
 
-#victoria-crosses-con, #regiments-con {
-    display: flex;
-    flex-direction: column-reverse;
-} 
+#india-support-con {
 
-#letters-con {
-    #letter-images-con {
-        margin: 0 auto;
-        margin-top: 5rem;
+    h4 {
+        margin-bottom: 1.25rem;
+    }
+
+    .section-button {
+        margin-top: 2rem;
+    }
+}
+
+#british-quote-con {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    p:first-of-type {
+        font-style: italic;
+    }
+    p:last-of-type {
+        text-align: right;
+        font-size: 1.25rem;
+    }
+}
+
+.history-section-flex {
+
+    .section-text-con {
+        width: 100%;
+
+        .section-header-con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            a {
+                padding: 0.5rem 1.25rem;
+            }
+        }
+
+        p {
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -204,21 +238,4 @@
         flex-direction: row;
     }
     
-    #letters-con {
-        #letters-text-con {
-            width: 100%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-    
-            h4 {
-                margin-bottom: 1rem;
-            }
-    
-            p {
-                width: 60%;
-                margin: 0;
-            }
-        }
-    }
 }
