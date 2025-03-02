@@ -127,6 +127,17 @@ input, textarea {
             width: 1.3rem; 
         }
     }
+
+    &.inverted {
+
+        h3 {
+            color: a.$heading-text-color;
+        }
+        
+        .section-button {
+            background-color: a.$secondary-accent-color;
+        }
+    }
 }
 
 
