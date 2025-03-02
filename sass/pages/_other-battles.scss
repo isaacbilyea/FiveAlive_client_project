@@ -1,0 +1,61 @@
+@use '../abstracts' as a;
+
+#battles-list {
+    color: a.$alt-text-color;
+
+    .battles-list-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .battle-group {
+        margin-bottom: 2rem;
+
+        h3 {
+            color: a.$alt-text-color;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .battle-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.5rem;
+                width: 0.25rem;
+                height: 0.25rem;
+                background-color: a.$alt-text-color;
+                border-radius: 50%;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #battles-list {
+        .battles-list-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
