@@ -29,12 +29,12 @@
 
         input {
             border: none;
-            border-radius: 10rem;
+            border-radius: 0.25rem;
             width: 55%;
             background-color: rgba(a.$alt-text-color,0.5);
             color: a.$alt-text-color;
             padding: 0.5rem;
-            padding-left: 1.25rem;
+            padding-left: 1rem;
             font-size: 1rem;
 
             &::placeholder {
