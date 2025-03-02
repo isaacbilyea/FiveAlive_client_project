@@ -1,12 +1,29 @@
 @use '../abstracts' as a;
 
 #timeline-wrapper {
-    padding: 10rem 0;
+    padding: 3rem 0;
+
+    .section-text-con {
+        margin: 0;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        
+        h3, h4, p {
+            color: a.$alt-text-color;
+
+            &::before {
+                background-color: a.$alt-text-color;
+            }
+        }
+    }
 }
 
 #timeline {
     position: relative;
     width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
     color: a.$alt-text-color;
 
@@ -45,10 +62,10 @@
             top: 50%;
             width: 0.8rem;
             height: 0.8rem;
-            background: a.$alt-text-color;
+            background: a.$secondary-color;
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
+            border: a.$alt-text-color 5px solid;
     
             &::before {
                 content: '';
@@ -111,10 +128,7 @@
     
         &.active {
             .timeline-dot {
-                background: a.$secondary-accent-color;
-                transform: translate(-50%, -50%) scale(1.05);
-                transition: all 150ms ease;
-                border: a.$alt-text-color 5px solid;
+                background: a.$primary-accent-color;
             }
     
             .timeline-content div {
@@ -125,6 +139,14 @@
 }
 
 @media screen and (min-width: 768px) {
+
+    #timeline-wrapper {
+        padding: 10rem 0;
+
+        .section-text-con {
+            margin-bottom: 10rem;
+        }
+    }
     
     #timeline {
         width: 95%;
