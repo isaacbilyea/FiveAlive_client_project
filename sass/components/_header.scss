@@ -42,7 +42,7 @@
         #main-nav {
             display: block;
             position: fixed;
-            background-color: a.$primary-color;
+            background-color: a.$tertiary-color;
             z-index: 4;
             top: 8rem;
             left: 0;
@@ -62,7 +62,6 @@
                 list-style: none;
                 padding: 0;
                 margin: 0;
-                margin-top: -2rem;
                 transform: translateY(-1rem);
                 transition: transform 0.3s ease-in-out;
             }
@@ -72,7 +71,7 @@
             }
         
             li {
-                margin-left: 2.5rem;
+                margin-left: 3rem;
                 margin-top: 1rem;
                 position: relative;
                 opacity: 0;
@@ -85,17 +84,72 @@
             }
         
             a {
+                color: a.$alt-text-color;
                 text-decoration: none;
+                font-weight: 300;
                 font-size: 1.5rem;
                 display: flex;
                 align-items: center;
 
                 &::before {
-                    content: '\276F';
-                    font-size: 1rem;
-                    margin-right: 1rem;
-                    line-height: 1;
+                    content: url('../images/menu-arrow.svg');
+                    width: 0.5rem;
+                    margin-right: 1.25rem;
                 }
+            }
+        }
+
+        #sm-icons-con {
+            position: fixed;
+            top: 30rem;
+            left: 0;
+            right: 0;
+            margin-left: 3rem;
+            opacity: 0;
+            transform: translateY(1rem);
+            z-index: 4;
+            display: none;
+            
+            h4 {
+                color: a.$alt-text-color;
+                margin-bottom: 1rem;
+                font-weight: 300;
+            }
+            
+            .sm-icons {
+                display: flex;
+                gap: 1.5rem;
+                
+                a {
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+            
+            &.visible {
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 300ms ease-in, transform 300ms ease-in;
+            }
+        }
+        
+        #main-nav.show + #sm-icons-con {
+            display: block;
+            animation: showIcons 150ms forwards;
+            animation-delay: 150ms;
+        }
+        
+        @keyframes showIcons {
+            0% {
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
@@ -197,6 +251,7 @@
                         
                         a {
                             font-size: 1rem;
+                            color: a.$body-text-color;
 
                             &.active {
                                 text-decoration: underline;
@@ -212,6 +267,10 @@
             }
 
             #menu-button {
+                display: none;
+            }
+
+            #sm-icons-con {
                 display: none;
             }
         }

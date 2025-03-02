@@ -103,7 +103,7 @@
                 width: 55%;
                 background-color: a.$alt-text-color;
                 color: a.$heading-text-color;
-                padding: 0.5rem;
+                padding-left: 1rem;
 
                 &::placeholder {
                     color: a.$heading-text-color;
@@ -150,6 +150,7 @@
     #bottom-footer {
         display: flex;
         flex-direction: column-reverse;
+        margin-top: 2rem;
 
         p {
             width: 80%;
@@ -269,23 +270,10 @@
             max-width: 1200px;
         }
 
-    
         #bottom-footer {
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0 auto;
-            margin-top: 1rem;
-            align-items: center;
             max-width: 1200px;
-
-            p {
-                text-align: left;
-                margin: 0;
-            }
-
-            .donate-btn {
-                margin: 0;
-            }
+            margin: 0 auto;
+            margin-top: 2rem;
         }
     }  
 }
