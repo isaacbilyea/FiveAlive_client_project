@@ -21,13 +21,13 @@
     <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script type="module" src="js/home.js"></script>
-    <title>BIA | Other Battles</title>
+    <script type="module" src="js/letters.js"></script>
+    <title>BIA | Letters</title>
 </head>
 
 <body>
     <!--Header-->
-    <h1 class="hidden">Other Battles</h1>
+    <h1 class="hidden">Letters</h1>
     <header id="main-header" class="grid-con">
 
         <a href="index.html" class="logo-anchor">
@@ -77,12 +77,14 @@
     <section id="home-hero-con" class="grid-con section-flex">
         <h2 class="hidden">Hero Section</h2>
         <div class="col-span-full section-text-con">
-            <h3 class="hidden">Other Battles</h3>
-            <h4 class="section-header hero-header">Other Battles Of World War One</h4>
-            <p class="section-text">Here are additional battles in which Indian regiments played a crucial role during
-                World War One, extending beyond Europe to campaigns in Mesopotamia, Africa, and the Middle East. Their
-                contributions were vital in various theaters of war, demonstrating resilience, bravery, and strategic
-                importance in key conflicts across different regions.</p>
+            <h3 class="hidden">Letters</h3>
+            <h4 class="section-header hero-header">Letters By<br>
+                Indian Soldiers</h4>
+            <p class="section-text">This section features letters written by Indian soldiers during World War I,
+                offering a rare and personal glimpse into their experiences on the battlefield and beyond. Through their
+                words, we see stories of bravery, sacrifice, hardship, and longing for home. These letters serve as a
+                powerful testament to the resilience and emotions of those who fought, providing a deeply human
+                perspective on history.</p>
         </div>
         <div class="br-image top-br col-span-full section-image-con">
             <img src="images/sample.png" alt="REPLACE ME">
@@ -91,93 +93,99 @@
 
     <!--Main Content-->
     <div class="bg-tertiary">
-        <section class="grid-con battles-con" id="battles-list">
-            <div class="battles-list-container col-span-full">
-                <div class="battles-column">
-                    <div class="battle-group">
-                        <h3>Western Front Europe Battles</h3>
-                        <ul class="battle-list">
-                            <li>First Battle of Ypres</li>
-                            <li>Battle of Neuve Chapelle</li>
-                            <li>Battle of Aubers Ridge</li>
-                            <li>Battle of Festubert</li>
-                            <li>Battle of Loos</li>
-                            <li>Battle of Somme</li>
-                            <li>Battle of Bazentin</li>
-                            <li>Battle of Flers-Courcelette</li>
-                            <li>Advance to Hindenburg Line</li>
-                            <li>Battle of Cambrai</li>
-                            <li>Battle of La Bassee</li>
-                        </ul>
-                    </div>
+        <section class="full-width-grid-con" id="letters-section">
+            <h2 class="hidden">Letters</h2>
 
-                    <div class="battle-group">
-                        <h3>Attempts to Relieve Kut</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Sheikh Sa'ad</li>
-                            <li>Battle of the Wadi</li>
-                            <li>Battle of Hanna</li>
-                            <li>Battle of Dujaila Redoubt</li>
-                            <li>First Battle of Kut</li>
-                            <li>Second Battle of Kut</li>
-                            <li>Fall of Baghdad</li>
-                            <li>Samarrah Offensive</li>
-                            <li>Battle of Jebel Hamlin</li>
-                            <li>Battle of Istabulat</li>
-                            <li>Battle of Ramadi</li>
-                            <li>Action of Khan Baghdadi</li>
-                            <li>Battle of Sharqat</li>
-                        </ul>
+            <div class="grid-con" id="letters-con">
+                <div id="soldier-info">
+                    <div id="soldier-image">
+                        <img src="images/letters-soldier.png" alt="photo of soldiers">
                     </div>
+                    <h3 id="soldier-name">South Indian Muslim</h3>
+                    <p id="letter-to">To: His Friend</p>
                 </div>
 
-                <div class="battles-column">
-                    <div class="battle-group">
-                        <h3>Mesopotamia Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Fao Landing</li>
-                            <li>Fall of Basra</li>
-                            <li>Battle of Qurna</li>
-                            <li>Battle of Shaiba</li>
-                            <li>Battle of Es Sinn</li>
-                            <li>Battle of Ctesiphon</li>
-                            <li>Siege of Kut</li>
-                        </ul>
-                    </div>
-
-                    <div class="battle-group">
-                        <h3>Sinai and Palestine Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Megiddo</li>
-                            <li>First Suez Canal Offensive</li>
-                        </ul>
-                    </div>
-
-                    <div class="battle-group">
-                        <h3>Gallipoli Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Second Battle of Krithia</li>
-                            <li>Third Battle of Krithia</li>
-                            <li>Battle of Gully Ravine</li>
-                        </ul>
-                    </div>
-
-                    <div class="battle-group">
-                        <h3>East Africa Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Tanga</li>
-                            <li>Battle of Kilimanjaro</li>
-                        </ul>
-                    </div>
-
-                    <div class="battle-group">
-                        <h3>China</h3>
-                        <ul class="battle-list">
-                            <li>Siege of Tsingtao</li>
-                        </ul>
+                <div id="letter-content">
+                    <div id="letter">
+                        <p>"If God enables me to see my people again, I shall look upon it as a new life"</p>
+                        <p id="letter-date">February 9th, 1915</p>
                     </div>
                 </div>
             </div>
+
+            <div id="letter-navigation" class="col-span-full">
+                <div class="letter-box">
+                    <span class="letter-number">1</span>
+                    <p>Muslim Officer to His Brother</p>
+                    <p class="letter-date">December 1914</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">2</span>
+                    <p>A Garhwali to His Father</p>
+                    <p class="letter-date">January 14th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">3</span>
+                    <p>A Wounded Sikh to His Brother</p>
+                    <p class="letter-date">January 18th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">4</span>
+                    <p>A Wounded Sikh to His Father</p>
+                    <p class="letter-date">January 18th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">5</span>
+                    <p>A Wounded Sikh to His Brother</p>
+                    <p class="letter-date">January 21st, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">6</span>
+                    <p>A Wounded Punjabi Rajput to a Relative</p>
+                    <p class="letter-date">January 29th, 1915</p>
+                </div>
+                <div class="letter-box active">
+                    <span class="letter-number">7</span>
+                    <p>South Indian Muslim to a Friend</p>
+                    <p class="letter-date">February 9th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">8</span>
+                    <p>The 20th Deccan Horse</p>
+                    <p class="letter-date">July 14th, 1916</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">9</span>
+                    <p>Rifleman Amar Singh Rawat</p>
+                    <p class="letter-date">March 26th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">10</span>
+                    <p>Jemadar Khan Muhammad</p>
+                    <p class="letter-date">March 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">11</span>
+                    <p>Rifleman Amar Singh Rawat</p>
+                    <p class="letter-date">April 1st, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">12</span>
+                    <p>A Sikh Sepoy to His Brother</p>
+                    <p class="letter-date">April 5th, 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">13</span>
+                    <p>Havildar Ghufran Khan</p>
+                    <p class="letter-date">April 1915</p>
+                </div>
+                <div class="letter-box">
+                    <span class="letter-number">14</span>
+                    <p>Jemadar Indar Singh</p>
+                    <p class="letter-date">September 15th, 1916</p>
+                </div>
+            </div>
+
         </section>
     </div>
 
