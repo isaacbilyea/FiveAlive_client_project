@@ -1,8 +1,8 @@
 @use '../abstracts' as a;
 
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .dot-header {
@@ -60,6 +60,11 @@ section {
 }
 
 @media screen and (min-width: 1200px) {
+
+    section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
   
     .section-text-con {
         width: 50%;
