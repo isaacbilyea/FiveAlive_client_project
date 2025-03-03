@@ -1,0 +1,45 @@
+.thankyou-text-intro {
+    font-size: 100px;
+    margin: 0;
+    padding: 0px 62px 0px 62px;
+}
+
+.thankyou-container {
+    margin: 0;
+    padding: 0px 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .thankyou-text {
+        width: 50%;
+        height: auto;
+    }
+
+    .thankyou-image {
+        margin: 0 auto;
+    }
+
+}
+
+.info {
+    .info-text-inline {
+        display: flex;
+        align-items: baseline;
+        margin-top: auto;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        a {
+            margin-left: 10px;
+            font-weight: 200;
+        }
+    }
+
+    .info-email {
+        font-weight: 300;
+    }
+}
