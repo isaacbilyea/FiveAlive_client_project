@@ -1,23 +1,26 @@
-export function letterNav() {
-    const letterNav = document.querySelector('#letter-navigation');
-    const allCards = document.querySelectorAll('.letter-box');
+export function awardsNav() {
 
+    //VARIABLES
+    const awardNav = document.querySelector('#award-navigation');
+    const allCards = document.querySelectorAll('.award-box');
+
+    //FUNCTIONS
     function centerCard() {
-        const activeCard = document.querySelector('.letter-box.active');
-        const navWidth = letterNav.offsetWidth;
+        const activeCard = document.querySelector('.award-box.active');
+        const navWidth = awardNav.offsetWidth;
         const cardWidth = activeCard.offsetWidth;
         const cardLeft = activeCard.offsetLeft;
         const scrollTo = cardLeft - (navWidth/2) + (cardWidth/2);
 
-        gsap.to(letterNav, {
+        gsap.to(awardNav, {
             duration: 0.5,
             scrollLeft: scrollTo,
             ease: "power2.inOut"
         });
     }
-    
+
     function changeCard(card) {
-        const lastCard = document.querySelector('.letter-box.active');
+        const lastCard = document.querySelector('.award-box.active');
         lastCard.classList.remove('active');
         card.classList.add('active');
         centerCard();
@@ -31,4 +34,3 @@ export function letterNav() {
     window.addEventListener('load', centerCard);
     window.addEventListener('resize', centerCard);
 }
-
