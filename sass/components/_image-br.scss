@@ -30,6 +30,11 @@
     mask-image: url('../images/right-br.svg');
 }
 
+.right-br-thk {
+    margin-bottom: 3rem;
+    mask-image: url('../images/right-br-thk.svg');
+}
+
 @media  screen and (min-width: 768px) {
     .br-image {
         margin: 0;
