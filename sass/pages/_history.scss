@@ -156,28 +156,10 @@
     }
 }
 
-.history-section-flex {
-
-    .section-text-con {
-        width: 100%;
-
-        .section-header-con {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            a {
-                padding: 0.5rem 1.25rem;
-            }
-        }
-
-        p {
-            margin-top: 2rem;
-        }
-    }
+#other-battles-con, #letters-con {
+    display: flex;
+    flex-direction: column-reverse;
 }
-
 
 @media screen and (min-width: 768px) {
     #history-hero-con {
@@ -234,7 +216,7 @@
         }
     }
 
-    #victoria-crosses-con, #regiments-con {
+    #other-battles-con, #letters-con {
         flex-direction: row;
     }
     
