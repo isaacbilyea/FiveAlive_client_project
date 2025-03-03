@@ -54,19 +54,17 @@ input, textarea {
 }
 
 .video-con {
-    width: 90%;
-    margin: 3rem auto;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 0.75rem;
     
     .plyr--video {
-        --plyr-color-main: #B91A17;
+        --plyr-color-main: #9E2A2B;
         --plyr-control-icon-size: 1rem;
         --plyr-control-radius: 1.25rem;
-        --plyr-font-family: Arial, Georgia, sans-serif;
+        --plyr-font-family: Roboto, Arial, sans-serif;
         --plyr-control-spacing: 1rem;
         --plyr-range-fill-background: #fff;
-        --plyr-range-thumb-background: #B91A17;
+        --plyr-range-thumb-background: #9E2A2B;
     }
 }
 
