@@ -27,8 +27,10 @@ export function gsapThankyou() {
 
     timeline.from(".thankyou-image", { 
         opacity: 0, 
-        x: 100, 
-        duration: 0.8, 
-        ease: "power2.out" 
+        y: 50, 
+        filter: "blur(10px)",
+        duration: 1.2,
+        ease: "power3.out",
+        onComplete: () => gsap.to(".thankyou-image", { filter: "blur(0px)", duration: 0.3 })
     });
 }

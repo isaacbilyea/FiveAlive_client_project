@@ -15,6 +15,11 @@
     mask-image: url('../images/top-br.svg');
 }
 
+.top-br-thk {
+    margin-top: 3rem;
+    mask-image: url('../images/top-br-thk.svg');
+}
+
 .tall-top-br {
     margin-bottom: 2rem;
     mask-image: url('../images/tall-top-br.svg');
@@ -30,10 +35,6 @@
     mask-image: url('../images/right-br.svg');
 }
 
-.right-br-thk {
-    margin-bottom: 3rem;
-    mask-image: url('../images/right-br-thk.svg');
-}
 
 @media  screen and (min-width: 768px) {
     .br-image {
