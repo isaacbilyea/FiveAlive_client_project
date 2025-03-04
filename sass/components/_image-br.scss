@@ -35,6 +35,11 @@
     mask-image: url('../images/right-br.svg');
 }
 
+.changing-br {
+    margin-bottom: 3rem;
+    mask-image: url('../images/right-br.svg');
+}
+
 
 @media  screen and (min-width: 768px) {
     .br-image {
@@ -47,5 +52,10 @@
 
     .left-br {
         margin-left: 2rem;
+    }
+
+    .changing-br {
+        mask-image: url('../images/left-br.svg');
+        margin-bottom: 0;
     }
 }
