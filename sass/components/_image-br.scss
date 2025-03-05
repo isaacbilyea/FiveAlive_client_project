@@ -15,28 +15,23 @@
     mask-image: url('../images/top-br.svg');
 }
 
-.top-br-thk {
-    margin-top: 3rem;
-    mask-image: url('../images/top-br-thk.svg');
-}
-
-.tall-top-br {
-    margin-bottom: 2rem;
-    mask-image: url('../images/tall-top-br.svg');
-}
-
 .left-br {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     mask-image: url('../images/left-br.svg');
 }
 
 .right-br {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     mask-image: url('../images/right-br.svg');
 }
 
+.right-br-tall {
+    margin-bottom: 2rem;
+    mask-image: url('../images/right-br-tall.svg');
+}
+
 .changing-br {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     mask-image: url('../images/right-br.svg');
 }
 
@@ -47,6 +42,10 @@
     }
 
     .right-br {
+        margin-right: 2rem;
+    }
+
+    .right-br-tall {
         margin-right: 2rem;
     }
 

@@ -94,6 +94,18 @@
                 opacity: 1;
             }
         }
+
+        .video-source {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+            z-index: 4;
+            padding: 0.25rem 0.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 0.25rem;
+        }
     }
 }
 
