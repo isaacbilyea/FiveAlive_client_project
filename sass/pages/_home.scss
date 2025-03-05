@@ -164,15 +164,6 @@
     }
 }
 
-#history-con {
-    
-    #history-images {
-        display: flex;
-        gap: 1rem;
-
-    }   
-}
-
 #partners-con {
     display: flex;
     flex-direction: column;
@@ -283,23 +274,8 @@
     }
 
     #history-con {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-
-        .section-text-con {
-            width: 50%;
-            margin-left: 1rem;
-        }
-    
-        .section-image-con {
-            width: 50%;
-        }
-    
-        .section-text {
-            width: 90%;
-        }
     }
 
     #partners-con {

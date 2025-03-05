@@ -2,9 +2,9 @@
 
 #history-hero-con {
     position: relative;
-    height: 56.25vw;
     margin: 0;
     padding: 0;
+    height: 20rem;
     overflow: hidden;
     background-color: #000; 
     
@@ -45,54 +45,22 @@
     }
     
     .video-con {
+        display: none;
+    }
+
+    #image-con {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
-        margin: 0;
-        padding: 0;
-        border-radius: 0;
-        
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
+        opacity: 0.5;
+
+        img {
             width: 100%;
             height: 100%;
-            background-color: #000;
-            z-index: 3;
-            animation: fadeOut 1s ease forwards;
-            animation-delay: 1s;
-        }
-        
-        @keyframes fadeOut {
-            0% { 
-                opacity: 1; 
-            }
-            100% { 
-                opacity: 0; 
-            }
-        }
-        
-        .video-background {
-            position: relative;
-            width: 100%;
-            height: 100%; 
-            overflow: hidden;
-            
-            iframe {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 100%;
-                height: 100%;
-                transform: translate(-50%, -50%) scale(1.4);
-                pointer-events: none;
-                opacity: 1;
-            }
+            object-fit: cover;
         }
     }
 }
@@ -195,11 +163,81 @@
 
 @media screen and (min-width: 768px) {
     #history-hero-con {
+        height: 56.25vw;
         .section-text-con {
             p {
                 margin: 2rem auto;
                 width: 60%;
             }
+        }
+
+        .video-con {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            display: block;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                z-index: 3;
+                animation: fadeOut 1s ease forwards;
+                animation-delay: 1s;
+            }
+            
+            @keyframes fadeOut {
+                0% { 
+                    opacity: 1; 
+                }
+                100% { 
+                    opacity: 0; 
+                }
+            }
+            
+            .video-background {
+                position: relative;
+                width: 100%;
+                height: 100%; 
+                overflow: hidden;
+                
+                iframe {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    transform: translate(-50%, -50%) scale(1.4);
+                    pointer-events: none;
+                    opacity: 1;
+                }
+            }
+    
+            .video-source {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.75rem;
+                z-index: 4;
+                padding: 0.25rem 0.5rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 0.25rem;
+            }
+        }
+
+        #image-con {
+            display: none;
         }
     }
 
@@ -213,7 +251,7 @@
 
         hr {
             all: unset;
-            border: 1px solid a.$secondary-accent-color;
+            border: 1px solid a.$alt-text-color;
             transform: scale(1, 1.5);
         }
 
