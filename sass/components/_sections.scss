@@ -65,6 +65,10 @@ section {
     section {
         padding-top: 5rem;
         padding-bottom: 5rem;
+
+        &:first-of-type {
+            padding-top: 2rem;
+        }
     }
   
     .section-text-con {
