@@ -1,3 +1,3 @@
-import { gsapThankyou } from './modules/gsap-thk.js';
+import { gsapThankyou } from './modules/gsap-thank.js';
 
 gsapThankyou();

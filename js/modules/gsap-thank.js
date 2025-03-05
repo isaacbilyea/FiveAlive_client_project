@@ -1,7 +1,7 @@
 export function gsapThankyou() {
     const timeline = gsap.timeline();
 
-    timeline.from(".thankyou-text-intro", { 
+    timeline.from("#thankyou", { 
         opacity: 0, 
         y: -50, 
         duration: 0.8, 
@@ -25,12 +25,10 @@ export function gsapThankyou() {
         stagger: 0.2
     });
 
-    timeline.from(".thankyou-image", { 
+    timeline.from("#thankyou-image", { 
         opacity: 0, 
         y: 50, 
-        filter: "blur(10px)",
         duration: 1.2,
         ease: "power3.out",
-        onComplete: () => gsap.to(".thankyou-image", { filter: "blur(0px)", duration: 0.3 })
     });
 }
