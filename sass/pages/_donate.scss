@@ -58,6 +58,43 @@
     }
 }
 
+#donation-bubble {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeIn 0.5s ease forwards;
+
+    img {
+        width: 15rem;
+        height: auto;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &.hidden {
+        opacity: 0;
+        transform: scale(0.9);
+        pointer-events: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -66,6 +103,12 @@
 
         #help-card-wrapper {
             flex-direction: row;
+        }
+    }
+
+    #donation-bubble {
+        img {
+            width: 19rem;
         }
     }
 }
