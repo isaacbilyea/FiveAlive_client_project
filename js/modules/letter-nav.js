@@ -1,7 +1,10 @@
 export function letterNav() {
+
+    //VARIABLES
     const letterNav = document.querySelector('#letter-navigation');
     const allCards = document.querySelectorAll('.letter-box');
 
+    //FUNCTIONS
     function centerCard() {
         const activeCard = document.querySelector('.letter-box.active');
         const navWidth = letterNav.offsetWidth;

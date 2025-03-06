@@ -1,17 +1,26 @@
 export function faq() {
 
+    //VARIABLES
     const questions = document.querySelectorAll('.faq-question');
 
-    questions.forEach(question => {
-        question.addEventListener('click', () => {
-            const card = question.closest('.faq-card');
-            
-            document.querySelectorAll('.faq-card.active').forEach(activeCard => {
-                if (activeCard !== card) activeCard.classList.remove('active');
-            });
-            
-            card.classList.toggle('active');
+
+    //FUNCTIONS
+    function toggleFaq(e) {
+        const clickedCard = e.currentTarget.closest('.faq-card');
+        const activeCards = document.querySelectorAll('.faq-card.active');
+        
+        activeCards.forEach(card => {
+            if (card !== clickedCard) {
+                card.classList.remove('active');
+            }
         });
+        
+        clickedCard.classList.toggle('active');
+    }
+
+    //EVENT LISTENERS
+    questions.forEach(question => {
+        question.addEventListener('click', toggleFaq);
     });
 
 }
