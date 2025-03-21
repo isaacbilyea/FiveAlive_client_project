@@ -42,7 +42,6 @@ section {
     }
 }
 
-
 .section-text {
     text-align: left;
 }
@@ -50,14 +49,18 @@ section {
 .section-button {
     display: block;
     width: fit-content;
-    background-color: a.$secondary-accent-color;
+    background-color: a.$primary-accent-color;
     color: a.$alt-text-color;
     border: none;
-    padding: 0.75rem 2.5rem;
+    padding: 0.75rem 2rem;
     margin-top: 1.5rem;
     border-radius: 2rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.green-button {
+    background-color: a.$secondary-accent-color;
 }
 
 @media screen and (min-width: 1200px) {

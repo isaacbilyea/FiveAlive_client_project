@@ -8,7 +8,8 @@
     <link href="css/main.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_left_alt,arrow_right_alt,chevron_left,chevron_right">
@@ -27,63 +28,67 @@
 <body>
     <!--Header-->
     <h1 class="hidden">Home</h1>
-    <header id="main-header" class="grid-con">
+    <div class="bg-tertiary">
+        <header id="main-header" class="grid-con">
 
-        <a href="index.html" class="logo-anchor">
-            <div class="logo">
-                <img src="images/logo.svg" alt="logo">
-                <p>BROTHERS<br>IN ARMS</p>
-            </div>
-        </a>
+            <a href="index.html" class="logo-anchor">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <p>BROTHERS<br>IN ARMS</p>
+                </div>
+            </a>
 
-        <div id="nav-wrapper">
-            <nav id="main-nav">
-                <h2 class="hidden">Main Navigation</h2>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News &amp; Events</a></li>
-                </ul>
-            </nav>
-            <div id="sm-icons-con">
-                <h3>Follow Us</h3>
-                <div class="sm-icons">
-                    <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
-                            alt="facebook icon"></a>
-                    <a href="https://www.instagram.com/srishticanada" target="_blank"><img src="images/instagram.svg"
-                            alt="instagram icon"></a>
-                    <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
-                            src="images/youtube.svg" alt="youtube icon"></a>
-                    <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
-                            alt="twitter icon"></a>
+            <div id="nav-wrapper">
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                    </ul>
+                </nav>
+                <div id="sm-icons-con">
+                    <h3>Follow Us</h3>
+                    <div class="sm-icons">
+                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                                alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
+                                src="images/instagram.svg" alt="instagram icon"></a>
+                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
+                                src="images/youtube.svg" alt="youtube icon"></a>
+                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                                alt="twitter icon"></a>
+                    </div>
+                </div>
+                <a class="donate-btn" href="donate.html">Donate</a>
+                <div id="menu-button">
+                    <span>Menu</span>
+                    <div id="hamburger-menu">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
                 </div>
             </div>
-            <a class="donate-btn" href="donate.html">Donate <img src="images/flower.svg" alt="flower"></a>
-            <div id="menu-button">
-                <span>Menu</span>
-                <div id="hamburger-menu">
-                    <div id="line1"></div>
-                    <div id="line2"></div>
-                    <div id="line3"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
+    </div>
     <!--Hero-->
-    <section id="home-hero-con" class="grid-con section-flex hero-section">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="section-header hero-header">Brothers in Arms</h3>
-            <p class="section-text">The Brothers in Arms Memorial stands as North America's first tribute honouring the
-                alliance between Indian and Canadian soldiers during World War I. Your support is vital in bringing the
-                Brothers in Arms Memorial to life and preserving it for future generations.</p>
-            <a class="section-button" href="donate.html">Support Us</a>
-        </div>
-        <div class="br-image top-br col-span-full section-image-con">
-            <img src="images/home-hero.png" alt="Painting of soldiers">
-        </div>
-    </section>
+    <div class="bg-hero">
+        <section id="home-hero-con" class="grid-con section-flex hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <p>Welcome to the</p>
+                <h3 class="section-header hero-header">Brothers in Arms</h3>
+                <p class="section-text">A memorial that stands as North America's first tribute honouring
+                    the
+                    alliance between Indian and Canadian soldiers during World War I. Your support is vital in bringing
+                    the
+                    Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <a class="section-button" href="donate.html">Support Us</a>
+            </div>
+        </section>
+    </div>
 
     <!--Donation Stats-->
     <div class="bg-tertiary">
@@ -101,7 +106,7 @@
     <section id="about-con" class="grid-con section-flex">
         <h2 class="hidden">About Section</h2>
         <div class="col-span-full section-text-con">
-            <h3 class="dot-header">About</h3>
+            <h3 class="icon-header">About</h3>
             <h4 class="section-header">Where Courage<br>
                 Unites Nations</h4>
             <p class="section-text">Located at Veterans Memorial Parkway, this living tribute features 108 heritage
@@ -119,7 +124,7 @@
             <h2 class="hidden">News &amp; Events Section</h2>
             <div id="news-header" class="col-span-full">
                 <div>
-                    <h3 class="dot-header">News &amp; Events</h3>
+                    <h3 class="icon-header">News &amp; Events</h3>
                     <h4 class="section-header">Featured Updates</h4>
                 </div>
                 <a class="section-button" href="news.html">See All</a>
@@ -166,7 +171,7 @@
             <span class="material-symbols-rounded">chevron_left</span>
             <div id="event-wrapper">
                 <div class="col-span-full section-text-con">
-                    <h3 class="dot-header">Featured Event</h3>
+                    <h3 class="icon-header">Featured Event</h3>
                     <h4 class="section-header">Remembrance Cultural Festival</h4>
                     <p class="section-text">Date: May 15th, 2024<br>Experience a celebration of Indian and Canadian
                         cultures with traditional performances, food, and activities. This festival honors the shared
@@ -188,7 +193,7 @@
             <img src="images/home-history.png" alt="Indian holding Canadian soldier">
         </div>
         <div class="col-span-full section-text-con">
-            <h3 class="dot-header">History</h3>
+            <h3 class="icon-header">History</h3>
             <h4 class="section-header">A Shared Legacy</h4>
             <p class="section-text">In World War I, over 135,000 Indian soldiers fought alongside Canadian forces in
                 pivotal battles like Ypres, the Somme, and Vimy. Their timely arrival in 1914 helped prevent a German
@@ -214,7 +219,7 @@
     <section id="contact-con" class="grid-con">
         <h2 class="hidden">Contact Form</h2>
         <div id="contact-text" class="col-span-full">
-            <h3 class="dot-header">Contact</h3>
+            <h3 class="icon-header">Contact</h3>
             <h4 class="section-header">Get In Touch</h4>
             <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or have
                 a general inquiry, fill out the form below, and we'll get back to you soon.</p>
@@ -256,7 +261,7 @@
             <div id="logo-wrapper">
                 <a href="index.html" class="logo-anchor">
                     <div class="logo">
-                        <img src="images/logo-white.svg" alt="logo">
+                        <img src="images/logo.svg" alt="logo">
                         <p>BROTHERS<br>IN ARMS</p>
                     </div>
                 </a>
@@ -323,10 +328,9 @@
                         alt="instagram icon"></a>
                 <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img src="images/youtube.svg"
                         alt="youtube icon"></a>
-                <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin icon"></a>
+                <!-- <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin icon"></a> -->
                 <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
                         alt="twitter icon"></a>
-                <a href="#" target="_blank"><img src="images/tiktok.svg" alt="tiktok icon"></a>
             </div>
         </div>
 

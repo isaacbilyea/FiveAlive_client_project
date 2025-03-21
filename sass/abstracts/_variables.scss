@@ -1,14 +1,15 @@
 @use 'fonts';
 
-$primary-color: #FAF5EE;
-$secondary-color: #F6EBD9;
-$tertiary-color: #314440; 
-$primary-accent-color: #9E2A2B; 
+$primary-color: #FFFDFB;
+$secondary-color: #FAF2E6;
+$tertiary-color: #08422A; 
+$primary-accent-color: #BE1E2D; 
 $secondary-accent-color: #08422A;
 $heading-text-color: #2C2C29;
 $body-text-color: #2C2C29;
-$alt-text-color: #FAF5EE;
-$heading-font-family: Roboto, Arial, serif;
-$body-font-family: Roboto, Arial, serif;
+$alt-text-color: #FFFDFB;
+$heading-font-family: 'Roboto Slab', 'Inter', serif;
+$alt-heading-font-family: 'Inter', 'Alexandria', sans-serif;
+$body-font-family: 'Alexandria', 'Inter', sans-serif;
 $base-font-size: 14px;
 $base-font-weight: 400;
