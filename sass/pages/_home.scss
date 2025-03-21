@@ -1,5 +1,32 @@
 @use '../abstracts' as a;
 
+.bg-hero {
+    background-image: url('../images/home-hero.png');
+
+    #home-hero-con {
+        padding: 0;
+        height: 100%;
+
+        .section-text-con {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            margin: 0;
+            color: a.$alt-text-color;
+        }
+
+        h3 {
+            color: a.$alt-text-color;
+        }
+    }
+}
+
+
+
+
 #donation-stats {
     text-align: center;
     color: a.$alt-text-color;
