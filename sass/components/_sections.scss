@@ -49,6 +49,18 @@ section {
     }
 }
 
+.section-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+
+    &.no-reverse {
+        flex-direction: column;
+    }
+}
+
 .section-header {
     font-size: 2.75rem;
     font-weight: 600;
@@ -120,5 +132,13 @@ section {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        &.no-reverse {
+            flex-direction: row;
+
+            .section-image-con {
+                margin-right: 1rem;
+            }
+        }
     }
 }
