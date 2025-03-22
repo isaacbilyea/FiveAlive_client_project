@@ -1,60 +1,8 @@
 @use '../abstracts' as a;
 
-#donate-hero-con {
-
-    .section-image-con {
-        margin-left: 2rem;
-    }
-}
-
-#help-con {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-
-    .section-text-con {
-        width: 100%;
-    }
-
-    #help-card-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-        gap: 3rem;
-
-        .help-card {
-            background-color: a.$primary-color;
-            width: 100%;
-            box-sizing: border-box;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 1rem;
-
-            .help-card-text {
-                padding: 1.5rem 2rem 2rem 2rem;
-
-                h4 {
-                    font-size: 1.5rem;
-                    margin: 0;
-                }
-    
-                p {
-                    margin-top: 0.25rem;
-                }
-            }
-
-            img {
-                width: 100%;
-                border-radius: 1rem 1rem 0 0;
-                height: 25rem;
-                object-fit: cover;
-            }
-
-            .section-button {
-                margin-top: 2rem;
-            }
-        }
+#donation-video-con {
+    * {
+        color: a.$alt-text-color;
     }
 }
 
@@ -97,14 +45,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
-    #help-con {
-        padding: 5rem 0 5rem 0;
-
-        #help-card-wrapper {
-            flex-direction: row;
-        }
-    }
 
     #donation-bubble {
         img {
