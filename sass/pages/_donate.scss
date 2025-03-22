@@ -1,8 +1,11 @@
 @use '../abstracts' as a;
 
-#donation-video-con {
-    * {
-        color: a.$alt-text-color;
+.bg-tertiary {
+
+    #donation-video-con {
+        * {
+            color: a.$alt-text-color;
+        }
     }
 }
 
