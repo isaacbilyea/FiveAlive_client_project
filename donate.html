@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -27,64 +27,68 @@
 <body>
     <!--Header-->
     <h1 class="hidden">Donate</h1>
-    <header id="main-header" class="grid-con">
+    <div class="bg-tertiary">
+        <header id="main-header" class="grid-con">
 
-        <a href="index.html" class="logo-anchor">
-            <div class="logo">
-                <img src="images/logo.svg" alt="logo">
-                <p>BROTHERS<br>IN ARMS</p>
-            </div>
-        </a>
+            <a href="index.html" class="logo-anchor">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <p>BROTHERS<br>IN ARMS</p>
+                </div>
+            </a>
 
-        <div id="nav-wrapper">
-            <nav id="main-nav">
-                <h2 class="hidden">Main Navigation</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News &amp; Events</a></li>
-                </ul>
-            </nav>
-            <div id="sm-icons-con">
-                <h3>Follow Us</h3>
-                <div class="sm-icons">
-                    <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
-                            alt="facebook icon"></a>
-                    <a href="https://www.instagram.com/srishticanada" target="_blank"><img src="images/instagram.svg"
-                            alt="instagram icon"></a>
-                    <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
-                            src="images/youtube.svg" alt="youtube icon"></a>
-                    <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
-                            alt="twitter icon"></a>
+            <div id="nav-wrapper">
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                    </ul>
+                </nav>
+                <div id="sm-icons-con">
+                    <h3>Follow Us</h3>
+                    <div class="sm-icons">
+                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                                alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
+                                src="images/instagram.svg" alt="instagram icon"></a>
+                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
+                                src="images/youtube.svg" alt="youtube icon"></a>
+                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                                alt="twitter icon"></a>
+                    </div>
+                </div>
+                <a class="donate-btn" href="donate.html">Donate</a>
+                <div id="menu-button">
+                    <span>Menu</span>
+                    <div id="hamburger-menu">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
                 </div>
             </div>
-            <a class="donate-btn" href="donate.html">Donate <img src="images/flower.svg" alt="flower"></a>
-            <div id="menu-button">
-                <span>Menu</span>
-                <div id="hamburger-menu">
-                    <div id="line1"></div>
-                    <div id="line2"></div>
-                    <div id="line3"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <!--Hero-->
-    <section id="donate-hero-con" class="grid-con section-flex hero-section">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="hidden">Donate</h3>
-            <h4 class="section-header hero-header">Donate</h4>
-            <p class="section-text">Your contribution directly supports the memorial’s construction and upkeep,
-                honouring the shared sacrifice of Indian and Canadian soldiers.</p>
-            <a class="section-button" href="#donate-form">Donate Now</a>
-        </div>
-        <div class="br-image top-br col-span-full section-image-con">
-            <img src="images/donate-hero.png" alt="rakhi celebration group photo">
-        </div>
-    </section>
+    <div class="bg-hero" id="donate-hero-con">
+        <section class="grid-con section-flex hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <p>Welcome to the</p>
+                <h3 class="section-header hero-header">Brothers in Arms</h3>
+                <p class="section-text">A memorial that stands as North America's first tribute honouring
+                    the
+                    alliance between Indian and Canadian soldiers during World War I. Your support is vital in bringing
+                    the
+                    Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <a class="section-button" href="donate.html">Support Us</a>
+            </div>
+        </section>
+    </div>
 
     <!--Donation Stats-->
     <div class="bg-secondary">
@@ -107,16 +111,46 @@
         </section>
     </div>
 
-    <!--Donation Video-->
+    <!--Volunteer-->
+    <section id="volunteer-con" class="grid-con section-flex no-reverse">
+        <h2 class="hidden">Volunteering Section</h2>
+        <div class="col-span-full section-image-con">
+            <img src="images/volunteer.png" alt="srishti foundation volunteers">
+        </div>
+        <div class="col-span-full section-text-con">
+            <h3 class="icon-header info-icon">Get Involved</h3>
+            <h4 class="section-header">Volunteering</h4>
+            <p class="section-text">Help organize events, maintain the park, or spread the word. Every hour and effort
+                makes a difference. Feel free to support us in our mission of preservation.</p>
+            <a class="section-button green-button" href="https://www.srishticanada.org/" target="_blank">Learn More</a>
+        </div>
+    </section>
+
+    <!--Sponsor-->
     <div class="bg-secondary">
+        <section id="sponsor-con" class="grid-con section-flex">
+            <h2 class="hidden">Sponsorship Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="icon-header info-icon">Support Us</h3>
+                <h4 class="section-header">Sponsorships</h4>
+                <p class="section-text">Partner with us to fund key elements of the memorial, from stone installations
+                    to community outreach. Find out more on how to sponsorship this exceptional project.</p>
+                <a class="section-button" href="https://www.srishticanada.org/" target="_blank">Learn
+                    More</a>
+            </div>
+            <div class="col-span-full section-image-con">
+                <img src="images/sponsor.png" alt="srishti foundation sponsors">
+            </div>
+        </section>
+    </div>
+
+    <!--Donation Video-->
+    <div class="bg-tertiary">
         <section id="donation-video-con" class="grid-con section-flex">
             <h2 class="hidden">Donation Video Section</h2>
             <div class="col-span-full section-text-con">
-                <h3 class="dot-header">Origins</h3>
+                <h3 class="icon-header news-icon">Main Purpose</h3>
                 <h4 class="section-header">Behind the Memorial</h4>
-                <p class="section-text">Discover the story behind the Brothers in Arms Memorial. In this interview,
-                    explore
-                    the inspiration and vision that brought this tribute to life.</p>
             </div>
             <div class="col-span-full">
                 <div class="col-span-full video-con">
@@ -130,59 +164,11 @@
         </section>
     </div>
 
-    <!--Volunteer & Support-->
-    <section id="help-con" class="grid-con section-flex">
-        <h2 class="hidden">Volunteer and Sponsor Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="dot-header">Get Involved</h3>
-            <h4 class="section-header">Join Us in Making Difference</h4>
-            <p class="section-text">Join us as a sponsor or volunteer to help make a difference.</p>
-        </div>
-        <div id="help-card-wrapper" class="col-span-full">
-            <div class="help-card">
-                <img src="images/volunteer.png" alt="srishti foundation volunteers">
-                <div class="help-card-text" id="volunteer">
-                    <h4>Volunteer</h4>
-                    <p>Help organize events, maintain the park, or spread the word. Every hour makes a difference.
-                    </p>
-                    <a class="section-button" href="#contact-form">Join Us</a>
-                </div>
-            </div>
-            <div class="help-card" id="sponsor">
-                <img src="images/sponsor.png" alt="srishti foundation sponsors">
-                <div class="help-card-text">
-                    <h4>Sponsor</h4>
-                    <p>Partner with us to fund key elements of the memorial, from stone installations to community
-                        outreach.</p>
-                    <a class="section-button" href="#contact-form">Join Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Newsletter-->
-    <div class="bg-tertiary">
-        <section id="newsletter-con" class="grid-con">
-            <div id="newsletter-text" class="col-span-full">
-                <h3>Subscribe to our Newsletter</h3>
-                <p>Subscribe to receive updates on our memorial, stories of courage, and upcoming events. Don’t miss
-                    out—sign up today!</p>
-            </div>
-
-            <form class="newsletter-form col-span-full" action="#" method="POST">
-                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="section-button">Subscribe</button>
-            </form>
-        </section>
-    </div>
-
     <!--FAQ-->
     <section id="faq-con" class="grid-con">
         <div class="col-span-full section-text-con">
-            <h3 class="dot-header">Frequently Asked Questions (FAQ)</h3>
-            <h4 class="section-header">You must Have a Question</h4>
-            <p class="section-text">Here’s some Frequently Asked Question, if you still have a question about us,
-                don’t hesitate to <a href="#contact">Contact us</a>!</p>
+            <h3 class="icon-header calendar-icon">Know More</h3>
+            <h4 class="section-header">Frequently Asked Questions</h4>
         </div>
 
         <div class="faq-card-con col-span-full">
@@ -261,23 +247,22 @@
 
     <!--Contact-->
     <div class="bg-secondary">
-        <a id="contact"></a>
         <section id="contact-con" class="grid-con">
             <h2 class="hidden">Contact Form</h2>
             <div id="contact-text" class="col-span-full">
-                <h3 class="dot-header">Contact</h3>
+                <h3 class="icon-header info-icon">Contact</h3>
                 <h4 class="section-header">Get In Touch</h4>
-                <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering,
-                    or
+                <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or
                     have
                     a general inquiry, fill out the form below, and we'll get back to you soon.</p>
+                <img src="images/contact-image.png" alt="contact image">
             </div>
             <form id="contact-form" action="#" method="POST">
-                <label for="contact-name">Name</label>
+                <label for="contact-name">Full Name*</label>
                 <input type="text" id="contact-name" name="name" required>
-                <label for="contact-email">Email</label>
+                <label for="contact-email">Email Address*</label>
                 <input type="email" id="contact-email" class="email" name="email" required>
-                <label for="contact-subject">Subject</label>
+                <label for="contact-subject">Subject Line*</label>
                 <select id="contact-subject" name="subject" required>
                     <option value="" disabled selected>Subject</option>
                     <option value="donation">Donation Inquiry</option>
@@ -285,7 +270,7 @@
                     <option value="sponsorship">Sponsorship</option>
                     <option value="general">General Inquiry</option>
                 </select>
-                <label for="contact-message">Message</label>
+                <label for="contact-message">Your Message*</label>
                 <textarea id="contact-message" name="message" rows="3" required></textarea>
                 <button type="submit">Submit</button>
             </form>

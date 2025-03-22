@@ -2,6 +2,14 @@
 
 #faq-con {
 
+  .section-text-con {
+    width: 100%;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
   .faq-card-con {
     margin-top: 2rem;
     width: 100%;
@@ -28,7 +36,7 @@
           font-weight: 600;
           margin: 0;
           font-size: 1.1rem;
-          width: 80%;
+          font-family: a.$body-font-family;
         }
         
         .arrow {
@@ -52,6 +60,10 @@
       &.active {
         background-color: a.$secondary-accent-color;
         color: a.$alt-text-color;
+        
+        h4 {
+          color: a.$alt-text-color;
+        }
         
         .arrow {
           transform: rotate(180deg);
