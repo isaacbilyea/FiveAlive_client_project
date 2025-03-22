@@ -122,7 +122,7 @@
                 trees, scenic paths, and a stunning granite monument preserving their shared legacy.</p>
             <a class="section-button green-button" href="about.html">Learn More</a>
         </div>
-        <div class="br-image changing-br col-span-full section-image-con">
+        <div class="col-span-full section-image-con">
             <img src="images/home-about.png" alt="trees at memorial site">
         </div>
     </section>
@@ -206,59 +206,97 @@
     <!--History-->
     <section id="history-con" class="grid-con section-flex">
         <h2 class="hidden">History Section</h2>
-        <div class="br-image col-span-full section-image-con">
-            <img src="images/home-history.png" alt="Indian holding Canadian soldier">
-        </div>
         <div class="col-span-full section-text-con">
-            <h3 class="icon-header">History</h3>
-            <h4 class="section-header">A Shared Legacy</h4>
-            <p class="section-text">In World War I, over 135,000 Indian soldiers fought alongside Canadian forces in
-                pivotal battles like Ypres, the Somme, and Vimy. Their timely arrival in 1914 helped prevent a German
-                breakthrough, shaping the course of the war.</p>
-            <a class="section-button" href="history.html">Learn More</a>
+            <div>
+                <h3 class="icon-header history-icon">History</h3>
+                <h4 class="section-header">A Shared Legacy</h4>
+                <p class="section-text">In World War I, over 135,000 Indian soldiers fought alongside Canadian forces in
+                    pivotal battles like Ypres, the Somme, and Vimy. Their timely arrival in 1914 helped prevent a
+                    German
+                    breakthrough, shaping the course of the war.</p>
+            </div>
+            <a class="section-button green-button" href="history.html">Explore</a>
+        </div>
+
+        <div id="history-cards-con" class="col-span-full">
+            <div class="history-card">
+                <img src="images/history-awards.png" alt="key battles">
+                <div>
+                    <h5>Key Battles</h5>
+                    <p>Indian and Canadian soldiers fought together in pivotal World War I battles, their bravery
+                        shaping
+                        history yet often overlooked.</p>
+                </div>
+            </div>
+
+            <div class="history-card">
+                <img src="images/history-awards.png" alt="key battles">
+                <div>
+                    <h5>Soldier Regiments</h5>
+                    <p>Indian regiments played a key role in World War One showing resilience and strategic importance
+                        in
+                        multiple campaigns.</p>
+                </div>
+            </div>
+
+            <div class="history-card">
+                <img src="images/history-awards.png" alt="key battles">
+                <div>
+                    <h5>Letters and Awardees</h5>
+                    <p>The stories and experiences of Indian soldiers during World War One with the prominent heroes and
+                        awardees of the battles.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!--Partners-->
-    <div class="bg-secondary">
+    <div class="bg-tertiary">
         <section id="partners-con" class="grid-con">
-            <h2 class="section-header">Our Partners</h2>
+            <h2 class="hidden">Partners Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="icon-header community-icon">Community</h3>
+                <h4 class="section-header">Partners and Sponsors</h4>
+            </div>
             <div id="partners" class="col-span-full">
-                <img src="images/srishti-logo.png" alt="srishti foundation logo">
-                <img src="images/london-logo.svg" alt="london logo">
-                <img src="images/sewa-logo.png" alt="sewa logo">
-                <img src="images/london-police-logo.png" alt="london police logo">
+                <div class="partner-card"><img src="images/srishti-logo.png" alt="srishti foundation logo"></div>
+                <div class="partner-card"><img src="images/london-logo.svg" alt="london logo"></div>
+                <div class="partner-card"><img src="images/sewa-logo.png" alt="sewa logo"></div>
             </div>
         </section>
     </div>
 
     <!--Contact-->
-    <section id="contact-con" class="grid-con">
-        <h2 class="hidden">Contact Form</h2>
-        <div id="contact-text" class="col-span-full">
-            <h3 class="icon-header">Contact</h3>
-            <h4 class="section-header">Get In Touch</h4>
-            <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or have
-                a general inquiry, fill out the form below, and we'll get back to you soon.</p>
-        </div>
-        <form id="contact-form" action="#" method="POST">
-            <label for="contact-name">Name</label>
-            <input type="text" id="contact-name" name="name" required>
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" class="email" name="email" required>
-            <label for="contact-subject">Subject</label>
-            <select id="contact-subject" name="subject" required>
-                <option value="" disabled selected>Subject</option>
-                <option value="donation">Donation Inquiry</option>
-                <option value="volunteer">Volunteer Opportunities</option>
-                <option value="sponsorship">Sponsorship</option>
-                <option value="general">General Inquiry</option>
-            </select>
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows="3" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <div class="bg-secondary">
+        <section id="contact-con" class="grid-con">
+            <h2 class="hidden">Contact Form</h2>
+            <div id="contact-text" class="col-span-full">
+                <h3 class="icon-header info-icon">Contact</h3>
+                <h4 class="section-header">Get In Touch</h4>
+                <p class="section-text">Want to support the us? Whether you're interested in donating, volunteering, or
+                    have
+                    a general inquiry, fill out the form below, and we'll get back to you soon.</p>
+                <img src="images/contact-image.png" alt="contact image">
+            </div>
+            <form id="contact-form" action="#" method="POST">
+                <label for="contact-name">Full Name*</label>
+                <input type="text" id="contact-name" name="name" required>
+                <label for="contact-email">Email Address*</label>
+                <input type="email" id="contact-email" class="email" name="email" required>
+                <label for="contact-subject">Subject Line*</label>
+                <select id="contact-subject" name="subject" required>
+                    <option value="" disabled selected>Subject</option>
+                    <option value="donation">Donation Inquiry</option>
+                    <option value="volunteer">Volunteer Opportunities</option>
+                    <option value="sponsorship">Sponsorship</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+                <label for="contact-message">Your Message*</label>
+                <textarea id="contact-message" name="message" rows="3" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
 
     <!--Support Banner-->
     <!-- <div class="bg-tertiary">

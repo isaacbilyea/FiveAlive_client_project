@@ -39,6 +39,14 @@ section {
     &.calendar-icon::before {
         background-image: url('../images/calendar-icon.svg');
     }
+
+    &.history-icon::before {
+        background-image: url('../images/history-icon.svg');
+    }
+
+    &.community-icon::before {
+        background-image: url('../images/community-icon.svg');
+    }
 }
 
 .section-header {
