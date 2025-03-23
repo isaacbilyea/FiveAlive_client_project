@@ -99,6 +99,15 @@ section {
     border-radius: 2rem;
     text-align: center;
     font-weight: 500;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten(a.$primary-accent-color, 10%);
+
+        &.green-button:hover {
+            background-color: lighten(a.$secondary-accent-color, 10%);  
+        }
+    }
 }
 
 .green-button {

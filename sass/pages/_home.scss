@@ -243,6 +243,14 @@
                     height: fit-content;
                 }
             }
+
+            &:nth-child(3) {
+                
+                img {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
         }
     }
 }
@@ -324,11 +332,6 @@
         .section-image-con {
             margin: 0;
             width: 50%;
-        }
-
-        .section-button {
-            background-color: a.$primary-accent-color;
-            margin-top: 0.5rem;
         }
     }
 
