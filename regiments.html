@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_left_alt,arrow_right_alt,chevron_left,chevron_right">
@@ -21,203 +21,321 @@
     <link rel="manifest" href="/images/site.webmanifest">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/regiments.js"></script>
     <title>BIA | Regiments</title>
 </head>
 
 <body>
     <!--Header-->
     <h1 class="hidden">Indian and Canadian Regiments</h1>
-    <header id="main-header" class="grid-con">
+    <div class="bg-tertiary">
+        <header id="main-header" class="grid-con">
 
-        <a href="index.html" class="logo-anchor">
-            <div class="logo">
-                <img src="images/logo.svg" alt="logo">
-                <p>BROTHERS<br>IN ARMS</p>
-            </div>
-        </a>
+            <a href="index.html" class="logo-anchor">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <p>BROTHERS<br>IN ARMS</p>
+                </div>
+            </a>
 
-        <div id="nav-wrapper">
-            <nav id="main-nav">
-                <h2 class="hidden">Main Navigation</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="history.html" class="active">History</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News &amp; Events</a></li>
-                </ul>
-            </nav>
-            <div id="sm-icons-con">
-                <h3>Follow Us</h3>
-                <div class="sm-icons">
-                    <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
-                            alt="facebook icon"></a>
-                    <a href="https://www.instagram.com/srishticanada" target="_blank"><img src="images/instagram.svg"
-                            alt="instagram icon"></a>
-                    <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
-                            src="images/youtube.svg" alt="youtube icon"></a>
-                    <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
-                            alt="twitter icon"></a>
+            <div id="nav-wrapper">
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="history.html" class="active">History</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                    </ul>
+                </nav>
+                <div id="sm-icons-con">
+                    <h3>Follow Us</h3>
+                    <div class="sm-icons">
+                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                                alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
+                                src="images/instagram.svg" alt="instagram icon"></a>
+                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
+                                src="images/youtube.svg" alt="youtube icon"></a>
+                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                                alt="twitter icon"></a>
+                    </div>
+                </div>
+                <a class="donate-btn" href="donate.html">Donate</a>
+                <div id="menu-button">
+                    <span>Menu</span>
+                    <div id="hamburger-menu">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
                 </div>
             </div>
-            <a class="donate-btn" href="donate.html">Donate <img src="images/flower.svg" alt="flower"></a>
-            <div id="menu-button">
-                <span>Menu</span>
-                <div id="hamburger-menu">
-                    <div id="line1"></div>
-                    <div id="line2"></div>
-                    <div id="line3"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <!--Hero-->
-    <section id="home-hero-con" class="grid-con section-flex hero-section">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="hidden">Regiments</h3>
-            <h4 class="section-header hero-header">Regiments of<br> World War One</h4>
-            <p class="section-text">Here are the Indian and Canadian regiments that served alongside each other,
-                highlighting their unique histories, identities, and contributions. Despite coming from different parts
-                of the world, these regiments shared a commitment to duty, discipline, and camaraderie, leaving a
-                lasting legacy in military history.</p>
-        </div>
-        <div class="br-image top-br col-span-full section-image-con">
-            <img src="images/regiments.png" alt="Indian Army Regiment">
-        </div>
-    </section>
-
-    <!--Indian Regiments-->
-    <div class="bg-tertiary">
-        <section class="grid-con regiments-con" id="indian-regiments">
-            <h2 class="section-header col-span-full">Indian Regiments</h2>
-
-            <div class="regiment-list-container col-span-full">
-                <div class="regiment-column">
-                    <ul class="regiment-list">
-                        <li>Sikh Regiment</li>
-                        <li>Gurkha Rifles</li>
-                        <li>Punjabis Regiment</li>
-                        <li>Rajput Light Infantry</li>
-                        <li>Maratha Light Infantry</li>
-                        <li>Garhwal Rifles</li>
-                        <li>Indian Cavalry Regiment</li>
-                        <li>Punjabi Rifles (Frontier Force)</li>
-                        <li>6th Poona Division</li>
-                        <li>Baluchistan Infantry</li>
-                        <li>King George's own Ferozepur Sikhs</li>
-                        <li>14th Murray's Jat Lancers</li>
-                        <li>Dogra Regiment</li>
-                        <li>3rd Lahore Division</li>
-                        <li>Kumaon Rifles</li>
-                        <li>Carnatic Infantry</li>
-                        <li>Madras Regiment</li>
-                    </ul>
-                </div>
-
-                <div class="regiment-column">
-                    <ul class="regiment-list">
-                        <li>27th Bangalore Brigade</li>
-                        <li>Imperial Service Infantry Brigade</li>
-                        <li>7th Meerut Division</li>
-                        <li>17th Ahmednagar Brigade</li>
-                        <li>22nd Lucknow Brigade</li>
-                        <li>Bikaner Camel Corps</li>
-                        <li>23rd Sikh Pioneers</li>
-                        <li>53rd Sikhs Frontier Force</li>
-                        <li>1st Peshawar Division</li>
-                        <li>2nd Rawalpindi Division</li>
-                        <li>4th Quetta Division</li>
-                        <li>Indian Mountain Artillery Regiment</li>
-                        <li>Indian Field Ambulance Services</li>
-                        <li>9th Secunderabad Division</li>
-                        <li>Gwalior Infantry</li>
-                        <li>Alwar Infantry</li>
-                        <li>Patiala Infantry</li>
-                    </ul>
-                </div>
-
-                <div class="regiment-column">
-                    <ul class="regiment-list">
-                        <li>Mysore Lancers</li>
-                        <li>Patiala Lancers</li>
-                        <li>Hyderabad Lancers</li>
-                        <li>Jodhpur Lancers</li>
-                        <li>Bengal Lancers</li>
-                        <li>Jind Infantry</li>
-                        <li>Bharatpur Infantry</li>
-                        <li>Kapurthala Infantry</li>
-                        <li>Poona Horse Division</li>
-                        <li>Sikhs In France</li>
-                        <li>Rampur Infantry</li>
-                        <li>Jats</li>
-                        <li>89th Punjabis 1917</li>
-                        <li>129th Baluchistan Infantry</li>
-                        <li>Deccan Horse</li>
-                    </ul>
-                </div>
+    <div class="bg-subpage-hero">
+        <section class="grid-con section-flex subpage-hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="icon-header info-icon">History</h3>
+                <h4 class="section-header hero-header">Regiments</h4>
             </div>
         </section>
     </div>
 
-    <!--Canadian Regiments-->
-    <section class="grid-con regiments-con" id="canadian-regiments">
-        <h2 class="section-header col-span-full">Canadian Regiments</h2>
-
-        <div class="regiment-list-container col-span-full">
-            <div class="regiment-column">
-                <ul class="regiment-list">
-                    <li>The Royal Canadian Regiment</li>
-                    <li>Princess Patricia's Canadian Light Infantry</li>
-                    <li>The Black Watch (Royal Highland Regiment) of Canada</li>
-                    <li>The Canadian Scottish Regiment</li>
-                    <li>The Queen's Own Rifles of Canada</li>
-                    <li>48th Highlanders of Canada</li>
-                    <li>Royal Winnipeg Rifles</li>
-                    <li>Victoria Rifles of Canada</li>
-                </ul>
-            </div>
-
-            <div class="regiment-column">
-                <ul class="regiment-list">
-                    <li>5th Battalion, Canadian Mounted Rifles</li>
-                    <li>4th Battalion, Canadian Mounted Rifles</li>
-                    <li>2nd Battalion, Canadian Mounted Rifles</li>
-                    <li>The Royal Montreal Regiment</li>
-                    <li>The Royal New Brunswick Regiment</li>
-                    <li>The Fort Garry Horse</li>
-                    <li>The Seaforth Highlanders of Canada</li>
-                    <li>Royal Newfoundland Regiment</li>
-                    <li>The Queen's Own Cameron Highlanders of Canada</li>
-                </ul>
-            </div>
-
-            <div class="regiment-column">
-                <ul class="regiment-list">
-                    <li>The Ontario Regiment</li>
-                    <li>South Alberta Light Horse</li>
-                    <li>The British Columbia Regiment (Duke of Connaught's Own)</li>
-                    <li>The Canadian Grenadier Guards</li>
-                    <li>The King's Own Calgary Regiment</li>
-                    <li>The Essex and Kent Scottish</li>
-                    <li>The Lorne Scots (Peel, Dufferin and Halton Regiment)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!--Support Banner-->
-    <!-- <div class="bg-tertiary">
-        <section id="support-con" class="grid-con">
-            <h2 class="hidden">Support Banner</h2>
-            <div class="col-span-full">
-                <h3 class="section-header">Support the Memorial</h3>
-                <a class="section-button" href="donate.html">Make a Donation <img src="images/flower.svg"
-                        alt="flower"></a>
+    <!--Filter Buttons-->
+    <div class="bg-tertiary">
+        <section class="grid-con" id="filter-section">
+            <h2 class="hidden">Filter Section</h2>
+            <div id="filter-bar" class="col-span-full">
+                <button class="active" data-type="infantry">Infantry</button>
+                <button data-type="elite">Elite</button>
+                <button data-type="cavalry">Cavalry</button>
+                <button data-type="armoured">Armoured</button>
+                <button data-type="artillery">Artillery</button>
+                <button data-type="division">Divisions</button>
+                <button data-type="brigade">Brigades</button>
+                <button data-type="princely">Princely States</button>
+                <button data-type="medical">Medical</button>
             </div>
         </section>
-    </div> -->
+    </div>
+
+    <!--Regiment Groups-->
+    <div class="bg-secondary">
+        <section class="grid-con battles-con" id="battles-list">
+            <h2 class="hidden">Regiment List Section</h2>
+            <div class="battles-list-container col-span-full">
+
+                <div class="regiment-group filter-content active" data-type="infantry">
+                    <h3>Infantry Regiments</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Sikh Regiment</li>
+                                    <li>Rajput Light Infantry</li>
+                                    <li>Maratha Light Infantry</li>
+                                    <li>Punjabis Regiment</li>
+                                    <li>Dogra Regiment</li>
+                                    <li>Garhwal Rifles</li>
+                                    <li>Kumaon Rifles</li>
+                                    <li>Baluchistan Infantry</li>
+                                    <li>Madras Regiment</li>
+                                    <li>Jats</li>
+                                    <li>89th Punjabis (1917)</li>
+                                    <li>129th Baluchistan Infantry</li>
+                                    <li>King George's Own Ferozepur Sikhs</li>
+                                    <li>23rd Sikh Pioneers</li>
+                                    <li>53rd Sikhs Frontier Force</li>
+                                </ul>
+                            </div>
+                            <div class="list-section">
+                                <h4>Canadian</h4>
+                                <ul class="battle-list">
+                                    <li>The Royal Canadian Regiment</li>
+                                    <li>Princess Patricia's Canadian Light Infantry</li>
+                                    <li>The Black Watch (Royal Highland Regiment) of Canada</li>
+                                    <li>The Canadian Scottish Regiment</li>
+                                    <li>The Queen's Own Rifles of Canada</li>
+                                    <li>48th Highlanders of Canada</li>
+                                    <li>Royal Winnipeg Rifles</li>
+                                    <li>Victoria Rifles of Canada</li>
+                                    <li>The Royal Montreal Regiment</li>
+                                    <li>The Royal New Brunswick Regiment</li>
+                                    <li>The Royal Newfoundland Regiment</li>
+                                    <li>The Queen's Own Cameron Highlanders of Canada</li>
+                                    <li>The Canadian Grenadier Guards</li>
+                                    <li>The Essex and Kent Scottish</li>
+                                    <li>The Lorne Scots (Peel, Dufferin and Halton Regiment)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Infantry Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="elite">
+                    <h3>Elite and Specialist Infantry</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Gurkha Rifles</li>
+                                    <li>Sikhs in France</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Elite Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="cavalry">
+                    <h3>Cavalry and Mounted Units</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Indian Cavalry Regiment</li>
+                                    <li>14th Murray's Jat Lancers</li>
+                                    <li>Bengal Lancers</li>
+                                    <li>Deccan Horse</li>
+                                    <li>Poona Horse Division</li>
+                                </ul>
+                            </div>
+                            <div class="list-section">
+                                <h4>Canadian</h4>
+                                <ul class="battle-list">
+                                    <li>5th Battalion, Canadian Mounted Rifles</li>
+                                    <li>4th Battalion, Canadian Mounted Rifles</li>
+                                    <li>2nd Battalion, Canadian Mounted Rifles</li>
+                                    <li>The Fort Garry Horse</li>
+                                    <li>South Alberta Light Horse</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Cavalry Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="armoured">
+                    <h3>Armoured Combat Units</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Canadian</h4>
+                                <ul class="battle-list">
+                                    <li>The British Columbia Regiment (Duke of Connaught's Own)</li>
+                                    <li>The King's Own Calgary Regiment</li>
+                                    <li>The Ontario Regiment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Armoured Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="artillery">
+                    <h3>Artillery Forces</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Indian Mountain Artillery Regiment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Artillery Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="division">
+                    <h3>Divisional Formations</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>6th Poona Division</li>
+                                    <li>3rd Lahore Division</li>
+                                    <li>7th Meerut Division</li>
+                                    <li>1st Peshawar Division</li>
+                                    <li>2nd Rawalpindi Division</li>
+                                    <li>4th Quetta Division</li>
+                                    <li>9th Secunderabad Division</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Division Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="brigade">
+                    <h3>Brigade Formations</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>27th Bangalore Brigade</li>
+                                    <li>17th Ahmednagar Brigade</li>
+                                    <li>22nd Lucknow Brigade</li>
+                                    <li>Imperial Service Infantry Brigade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Brigade Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="princely">
+                    <h3>Princely State Forces</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Bikaner Camel Corps</li>
+                                    <li>Gwalior Infantry</li>
+                                    <li>Alwar Infantry</li>
+                                    <li>Patiala Infantry</li>
+                                    <li>Mysore Lancers</li>
+                                    <li>Patiala Lancers</li>
+                                    <li>Hyderabad Lancers</li>
+                                    <li>Jodhpur Lancers</li>
+                                    <li>Jind Infantry</li>
+                                    <li>Bharatpur Infantry</li>
+                                    <li>Kapurthala Infantry</li>
+                                    <li>Rampur Infantry</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Princely States Regiments">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiment-group filter-content" data-type="medical">
+                    <h3>Medical Support Services</h3>
+                    <div class="regiment-content">
+                        <div class="lists-container">
+                            <div class="list-section">
+                                <h4>Indian</h4>
+                                <ul class="battle-list">
+                                    <li>Indian Field Ambulance Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="regiment-image">
+                            <img src="images/regiments.png" alt="Medical Services">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <!--Footer-->
     <footer id="main-footer">
