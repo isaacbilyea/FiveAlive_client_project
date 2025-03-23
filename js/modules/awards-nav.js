@@ -10,6 +10,7 @@ export function awardsNav() {
     const medalImg = document.querySelector('#medal-image');
     const soldierImg = document.querySelector('.soldier-img img');
     const awardTitle = document.querySelector('.award-column h3');
+    const lastCard = document.querySelector('.award-box.active');
     
     function updateContent(card) {
         const name = card.querySelector('.soldier-name').textContent;
@@ -79,11 +80,15 @@ export function awardsNav() {
     }
     
     function changeCard(card) {
-        const lastCard = document.querySelector('.award-box.active');
         lastCard.classList.remove('active');
         card.classList.add('active');
         centerCard(card);
         updateContent(card);
+        
+        document.querySelector('#awards-section').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
     }
     
     allCards.forEach(card => {
