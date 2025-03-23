@@ -1,0 +1,60 @@
+@use '../abstracts' as a;
+
+.bg-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/home-hero.png');
+
+    .hero-section {
+        height: 100%;
+
+        .section-text-con {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p {
+            margin: 0;
+            color: a.$alt-text-color;
+        }
+
+        h3 {
+            color: a.$alt-text-color;
+        }
+    }  
+}
+
+.bg-subpage-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/subpage-banner.png');
+    max-height: 275px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    .subpage-hero-section {
+        margin: 0 auto;
+        width: 100%;
+
+        .section-text-con {
+            align-self: flex-start;
+        
+            .section-header {
+                color: a.$alt-text-color;
+                font-size: 2.5rem;
+            }
+
+            .icon-header {
+                color: a.$alt-text-color;
+            }
+        }
+    }
+}

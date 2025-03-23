@@ -28,65 +28,62 @@
 <body>
     <!--Header-->
     <h1 class="hidden">Other Battles</h1>
-    <header id="main-header" class="grid-con">
+    <div class="bg-tertiary">
+        <header id="main-header" class="grid-con">
 
-        <a href="index.html" class="logo-anchor">
-            <div class="logo">
-                <img src="images/logo.svg" alt="logo">
-                <p>BROTHERS<br>IN ARMS</p>
-            </div>
-        </a>
+            <a href="index.html" class="logo-anchor">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <p>BROTHERS<br>IN ARMS</p>
+                </div>
+            </a>
 
-        <div id="nav-wrapper">
-            <nav id="main-nav">
-                <h2 class="hidden">Main Navigation</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="history.html" class="active">History</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News &amp; Events</a></li>
-                </ul>
-            </nav>
-            <div id="sm-icons-con">
-                <h3>Follow Us</h3>
-                <div class="sm-icons">
-                    <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
-                            alt="facebook icon"></a>
-                    <a href="https://www.instagram.com/srishticanada" target="_blank"><img src="images/instagram.svg"
-                            alt="instagram icon"></a>
-                    <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
-                            src="images/youtube.svg" alt="youtube icon"></a>
-                    <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
-                            alt="twitter icon"></a>
+            <div id="nav-wrapper">
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                    </ul>
+                </nav>
+                <div id="sm-icons-con">
+                    <h3>Follow Us</h3>
+                    <div class="sm-icons">
+                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                                alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
+                                src="images/instagram.svg" alt="instagram icon"></a>
+                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
+                                src="images/youtube.svg" alt="youtube icon"></a>
+                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                                alt="twitter icon"></a>
+                    </div>
+                </div>
+                <a class="donate-btn" href="donate.html">Donate</a>
+                <div id="menu-button">
+                    <span>Menu</span>
+                    <div id="hamburger-menu">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
                 </div>
             </div>
-            <a class="donate-btn" href="donate.html">Donate <img src="images/flower.svg" alt="flower"></a>
-            <div id="menu-button">
-                <span>Menu</span>
-                <div id="hamburger-menu">
-                    <div id="line1"></div>
-                    <div id="line2"></div>
-                    <div id="line3"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <!--Hero-->
-    <section id="home-hero-con" class="grid-con section-flex hero-section">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="col-span-full section-text-con">
-            <h3 class="hidden">More Battles</h3>
-            <h4 class="section-header hero-header">Other Battles Of World War One</h4>
-            <p class="section-text">Here are additional battles in which Indian regiments played a crucial role during
-                World War One, extending beyond Europe to campaigns in Mesopotamia, Africa, and the Middle East. Their
-                contributions were vital in various theaters of war, demonstrating resilience, bravery, and strategic
-                importance in key conflicts across different regions.</p>
-        </div>
-        <div class="br-image top-br col-span-full section-image-con">
-            <img src="images/other-battles.png" alt="Indian Soldiers laying down with rifles">
-        </div>
-    </section>
+    <div class="bg-subpage-hero">
+        <section class="grid-con section-flex subpage-hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="icon-header info-icon">History</h3>
+                <h4 class="section-header hero-header">More Battles</h4>
+            </div>
+        </section>
+    </div>
 
     <!--Filter Buttons-->
     <div class="bg-tertiary">
@@ -95,10 +92,11 @@
             <div id="filter-bar" class="col-span-full">
                 <button class="active" data-campaign="western">Western Front</button>
                 <button data-campaign="mesopotamia">Mesopotamia</button>
-                <button data-campaign="kut">Kut Campaign</button>
+                <button data-campaign="kut">Kut</button>
                 <button data-campaign="sinai">Sinai &amp; Palestine</button>
                 <button data-campaign="gallipoli">Gallipoli</button>
                 <button data-campaign="africa">East Africa</button>
+                <button data-campaign="china">China</button>
             </div>
         </section>
     </div>
@@ -109,118 +107,132 @@
             <h2 class="hidden">Battle List Section</h2>
             <div class="battles-list-container col-span-full">
                 <div class="battle-group active" data-campaign="western">
+                    <h3>Western Front Europe Battles</h3>
                     <div class="battle-content">
-                        <h3>Western Front Europe Battles</h3>
-                        <ul class="battle-list">
-                            <li>First Battle of Ypres</li>
-                            <li>Battle of Neuve Chapelle</li>
-                            <li>Battle of Aubers Ridge</li>
-                            <li>Battle of Festubert</li>
-                            <li>Battle of Loos</li>
-                            <li>Battle of Somme</li>
-                            <li>Battle of Bazentin</li>
-                            <li>Battle of Flers-Courcelette</li>
-                            <li>Advance to Hindenburg Line</li>
-                            <li>Battle of Cambrai</li>
-                            <li>Battle of La Bassee</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/other-battles.png" alt="Western Front Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>First Battle of Ypres</li>
+                                <li>Battle of Neuve Chapelle</li>
+                                <li>Battle of Aubers Ridge</li>
+                                <li>Battle of Festubert</li>
+                                <li>Battle of Loos</li>
+                                <li>Battle of Somme</li>
+                                <li>Battle of Bazentin</li>
+                                <li>Battle of Flers-Courcelette</li>
+                                <li>Advance to Hindenburg Line</li>
+                                <li>Battle of Cambrai</li>
+                                <li>Battle of La Bassee</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="Western Front Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="mesopotamia">
+                    <h3>Mesopotamia Campaign</h3>
                     <div class="battle-content">
-                        <h3>Mesopotamia Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Fao Landing</li>
-                            <li>Fall of Basra</li>
-                            <li>Battle of Qurna</li>
-                            <li>Battle of Shaiba</li>
-                            <li>Battle of Es Sinn</li>
-                            <li>Battle of Ctesiphon</li>
-                            <li>Siege of Kut</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/mesopotamia.jpg" alt="Mesopotamia Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Fao Landing</li>
+                                <li>Fall of Basra</li>
+                                <li>Battle of Qurna</li>
+                                <li>Battle of Shaiba</li>
+                                <li>Battle of Es Sinn</li>
+                                <li>Battle of Ctesiphon</li>
+                                <li>Siege of Kut</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="Mesopotamia Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="kut">
+                    <h3>Attempts to Relieve Kut</h3>
                     <div class="battle-content">
-                        <h3>Attempts to Relieve Kut</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Sheikh Sa'ad</li>
-                            <li>Battle of the Wadi</li>
-                            <li>Battle of Hanna</li>
-                            <li>Battle of Dujaila Redoubt</li>
-                            <li>First Battle of Kut</li>
-                            <li>Second Battle of Kut</li>
-                            <li>Fall of Baghdad</li>
-                            <li>Samarrah Offensive</li>
-                            <li>Battle of Jebel Hamlin</li>
-                            <li>Battle of Istabulat</li>
-                            <li>Battle of Ramadi</li>
-                            <li>Action of Khan Baghdadi</li>
-                            <li>Battle of Sharqat</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/kut.jpg" alt="Kut Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Battle of Sheikh Sa'ad</li>
+                                <li>Battle of the Wadi</li>
+                                <li>Battle of Hanna</li>
+                                <li>Battle of Dujaila Redoubt</li>
+                                <li>First Battle of Kut</li>
+                                <li>Second Battle of Kut</li>
+                                <li>Fall of Baghdad</li>
+                                <li>Samarrah Offensive</li>
+                                <li>Battle of Jebel Hamlin</li>
+                                <li>Battle of Istabulat</li>
+                                <li>Battle of Ramadi</li>
+                                <li>Action of Khan Baghdadi</li>
+                                <li>Battle of Sharqat</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="Kut Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="sinai">
+                    <h3>Sinai and Palestine Campaign</h3>
                     <div class="battle-content">
-                        <h3>Sinai and Palestine Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Megiddo</li>
-                            <li>First Suez Canal Offensive</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/sinai.jpg" alt="Sinai Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Battle of Megiddo</li>
+                                <li>First Suez Canal Offensive</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="Sinai Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="gallipoli">
+                    <h3>Gallipoli Campaign</h3>
                     <div class="battle-content">
-                        <h3>Gallipoli Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Second Battle of Krithia</li>
-                            <li>Third Battle of Krithia</li>
-                            <li>Battle of Gully Ravine</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/gallipoli.jpg" alt="Gallipoli Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Second Battle of Krithia</li>
+                                <li>Third Battle of Krithia</li>
+                                <li>Battle of Gully Ravine</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="Gallipoli Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="africa">
+                    <h3>East Africa Campaign</h3>
                     <div class="battle-content">
-                        <h3>East Africa Campaign</h3>
-                        <ul class="battle-list">
-                            <li>Battle of Tanga</li>
-                            <li>Battle of Kilimanjaro</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/africa.jpg" alt="East Africa Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Battle of Tanga</li>
+                                <li>Battle of Kilimanjaro</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="East Africa Campaign">
+                        </div>
                     </div>
                 </div>
 
                 <div class="battle-group" data-campaign="china">
+                    <h3>China</h3>
                     <div class="battle-content">
-                        <h3>China</h3>
-                        <ul class="battle-list">
-                            <li>Siege of Tsingtao</li>
-                        </ul>
-                    </div>
-                    <div class="battle-image">
-                        <img src="images/china.jpg" alt="China Campaign">
+                        <div>
+                            <ul class="battle-list">
+                                <li>Siege of Tsingtao</li>
+                            </ul>
+                        </div>
+                        <div class="battle-image">
+                            <img src="images/other-battles.png" alt="China Campaign">
+                        </div>
                     </div>
                 </div>
             </div>
