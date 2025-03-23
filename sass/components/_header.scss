@@ -13,6 +13,10 @@
     .logo-anchor {
         all: unset;
 
+        &:hover img {
+            transform: rotate(360deg);
+        }
+
         .logo {
             height: 4rem;
             cursor: pointer;
@@ -21,6 +25,7 @@
 
             img {
                 height: 100%;
+                transition: transform 0.3s ease-in-out;
             }
 
             p {

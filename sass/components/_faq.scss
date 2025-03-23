@@ -47,7 +47,7 @@
       .faq-answer {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 150ms ease-in-out, opacity 150ms ease-out;
+        transition: all 150ms ease-in-out;
         opacity: 0;
         
         p {
@@ -74,6 +74,20 @@
           max-height: 200px;
           opacity: 1;
         }
+      }
+
+      &:hover {
+        background-color: a.$secondary-accent-color;
+        color: a.$alt-text-color;
+        
+        h4 {
+          color: a.$alt-text-color;
+        }
+        
+        .arrow {
+          filter: brightness(0) invert(1);
+        }
+
       }
     }
   }
