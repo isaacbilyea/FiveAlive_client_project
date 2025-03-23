@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&family=Zeyada&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_left_alt,arrow_right_alt,chevron_left,chevron_right">
@@ -86,11 +86,10 @@
     </div>
 
     <!--Main Content-->
-    <div class="bg-tertiary">
-        <section class="full-width-grid-con" id="letters-section">
+    <div class="bg-secondary">
+        <section class="grid-con" id="letters-section">
             <h2 class="hidden">Letters</h2>
-
-            <div class="grid-con" id="letters-con">
+            <div class="col-span-full" id="letters-con">
                 <div id="soldier-info">
                     <div id="soldier-image">
                         <img src="images/letters-soldier.png" alt="photo of soldiers">
@@ -101,85 +100,74 @@
 
                 <div id="letter-content">
                     <div id="letter">
-                        <p>"If God enables me to see my people again, I shall look upon it as a new life"</p>
+                        <p>If God enables me to see my people again, I shall look upon it as a new life</p>
                         <p id="letter-date">February 9th, 1915</p>
                     </div>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <div id="letter-navigation" class="col-span-full">
-                <div class="letter-box">
-                    <span class="letter-number">1</span>
-                    <p>Muslim Officer to His Brother</p>
-                    <p class="letter-date">December 1914</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">2</span>
-                    <p>A Garhwali to His Father</p>
-                    <p class="letter-date">January 14th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">3</span>
-                    <p>A Wounded Sikh to His Brother</p>
-                    <p class="letter-date">January 18th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">4</span>
-                    <p>A Wounded Sikh to His Father</p>
-                    <p class="letter-date">January 18th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">5</span>
-                    <p>A Wounded Sikh to His Brother</p>
-                    <p class="letter-date">January 21st, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">6</span>
-                    <p>A Wounded Punjabi Rajput to a Relative</p>
-                    <p class="letter-date">January 29th, 1915</p>
-                </div>
-                <div class="letter-box active">
-                    <span class="letter-number">7</span>
-                    <p>South Indian Muslim to a Friend</p>
-                    <p class="letter-date">February 9th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">8</span>
-                    <p>The 20th Deccan Horse</p>
-                    <p class="letter-date">July 14th, 1916</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">9</span>
-                    <p>Rifleman Amar Singh Rawat</p>
-                    <p class="letter-date">March 26th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">10</span>
-                    <p>Jemadar Khan Muhammad</p>
-                    <p class="letter-date">March 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">11</span>
-                    <p>Rifleman Amar Singh Rawat</p>
-                    <p class="letter-date">April 1st, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">12</span>
-                    <p>A Sikh Sepoy to His Brother</p>
-                    <p class="letter-date">April 5th, 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">13</span>
-                    <p>Havildar Ghufran Khan</p>
-                    <p class="letter-date">April 1915</p>
-                </div>
-                <div class="letter-box">
-                    <span class="letter-number">14</span>
-                    <p>Jemadar Indar Singh</p>
-                    <p class="letter-date">September 15th, 1916</p>
-                </div>
+    <!--Letters Navigation-->
+    <div class="bg-tertiary">
+        <section id="letter-navigation" class="col-span-full">
+            <h2 class="hidden">Letters Navigation</h2>
+            <div class="letter-box">
+                <p>Muslim Officer to His Brother</p>
+                <p class="letter-date">December 1914</p>
             </div>
-
+            <div class="letter-box">
+                <p>A Garhwali to His Father</p>
+                <p class="letter-date">January 14th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>A Wounded Sikh to His Brother</p>
+                <p class="letter-date">January 18th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>A Wounded Sikh to His Father</p>
+                <p class="letter-date">January 18th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>A Wounded Sikh to His Brother</p>
+                <p class="letter-date">January 21st, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>A Wounded Punjabi Rajput to a Relative</p>
+                <p class="letter-date">January 29th, 1915</p>
+            </div>
+            <div class="letter-box active">
+                <p>South Indian Muslim to a Friend</p>
+                <p class="letter-date">February 9th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>The 20th Deccan Horse</p>
+                <p class="letter-date">July 14th, 1916</p>
+            </div>
+            <div class="letter-box">
+                <p>Rifleman Amar Singh Rawat</p>
+                <p class="letter-date">March 26th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>Jemadar Khan Muhammad</p>
+                <p class="letter-date">March 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>Rifleman Amar Singh Rawat</p>
+                <p class="letter-date">April 1st, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>A Sikh Sepoy to His Brother</p>
+                <p class="letter-date">April 5th, 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>Havildar Ghufran Khan</p>
+                <p class="letter-date">April 1915</p>
+            </div>
+            <div class="letter-box">
+                <p>Jemadar Indar Singh</p>
+                <p class="letter-date">September 15th, 1916</p>
+            </div>
         </section>
     </div>
 
