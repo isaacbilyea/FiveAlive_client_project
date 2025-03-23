@@ -30,6 +30,7 @@ a, button {
     color: inherit;
     font: inherit;
     scroll-behavior: smooth;
+    cursor: pointer;
 }
 
 input, textarea {
@@ -58,13 +59,13 @@ input, textarea {
     border-radius: 0.75rem;
     
     .plyr--video {
-        --plyr-color-main: #9E2A2B;
+        --plyr-color-main: #BE1E2D;
         --plyr-control-icon-size: 1rem;
         --plyr-control-radius: 1.25rem;
-        --plyr-font-family: Roboto, Arial, sans-serif;
+        --plyr-font-family: 'Alexandria', 'Inter', sans-serif;
         --plyr-control-spacing: 1rem;
         --plyr-range-fill-background: #fff;
-        --plyr-range-thumb-background: #9E2A2B;
+        --plyr-range-thumb-background: #BE1E2D;
     }
 }
 
@@ -86,17 +87,17 @@ input, textarea {
     font-size: 1.15rem;
     border-radius: 10rem;
     margin: 3rem auto;
-    padding: 0.75rem 1.75rem;
+    padding: 0.75rem 2rem;
     font-weight: 600;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten(a.$primary-accent-color, 10%);
+    }
 
     a {
         all: unset;
-    }
-
-    img {
-        margin-left: 0.5rem;
-        width: 1.3rem;
     }
 }
 
