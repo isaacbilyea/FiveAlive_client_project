@@ -65,28 +65,25 @@
     }
 }
 
-#india-support-con {
+#support-quote {
+    background-color: a.$secondary-color;
+    border-radius: 0.5rem;
+    border-left: 10px solid a.$primary-accent-color;
+    padding: 1.25rem 1.5rem;
 
+    #quote {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+        font-family: a.$heading-font-family;
+    }
 
-    #support-quote {
-        background-color: a.$secondary-color;
-        border-radius: 0.5rem;
-        border-left: 10px solid a.$primary-accent-color;
-        padding: 1.25rem 1.5rem;
-
-        #quote {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        #quote-name {
-            text-align: right;
-            width: 100%;
-            margin: 0;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
+    #quote-name {
+        text-align: right;
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -304,17 +301,17 @@
         .section-header {
             margin: 0;
         }
-
-        #support-quote {
-            width: 100%;
-            margin-top: 2rem;
-            box-sizing: border-box;
-
-            #quote {
-                font-size: 1.5rem;
-                width: 80%;
-            }
-        }
     }
     
+    
+    #support-quote {
+        width: 100%;
+        margin-top: 2rem;
+        box-sizing: border-box;
+
+        #quote {
+            font-size: 1.5rem;
+            width: 80%;
+        }
+    }
 }
