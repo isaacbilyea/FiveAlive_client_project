@@ -3,12 +3,16 @@
 #letters-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     #letters-con {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         gap: 2rem;
-        margin-bottom: 5rem;
+        margin: 0 auto;
     }
 
     #soldier-info {
@@ -18,101 +22,100 @@
             width: 10rem;
             height: 10rem;
             margin: 0 auto;
-            border-radius: 50%;
 
             img {
                 width: 100%;
                 height: 100%;
+                border-radius: 0.5rem;
                 object-fit: cover;
+                max-width: 10rem;
             }
         }
 
         #soldier-name {
-            color: a.$alt-text-color;
             margin-bottom: 0.25rem;  
             font-size: 1.5rem;
         }
 
         #letter-to {
-            color: a.$alt-text-color;
-            font-style: italic;
             margin: 0;
         }
     }
 
     #letter-content {
         background-color: a.$secondary-color;
-        padding: 1rem 2rem;
+        padding: 2.5rem 3rem;
         border-radius: 0.5rem;
+        min-height: 20rem;
+        background: url('../images/letter-background.png') no-repeat center center/cover;
 
         #letter {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
+            height: 20rem;
 
             p {
                 color: a.$body-text-color;
+                font-family: 'Zeyada', cursive;
+                font-size: 1.25rem;
+                width: 90%;
+                margin: 0;
             }
 
             #letter-date {
                 text-align: right;
                 font-style: italic;
                 margin-top: 2rem;
-            }
-        }
-    }
-
-    #letter-navigation {
-        display: flex;
-        gap: 1rem;
-        overflow: hidden;
-        padding: 1rem 0.5rem;
-
-        .letter-box {
-            flex: 0 0 10.5rem;
-            height: 15rem;
-            background-color: a.$secondary-color;
-            padding: 2rem 1.5rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            &.active {
-                background-color: a.$primary-accent-color;
-                color: a.$alt-text-color;
-                transform: translateY(-1rem);
-
-                .letter-date {
-                    color: a.$alt-text-color;
-                }
-            }
-
-            .letter-number {
-                font-size: 1.75rem;
-                font-weight: 800;
-                margin-bottom: 1rem;
-            }
-
-            p {
-                margin: 0;
-                font-size: 0.9rem;
-            }
-
-            .letter-date {
-                font-size: 0.8rem;
-                color: a.$body-text-color;
-                font-style: italic;
-                margin-top: 0.5rem;
+                width: 100%;
             }
         }
     }
 }
+
+#letter-navigation {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    padding: 5rem 2rem;
+
+    .letter-box {
+        flex: 0 0 10.5rem;
+        height: 15rem;
+        background-color: a.$secondary-color;
+        padding: 2rem 1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url('../images/letter-nav-background.png') no-repeat center center/cover;
+
+        &.active {
+            background-color: a.$primary-accent-color;
+            transform: translateY(-1rem);
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-family: a.$heading-font-family;
+            font-weight: 500;
+        }
+
+        .letter-date {
+            font-size: 0.8rem;
+            color: a.$body-text-color;
+            font-family: a.$body-font-family;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     #letters-section {
@@ -121,6 +124,25 @@
 
             #letter-content {
                 margin-left: 4rem;
+                
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        #soldier-info {
+
+            #soldier-image {
+                margin: 0;
+            }
+
+            #soldier-name {
+                text-align: left;
+            }
+
+            #letter-to {
+                text-align: left;
             }
         }
     }
