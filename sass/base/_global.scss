@@ -20,6 +20,21 @@ html, body {
     background-color: a.$primary-color;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/main-background.png');
+    background-repeat: repeat;
+    z-index: -1;
+    opacity: 0.85;
+    pointer-events: none;
+    mix-blend-mode: multiply; 
+}
+
 body.menu-open {
     overflow: hidden;
     padding-right: var(--scrollbar-width);
@@ -50,12 +65,27 @@ input, textarea {
 
 .bg-secondary {
     background-color: a.$secondary-color;
+    position: relative;
+    isolation: isolate; 
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/main-background.png');
+        background-repeat: repeat;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.85;
+        mix-blend-mode: multiply; 
+    }
 }
 
 .bg-tertiary {
     background-color: a.$tertiary-color;
-<<<<<<< Updated upstream
-=======
     position: relative;
     isolation: isolate; 
 
@@ -106,7 +136,7 @@ input, textarea {
         background-size: unset;
         background-position: unset;
     }
->>>>>>> Stashed changes
+
 }
 
 .bg-accent {
