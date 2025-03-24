@@ -1,32 +1,39 @@
 export function donationCounter() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(TextPlugin);
     
-    // Get all counter elements
-    const counters = document.querySelectorAll('#donation-stats-con span');
+    const stats = document.querySelectorAll('#donation-stats-con span');
     
-    counters.forEach(counter => {
-        const startText = counter.textContent;
-        const endNumber = parseInt(startText.replace(/\D/g, ''));
+    stats.forEach(stat => {
+        const value = stat.innerText;
+        const hasPrefix = value.includes('$');
+        const hasSuffix = value.includes('+');
+        const number = parseInt(value.replace(/\D/g, ''));
+        const numberLength = number.toString().length;
         
-        // Animate counter
-        gsap.to(counter, {
-            textContent: endNumber,
+        // Start with padded zeros matching final number length
+        let current = Math.pow(10, numberLength - 1);
+        if (current > number) current = Math.pow(10, numberLength - 2);
+
+        // Set initial display
+        let initialDisplay = current.toLocaleString();
+        if (hasPrefix) initialDisplay = '$' + initialDisplay;
+        if (hasSuffix) initialDisplay += '+';
+        stat.innerText = initialDisplay;
+
+        gsap.to({value: current}, {
+            value: number,
             duration: 2,
-            ease: "power1.out",
             scrollTrigger: {
                 trigger: '#donation-stats',
                 start: "top 80%",
                 once: true
             },
-            onUpdate: () => {
-                let currentNumber = Math.round(counter.textContent);
-                let formatted = currentNumber.toLocaleString();
-                
-                if (startText.includes('$')) formatted = '$' + formatted;
-                if (startText.includes('+')) formatted = formatted + '+';
-                
-                counter.textContent = formatted;
+            onUpdate: function() {
+                current = Math.round(this.targets()[0].value);
+                let display = current.toLocaleString();
+                if (hasPrefix) display = '$' + display;
+                if (hasSuffix) display += '+';
+                stat.innerText = display;
             }
         });
     });

@@ -23,6 +23,12 @@ html, body {
 body.menu-open {
     overflow: hidden;
     padding-right: var(--scrollbar-width);
+    background-color: a.$tertiary-color;
+    background-image: none;
+    
+    &::before {
+        display: none;
+    }
 }
 
 a, button {
@@ -48,6 +54,59 @@ input, textarea {
 
 .bg-tertiary {
     background-color: a.$tertiary-color;
+<<<<<<< Updated upstream
+=======
+    position: relative;
+    isolation: isolate; 
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        mix-blend-mode: multiply; 
+    }
+
+    &#header-background {
+        isolation: unset;
+    }
+
+    &#event-background::before {
+        background-image: url('../images/event-background.png');
+    }
+
+    &#partners-background::before {
+        background-image: url('../images/partners-background.png');
+    }
+
+    &#phases-background::before {
+        background-image: url('../images/phases-background.png');
+    }
+
+    &#srishti-background::before {
+        background-image: url('../images/srishti-background.png');
+    }
+
+    &#video-background::before {
+        background-image: url('../images/video-background.png');
+    }
+
+    &.history-background::before {
+        background-image: url('../images/history-background.png');
+        background-repeat: repeat;
+        opacity: 0.5;
+        background-size: unset;
+        background-position: unset;
+    }
+>>>>>>> Stashed changes
 }
 
 .bg-accent {
