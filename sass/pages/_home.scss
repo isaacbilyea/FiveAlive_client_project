@@ -48,99 +48,6 @@
     }
 }
 
-#news-con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    #news-header {
-        margin: 0 auto;
-        
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    h4 {
-        margin-bottom: 1rem;
-    }
-
-    #articles {
-        margin: 3rem auto;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        gap: 3rem;
-  
-        .article {
-            all: unset;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            min-height: 28rem;
-            
-            img {   
-                width: 100%;
-                height: 12rem;
-                object-fit: cover;
-            }
-
-            &.news-article .article-text h5 {
-                background-color: a.$primary-accent-color;
-            }
-        
-            .article-text {
-                background-color: a.$primary-color;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 1.5rem;
-                flex: 1;
-                height: 100%;
-
-                h5 {
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    margin: 0;
-                    border-radius: 0.5rem;
-                    color: a.$primary-color;
-                    background-color: a.$secondary-accent-color;
-                    padding: 0.25rem 0.75rem;
-                    width: fit-content;
-                    margin-bottom: 0.5rem;
-                }
-            
-                h6 {
-                    font-size: 1.75rem;
-                    font-weight: 600;
-                    margin: 0;
-                    font-family: a.$heading-font-family;
-                }
-    
-                span {
-                    font-size: 0.8rem;
-                    font-weight: 300;
-                }
-    
-                p {
-                    margin: 0;
-                    margin-top: 0.5rem;
-                }
-
-                .article-cta {
-                    text-decoration: underline;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-
-}
-
 #featured-events-con {
     display: flex;
     align-items: center;
@@ -297,21 +204,6 @@
     #about-con {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    #news-con {
-
-        #articles {
-            flex-direction: row;
-
-            .article {
-                min-height: 30rem;
-
-                img {
-                    height: 12rem;
-                }
-            }
-        }
     }
 
     #featured-events-con {
