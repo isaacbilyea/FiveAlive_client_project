@@ -5,8 +5,9 @@ export function burgerMenu() {
           mainNav = document.querySelector('#main-nav'),
           menuText = document.querySelector('#menu-button span'),
           body = document.querySelector('body'),
-          scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
+          scrollbarWidth = window.innerWidth - document.documentElement.clientWidth,
+          historyLink = document.querySelector('#history-submenu'),
+          submenu = document.querySelector('.submenu');
 
     document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
 
@@ -23,19 +24,30 @@ export function burgerMenu() {
             menuText.textContent = 'Menu';
         }
     };
- 
+
+    function toggleSubmenu(e) {
+        if (window.innerWidth < 1200) {
+            e.preventDefault();
+            historyLink.classList.toggle('submenu-active');
+            submenu.classList.toggle('active');
+        }
+    }
+
     function resetMenu() {
         if (window.innerWidth >= 1200) {
             hamburgerMenu.classList.remove('activate');
             mainNav.classList.remove('show');
             body.classList.remove('menu-open');
             menuText.textContent = 'Menu';
+            historyLink.classList.remove('submenu-active');
+            submenu.classList.remove('active');
         }
     }
 
     //EVENT LISTENERS
 
     hamburgerMenu.addEventListener('click', toggleMenu);
+    historyLink.addEventListener('click', toggleSubmenu);
     window.addEventListener('resize', resetMenu);
 
 }
