@@ -2,8 +2,8 @@
 
 #filter-section {
     padding: {
-        top: 1rem;
-        bottom: 1rem;
+        top: 1.25rem;
+        bottom: 1.25rem;
     }
 
     #filter-bar {
@@ -11,6 +11,8 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+        // opacity: 0;
+        // animation: fadeIn 0.8s ease-out forwards;
     
         button {
             background-color: #1C583F;
@@ -106,11 +108,19 @@
     }
 }
 
+// @keyframes fadeIn {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
 @media screen and (min-width: 768px) {
     #filter-section {
         #filter-bar {
             justify-content: center;
-            gap: 1.5rem;
 
             button {
                 padding: 1rem 2rem;

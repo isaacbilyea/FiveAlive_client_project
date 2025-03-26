@@ -33,6 +33,7 @@ body::before {
     opacity: 0.85;
     pointer-events: none;
     mix-blend-mode: multiply; 
+    scroll-behavior: smooth;
 }
 
 body.menu-open {

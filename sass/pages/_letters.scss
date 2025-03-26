@@ -101,7 +101,7 @@
 
         &.active {
             background-color: a.$primary-accent-color;
-            transform: translateY(-1rem);
+            transform: translateY(-1rem) !important;
         }
 
         p {
