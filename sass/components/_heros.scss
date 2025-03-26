@@ -1,31 +1,86 @@
 @use '../abstracts' as a;
 
 .bg-hero {
+    position: relative;
+    height: calc(100vh - 6rem);
+    overflow: hidden;
+    background-image: url('../images/home-hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/home-hero.png');
+
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            background: linear-gradient(
+                to top,
+                rgba(#232323, 0.9) 0%,
+                rgba(#232323, 0.7) 50%,
+                rgba(#232323, 0.5) 100%
+            );
+            z-index: 1; 
+
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     .hero-section {
+        position: relative;
+        z-index: 3;
         height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
 
         .section-text-con {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            position: relative;
+            z-index: 4;
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            .hero-header {
+                font-size: 3.5rem;
+                margin: 0;
+            }
+
+            .section-button {
+                margin-top: 2.25rem;
+            }
         }
 
         p {
             margin: 0;
+            margin-bottom: -1.25rem;
             color: a.$alt-text-color;
         }
 
         h3 {
             color: a.$alt-text-color;
         }
-    }  
+    }
 }
 
 .bg-subpage-hero {

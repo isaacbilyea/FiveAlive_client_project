@@ -29,7 +29,7 @@
 <body>
     <!--Header-->
     <h1 class="hidden">Letters</h1>
-    <div class="bg-tertiary">
+    <div class="bg-tertiary" id="header-background">
         <header id="main-header" class="grid-con">
 
             <a href="index.html" class="logo-anchor">
@@ -43,8 +43,18 @@
                 <nav id="main-nav">
                     <h2 class="hidden">Main Navigation</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="history.html" class="active">History</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a href="history.html" id="history-submenu">History</a>
+                            <ul class="submenu">
+                                <li><a href="india-involvement.html">India in WW1</a></li>
+                                <li><a href="history.html#timeline">Timeline</a></li>
+                                <li><a href="more-battles.html">More Battles</a></li>
+                                <li><a href="regiments.html">Regiments</a></li>
+                                <li><a href="awards.html">Awardees</a></li>
+                                <li><a href="letters.html">Letters</a></li>
+                            </ul>
+                        </li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="news.html">News &amp; Events</a></li>
                     </ul>
@@ -74,6 +84,7 @@
             </div>
         </header>
     </div>
+
 
     <!--Hero-->
     <div class="bg-subpage-hero">
@@ -179,7 +190,7 @@
             <div id="logo-wrapper">
                 <a href="index.html" class="logo-anchor">
                     <div class="logo">
-                        <img src="images/logo-white.svg" alt="logo">
+                        <img src="images/logo.svg" alt="logo">
                         <p>BROTHERS<br>IN ARMS</p>
                     </div>
                 </a>
@@ -231,7 +242,7 @@
             <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
             <form class="newsletter-form" action="#" method="POST">
                 <input type="email" class="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="section-button">Subscribe</button>
+                <button type="submit" class="section-button green-button">Subscribe</button>
             </form>
         </div>
 
@@ -246,10 +257,8 @@
                         alt="instagram icon"></a>
                 <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img src="images/youtube.svg"
                         alt="youtube icon"></a>
-                <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin icon"></a>
                 <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
                         alt="twitter icon"></a>
-                <a href="#" target="_blank"><img src="images/tiktok.svg" alt="tiktok icon"></a>
             </div>
         </div>
 
