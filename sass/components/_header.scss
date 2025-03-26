@@ -31,7 +31,7 @@
             p {
                 line-height: 1;
                 font-weight: 700;
-                margin-left: 1rem;
+                margin-left: 0.5rem;
                 font-size: 1.25rem;
                 color: a.$alt-text-color;
                 font-family: a.$alt-heading-font-family;
@@ -279,6 +279,12 @@
             }
         }
 
+        .logo-anchor {
+    
+            p {
+                margin-left: 1rem;
+            }  
+        }            
     }
 }
 

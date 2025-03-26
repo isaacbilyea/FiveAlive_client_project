@@ -55,6 +55,7 @@
             justify-content: flex-start;
             gap: 1rem;
             position: relative;
+            width: 100%;
             z-index: 4;
 
             p {
@@ -112,4 +113,17 @@
             }
         }
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .bg-hero {
+        .hero-section {
+            .section-text-con {
+                p {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
 }
