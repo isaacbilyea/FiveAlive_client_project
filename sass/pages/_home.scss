@@ -1,5 +1,10 @@
 @use '../abstracts' as a;
 
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 #donation-stats {
     text-align: center;
     padding: 2rem;
@@ -69,11 +74,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
 
         h3, h4 {
             color: a.$alt-text-color;
-            text-align: center;
+            text-align: left;
         }
 
         h4 {
@@ -82,7 +86,8 @@
         }
 
         p {
-            text-align: center;
+            text-align: left;
+            margin-bottom: 0;
         }
         
     }
@@ -93,6 +98,7 @@
         
         img {
             border-radius: 0.5rem;
+            margin-bottom: 0;
         }
     }
 }
@@ -143,20 +149,34 @@
     #partners {
         margin-top: 3rem;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
-        place-items: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 2rem;
+        padding: 0.5rem;
+        margin: 0;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        width: 100%;
+        margin-top: 3rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
        
         .partner-card {
             background-color: a.$primary-color;
-            min-width: 7rem;
-            max-width: 7rem;
+            min-width: 30%;
+            max-width: 30%;
+            flex: 0 0 auto;
             aspect-ratio: 1/1;
-            max-height: 7rem;
             padding: 2rem;
             border-radius: 0.5rem;
+            scroll-snap-align: center;
             @include a.center;
 
             img {
@@ -178,6 +198,40 @@
                     height: 80%;
                 }
             }
+        }
+    }
+}
+
+#news-con.home-news {
+    #articles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 2rem;
+        padding: 0.5rem;
+        margin: 0;
+        margin-top: 2rem;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        width: 100%;
+        box-sizing: border-box;
+        
+        .article {
+            min-width: 80%;
+            max-width: 80%;
+            flex: 0 0 auto;
+            margin: 0;
+            scroll-snap-align: center;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+            background: transparent;
         }
     }
 }
@@ -252,20 +306,21 @@
             }
         }
     }
-}
 
-@media screen and (min-width: 1200px) {
-
-    #donation-stats {
-
-        #donation-stats-con {
-            gap: 7rem;
+    #news-con.home-news {
+        #articles {
+            flex-wrap: nowrap;
+            overflow-x: visible;
+            gap: 1rem; 
+            margin-top: 2rem;
+            padding: 0;
+            
+            .article {
+                min-width: 0;
+                max-width: none;
+                flex: 1;
+            }
         }
-    }
-
-    #about-con {
-        flex-direction: row;
-        justify-content: space-between;
     }
 
     #history-con {
@@ -290,15 +345,67 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap: 4rem;
+                gap: 2rem;
 
                 img {
-                    width: 24rem;
+                    width: 18rem;
                 }
 
                 p {
                     width: 90%;
                 }
+            }
+        }
+    }
+
+    #partners-con {
+
+        .section-text-con {
+            width: 100%;
+        }
+        
+        #partners {
+            flex-wrap: nowrap;
+            overflow-x: visible;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 0;
+            margin-top: 2rem;
+            width: 100%;
+        
+            .partner-card {
+                min-width: 0;
+                max-width: none;
+                flex: 1; // Each item takes equal space
+                aspect-ratio: 1/1; // Maintain square shape
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #donation-stats {
+
+        #donation-stats-con {
+            gap: 7rem;
+        }
+    }
+
+    #about-con {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    
+    #history-cards-con {
+
+        .history-card {
+
+            gap: 4rem;
+
+            img {
+                width: 24rem;
             }
         }
     }

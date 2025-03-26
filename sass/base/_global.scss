@@ -177,7 +177,7 @@ input, textarea {
     font-size: 1.15rem;
     border-radius: 10rem;
     margin: 3rem auto;
-    padding: 0.75rem 2rem;
+    padding: 0.5rem 1.25rem;
     font-weight: 600;
     font-size: 1rem;
     transition: background-color 0.3s ease;
@@ -234,6 +234,10 @@ input, textarea {
 
     html, body {
         font-size: 16px;
+    }
+
+    .donate-btn {
+        padding: 0.75rem 2rem;
     }
 
 }
