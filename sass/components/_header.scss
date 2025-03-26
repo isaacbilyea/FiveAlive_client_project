@@ -100,16 +100,16 @@
             }
 
             #history-submenu {
-                margin-bottom: -3rem;
+                margin-bottom: -2.5rem;
 
-                // &::after {
-                //     content: url('../images/menu-arrow.svg');
-                //     width: 0.5rem;
-                //     margin-left: 1rem;
-                //     transform: rotate(0deg);
-                //     transition: transform 0.3s ease;
-                //     transform-origin: center;
-                // }
+                &::after {
+                    content: url('../images/menu-arrow.svg');
+                    width: 0.5rem;
+                    margin-left: 1rem;
+                    transform: rotate(0deg);
+                    transition: transform 0.3s ease;
+                    transform-origin: center;
+                }
 
                 &.submenu-active::after {
                     transform: rotate(90deg);
@@ -298,6 +298,26 @@
                 transform: none;
                 transition: none;
 
+                #history-submenu {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: white;
+                        transition: width 0.3s ease;
+                        margin-left: 0rem;
+         
+                        
+                        &:hover::after,
+                        &.active::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
                 ul {
                     flex-direction: row;
                     gap: 3rem;
@@ -332,16 +352,11 @@
                             &.active::after {
                                 width: 100%;
                             }
-                            
-                            // &.active,
-                            // &:hover {
-                            //     font-weight: 600;
-                            // }
 
                             &::before {
                                 display: none;
                             }
-
+                            
                             &#history-submenu {
                                 padding-right: 1.5rem;
                                 
@@ -359,7 +374,7 @@
                             
                                 &:hover::after,
                                 &.active::after {
-                                    width: 100%;
+                                    width: 70%;
                                 }
                         
                             }
@@ -410,22 +425,32 @@
                         
                         a {
                             font-size: 1rem;
-                            width: fit-content;
-                            display: block;
-                            color: a.$primary-color;
+                            display: inline-block;
+                            color: white;
                             text-align: center;
-                            padding-top: 0.65rem;
-                            margin-bottom: 0.65rem;
+                            margin: 0.65rem 0;
+                            position: relative;
+                            
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 1px;
+                                background-color: white;
+                                transition: width 0.3s ease;
+                            }
+                            
+                            &:hover::after {
+                                width: 100%;
+                            }
                         }
                     }
                 }
 
                 li {
                     position: relative;
-
-                    #history-submenu::after {
-                        background: none;
-                    }
 
                     &:has(#history-submenu) {
                         position: relative;
@@ -442,34 +467,12 @@
                             transition: background-color 0.3s ease;
                             z-index: -1;
                         }
-
-                        // a::after {
-                        //     content: '';
-                        //     position: absolute;
-                        //     bottom: -2px;
-                        //     width: 0;
-                        //     height: 1px;
-                        //     background-color: white;
-                        //     transition: width 0.3s ease; 
-
-                        //     &:hover {
-                        //         width: 100%;
-                        //     }
-                        // }
-
-                        // &:hover::before {
-                        //     background-color: lighten(a.$tertiary-color, 10%);
-                        // }
                     }
 
                     &:hover .submenu {
                         height: 17.25rem;
                         opacity: 1;
                         pointer-events: all;
-
-                        & + a::after {
-                            width: 100%;
-                        }
                     }
                 }
             }
