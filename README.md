@@ -6,7 +6,7 @@ Welcome! This is the repository of official website development of the Brothers 
 
 ## Technologies :desktop_computer:
 
-- Front-End: HTML, CSS (SASS), JavaScript, Vue.js, GreenSock, AJAX, Three.js
+- Front-End: HTML, CSS (SASS), JavaScript, Vue.js, GreenSock, AJAX
 - Back-End: PHP, MySQL, Lumen
 - Design Softwares: Adobe Illustrator, Photoshop, Adobe InDesign
 - Motion Applications: Cinema 4D, Adobe Premiere Pro, After Effects
