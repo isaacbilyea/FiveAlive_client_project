@@ -102,14 +102,14 @@
             #history-submenu {
                 margin-bottom: -3rem;
 
-                &::after {
-                    content: url('../images/menu-arrow.svg');
-                    width: 0.5rem;
-                    margin-left: 1rem;
-                    transform: rotate(0deg);
-                    transition: transform 0.3s ease;
-                    transform-origin: center;
-                }
+                // &::after {
+                //     content: url('../images/menu-arrow.svg');
+                //     width: 0.5rem;
+                //     margin-left: 1rem;
+                //     transform: rotate(0deg);
+                //     transition: transform 0.3s ease;
+                //     transform-origin: center;
+                // }
 
                 &.submenu-active::after {
                     transform: rotate(90deg);
@@ -333,10 +333,10 @@
                                 width: 100%;
                             }
                             
-                            &.active,
-                            &:hover {
-                                font-weight: 600;
-                            }
+                            // &.active,
+                            // &:hover {
+                            //     font-weight: 600;
+                            // }
 
                             &::before {
                                 display: none;
@@ -372,9 +372,9 @@
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
-                    background-color: white;
+                    background-color: #134832;
                     padding: 1rem;
-                    min-width: 6rem;
+                    min-width: 8rem;
                     height: 0;
                     transition: all 0.3s ease;
                     margin-top: 2.25rem;
@@ -412,15 +412,20 @@
                             font-size: 1rem;
                             width: fit-content;
                             display: block;
-                            color: a.$tertiary-color;
+                            color: a.$primary-color;
                             text-align: center;
-                            padding: 0.5rem 0rem;
+                            padding-top: 0.65rem;
+                            margin-bottom: 0.65rem;
                         }
                     }
                 }
 
                 li {
                     position: relative;
+
+                    #history-submenu::after {
+                        background: none;
+                    }
 
                     &:has(#history-submenu) {
                         position: relative;
@@ -438,29 +443,27 @@
                             z-index: -1;
                         }
 
-                        a::after {
-                            content: '';
-                            position: absolute;
-                            bottom: -2px;
-                            width: 0;
-                            height: 1px;
-                            background-color: white;
-                            transition: width 0.3s ease; 
-                        }
+                        // a::after {
+                        //     content: '';
+                        //     position: absolute;
+                        //     bottom: -2px;
+                        //     width: 0;
+                        //     height: 1px;
+                        //     background-color: white;
+                        //     transition: width 0.3s ease; 
 
-                        &:hover {
-                            a::after {
-                                width: 100%;
-                            }
-                        }
+                        //     &:hover {
+                        //         width: 100%;
+                        //     }
+                        // }
 
-                        &:hover::before {
-                            background-color: lighten(a.$tertiary-color, 10%);
-                        }
+                        // &:hover::before {
+                        //     background-color: lighten(a.$tertiary-color, 10%);
+                        // }
                     }
 
                     &:hover .submenu {
-                        height: 18rem;
+                        height: 17.25rem;
                         opacity: 1;
                         pointer-events: all;
 
