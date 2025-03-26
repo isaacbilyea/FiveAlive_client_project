@@ -21,6 +21,7 @@
     <link rel="manifest" href="/images/site.webmanifest">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     <script type="module" src="js/more-battles.js"></script>
     <title>BIA | Other Battles</title>
 </head>
@@ -42,9 +43,9 @@
                 <nav id="main-nav">
                     <h2 class="hidden">Main Navigation</h2>
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" id="history-submenu">History</a>
+                            <a href="history.html" id="history-submenu" class="active">History</a>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -100,7 +101,7 @@
     <div class="bg-tertiary">
         <section class="grid-con" id="filter-section">
             <h2 class="hidden">Filter Section</h2>
-            <div id="filter-bar" class="col-span-full">
+            <div id="filter-bar" class="col-span-full no-animation">
                 <button class="active" data-type="western">Western Front</button>
                 <button data-type="mesopotamia">Mesopotamia</button>
                 <button data-type="kut">Kut</button>

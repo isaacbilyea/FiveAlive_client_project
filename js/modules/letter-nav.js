@@ -1,7 +1,7 @@
 import { letterData } from './letter-data.js';
 
 export function letterNav() {
-    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(TextPlugin, ScrollTrigger);
     
     //VARIABLES
     const letterNav = document.querySelector('#letter-navigation');
@@ -82,9 +82,13 @@ export function letterNav() {
         centerCard(card);
         updateContent(index);
         
-        letterSection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'center'
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: "#letters-section",
+                offsetY: 150
+            },
+            ease: "power2.inOut"
         });
     }
         
@@ -93,6 +97,24 @@ export function letterNav() {
     //EVENT LISTENERS
     allCards.forEach(card => {
         card.addEventListener('click', () => changeCard(card));
+    });
+
+    // Add stagger animation for cards
+    gsap.set('.letter-box', { opacity: 0, y: 50 });
+    
+    ScrollTrigger.create({
+        trigger: '#letter-navigation',
+        start: 'top 80%',
+        once: true,
+        onEnter: () => {
+            gsap.to('.letter-box', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'power2.out'
+            });
+        }
     });
 
 }
