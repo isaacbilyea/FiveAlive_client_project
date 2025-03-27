@@ -85,28 +85,26 @@
 
 
     <!--Hero-->
-    <section id="history-hero-con" class="full-width-grid-con">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="section-text-con">
-            <h3 class="hidden">History</h3>
-            <h4 class="section-header">The Untold Story of Brotherhood</h4>
-            <p class="section-text">Indian and Canadian soldiers fought together in pivotal World War I battles, their
-                bravery shaping history yet often overlooked.</p>
-            <a class="section-button" href="donate.html">Support Us</a>
-        </div>
-        <div class="video-con">
-            <div class="video-background">
-                <iframe
-                    src="https://www.youtube.com/embed/PmDn-a5FOjg?autoplay=1&mute=1&loop=1&playlist=PmDn-a5FOjg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=10&iv_load_policy=3&disablekb=1&fs=0"
-                    title="YouTube video player" allowfullscreen>
-                </iframe>
-            </div>
+    <div class="bg-hero" id="home-hero-con">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="videos/History.webm" type="video/mp4">
+            </video>
             <span class="video-source">Source: Library and Archives Canada</span>
         </div>
-        <div id="image-con">
-            <img src="images/history-hero.png" alt="soldiers marching">
-        </div>
-    </section>
+        <section class="grid-con section-flex hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <p>Welcome to the</p>
+                <h3 class="section-header hero-header">Brothers in Arms</h3>
+                <p class="section-text">A memorial that stands as North America's first tribute honouring
+                    the alliance between Indian and Canadian soldiers during World War I. Your support is vital in
+                    bringing
+                    the Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <a class="section-button" href="donate.html">Support Us</a>
+            </div>
+        </section>
+    </div>
 
     <!--India Support-->
     <section id="india-support-con" class="grid-con section-flex no-reverse">
@@ -142,12 +140,12 @@
     <!--Timeline-->
     <div class="bg-tertiary history-background" id="timeline-wrapper">
         <div class="grid-con">
-            <div class="col-span-full section-text-con">
+            <div class="col-span-full section-text-con" id="timeline-header">
                 <h3 class="icon-header history-icon">The Timeline</h3>
                 <h4 class="section-header">Key Battles &amp; Events</h4>
             </div>
         </div>
-        <section id="timeline">
+        <section id="timeline" class="no-animation">
             <div>
                 <div class="timeline-line">
                     <div id="timeline-progress"></div>

@@ -1,6 +1,6 @@
 export function videoPlayer() {
     
-    const player = new Plyr('video', {
+    const player = new Plyr('.player', {
         settings: [
             'play-large',
             'play',    
