@@ -96,12 +96,36 @@
     display: flex;
     justify-content: flex-start;
 
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        background: linear-gradient(
+            to top,
+            rgba(#232323, 0.8) 0%,
+            rgba(#232323, 0.6) 50%,
+            rgba(#232323, 0.4) 100%
+        );
+        z-index: 1; 
+
+    }
+
+    &#letter-banner {
+        background-image: url('../images/letter-banner.jpg');
+    }
+
     .subpage-hero-section {
         margin: 0 auto;
         width: 100%;
 
         .section-text-con {
             align-self: flex-start;
+            z-index: 2;
         
             .section-header {
                 color: a.$alt-text-color;

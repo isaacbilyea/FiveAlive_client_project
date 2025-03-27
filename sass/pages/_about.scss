@@ -87,6 +87,7 @@
 #phases-con {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     * {
         color: a.$alt-text-color;

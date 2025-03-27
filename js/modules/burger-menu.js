@@ -42,10 +42,15 @@ export function burgerMenu() {
             historyLink.classList.remove('submenu-active');
             submenu.classList.remove('active');
         }
+
+        if (window.innerWidth < 412) {
+            menuText.style.display = 'none';
+        } else {
+            menuText.style.display = 'block';
+        }
     }
 
     //EVENT LISTENERS
-
     hamburgerMenu.addEventListener('click', toggleMenu);
     historyLink.addEventListener('click', toggleSubmenu);
     window.addEventListener('resize', resetMenu);
