@@ -5,6 +5,19 @@ export function timeline() {
     const timeline = document.querySelector('#timeline');
     const progress = document.querySelector('#timeline-progress');
     const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineHeader = document.querySelector('.timeline-header');
+
+    gsap.from(timelineHeader, {
+        y: 25,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: timelineHeader,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+    });
 
     //Progress bar
     gsap.to(progress, {

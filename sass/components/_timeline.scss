@@ -5,7 +5,6 @@
 
     .section-text-con {
         margin: 0;
-        margin-bottom: 3rem;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -21,6 +20,7 @@
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
     color: a.$alt-text-color;
 
     .timeline-line {
@@ -142,7 +142,8 @@
         padding: 10rem 0;
 
         .section-text-con {
-            margin-bottom: 10rem;
+            margin-bottom: 2rem;
+            width: 100%;
         }
     }
     

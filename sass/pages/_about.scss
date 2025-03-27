@@ -144,17 +144,33 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
 
-    #mission-con {
+     #mission-con {
         
         #mission-cards {
+            gap: 1.5rem;
             flex-direction: row;
+
+            .mission-card {
+
+                div {
+
+                    img {
+                        max-height: 10rem;
+                    }
+                }
+            }
         }
     }
 
     #phases-con {
         align-items: flex-start;
+
+        
+        .section-text-con {
+            width: 100%;
+        }
         
         .phase {
             flex-direction: row;
@@ -163,22 +179,50 @@
             margin-bottom: 1rem;
 
             .section-image-con {
-                width: 30%;
+                width: 80%;
 
                 img {
                     width: 100%;
                     margin: 0;
                 }
             }
+
+            p {
+                width: 100%;
+            }
         }
 
     }
 
+    
     #donation-video-con {
+
+        .section-text-con {
+            width: 100%;
+        }
         
         .video-con {
             width: 90%;
             margin: 0 auto;
         }
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #phases-con {
+        
+        .phase {
+
+            .section-image-con {
+                width: 50%;
+            }
+
+            p {
+                width: 70%;
+            }
+        }
+
     }
 }
