@@ -146,7 +146,37 @@
 
 @media screen and (min-width: 768px) {
 
-     #mission-con {
+    #vision, #features, #sristhi-con, #location-con {
+        
+        .section-image-con {
+            width: 45%;
+            margin-left: 1rem;
+            img {
+                height: 20rem;
+                object-fit: cover;
+            }
+        }
+
+        .section-text-con {
+            width: 55%;
+            margin: 0;
+            
+            p {
+                width: 100%;
+            }
+        }
+
+        &.no-reverse .section-text-con {
+            margin-left: 1rem;
+        }
+
+        &.no-reverse .section-image-con {
+            margin: 0;
+        }
+    }
+    
+
+    #mission-con {
         
         #mission-cards {
             gap: 1.5rem;
@@ -210,6 +240,24 @@
 }
 
 @media screen and (min-width: 1200px) {
+    
+    #mission-con {
+        
+        #mission-cards {
+            gap: 3rem;
+            flex-direction: row;
+
+            .mission-card {
+
+                div {
+
+                    img {
+                        max-height: 15rem;
+                    }
+                }
+            }
+        }
+    }
 
     #phases-con {
         
