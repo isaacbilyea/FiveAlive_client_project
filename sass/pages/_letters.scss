@@ -48,7 +48,8 @@
         border-radius: 0.5rem;
         min-width: 23rem;
         max-width: 23rem;
-        height: 25rem; 
+        min-height: 25rem;
+        height: fit-content;
         background: url('../images/letter-background.png') no-repeat center center/cover;
         box-sizing: border-box;
 
