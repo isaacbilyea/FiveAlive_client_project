@@ -22,6 +22,7 @@
             overflow: hidden;
             width: 80%;
             margin: 0 auto;
+            max-width: 20rem;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -184,11 +185,12 @@
             flex-direction: row;
 
             .mission-card {
+                max-width: 20rem;
 
                 div {
 
                     img {
-                        max-height: 10rem;
+                        max-height: 15rem;
                     }
                 }
             }
