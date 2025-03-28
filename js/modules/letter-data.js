@@ -14,25 +14,25 @@ export const letterData = [
     {
         content: "There can be no confidence of life or of seeing again the dear children or of seeing you once more. [...] If I live I will write again",
         date: "January 18th, 1915",
-        from: "A wounded Sikh",
+        from: "A Wounded Sikh",
         to: "his brother"
     },
     {
         content: "Tell my mother not to go wandering madly because her son, my brother, is dead. To be born and to die is God's order. Some day we must die, sooner or later, and if I die here, who will remember me? It is a fine thing to die far from home. A saint said this, and, as he was a good man, it must be true.",
         date: "January 18th, 1915",
-        from: "A wounded Sikh",
+        from: "A Wounded Sikh",
         to: "his father"
     },
     {
         content: "The battle is beginning and the men are dying like maggots. No one can count them - not in thousands but in hundreds of thousands of thousands. No one can count them",
         date: "January 21st, 1915",
-        from: "A wounded Sikh",
+        from: "A Wounded Sikh",
         to: "his brother"
     },
     {
         content: "Do not think that this is war. This is not war. It is the ending of the world",
         date: "January 29th, 1915",
-        from: "A wounded Punjabi Rajput",
+        from: "A Wounded Punjabi Rajput",
         to: "a relative"
     },
     {
