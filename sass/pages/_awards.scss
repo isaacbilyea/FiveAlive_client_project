@@ -27,6 +27,14 @@
                 width: 100%;
             }
 
+            #regiment {
+                margin: 0;
+            }
+
+            #soldier-name {
+                margin-bottom: 0.25rem;
+            }
+
             .soldier-img {
 
                 img {
@@ -38,12 +46,15 @@
             }
 
             .medal-img {
+                box-sizing: border-box;
+                margin-right: 2rem;
+                max-width: 4rem;
+                min-width: 4rem;
                 
                 img {
-                    width: 3rem;
+                    width: 4rem;
                     height: auto;
                     border-radius: 0.5rem;
-                    margin-right: 2rem;
                 }
             }
 
