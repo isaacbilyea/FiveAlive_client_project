@@ -26,8 +26,8 @@
 <body>
     <!--Header-->
     <h1 class="hidden">News Article</h1>
-    <div class="bg-tertiary" id="header-background">
-        <header id="main-header" class="grid-con">
+    <div class="bg-tertiary grid-con" id="header-background">
+        <header id="main-header" class="col-span-full">
 
             <a href="index.html" class="logo-anchor">
                 <div class="logo">
@@ -40,7 +40,7 @@
                 <nav id="main-nav">
                     <h2 class="hidden">Main Navigation</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li>
                             <a href="history.html" id="history-submenu">History</a>
                             <ul class="submenu">
@@ -53,7 +53,7 @@
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="news.html" class="active">News &amp; Events</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
                     </ul>
                 </nav>
                 <div id="sm-icons-con">
@@ -221,8 +221,8 @@
     </div> -->
 
     <!--Footer-->
-    <footer id="main-footer">
-        <div id="top-footer">
+    <footer id="main-footer" class="grid-con">
+        <div id="top-footer" class="col-span-full">
             <div id="logo-wrapper">
                 <a href="index.html" class="logo-anchor">
                     <div class="logo">
@@ -274,7 +274,7 @@
                 <p>London, ON</p>
             </div>
         </div>
-        <div id="newsletter-signup">
+        <div id="newsletter-signup" class="col-span-full">
             <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
             <form class="newsletter-form" action="#" method="POST">
                 <input type="email" class="email" name="email" placeholder="Enter your email address" required>
@@ -298,7 +298,8 @@
             </div>
         </div>
 
-        <div class="line-break col-span-full"></div>
+        <hr class="line-break col-span-full">
+
 
         <div id="bottom-footer" class="col-span-full">
             <p>&copy; 2025 Brothers in Arms Memorial. Managed by Srishti Foundation. All rights reserved.</p>

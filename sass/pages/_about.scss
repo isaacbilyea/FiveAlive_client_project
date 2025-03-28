@@ -30,13 +30,12 @@
             div {
                 position: relative;
                 background-color: a.$primary-color;
-                height: fit-content;
+                max-height: 15rem;
 
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    max-height: 15rem;
                     position: relative;
                 }
         
@@ -49,7 +48,6 @@
                     font-size: 1.25rem;
                     border-radius: 0 1rem 0 0;
                     margin: 0;
-                    margin-bottom: 0.4rem;
                     bottom: 0;
                     left: 0;
                 }
@@ -186,13 +184,6 @@
 
             .mission-card {
                 max-width: 20rem;
-
-                div {
-
-                    img {
-                        max-height: 15rem;
-                    }
-                }
             }
         }
     }
@@ -249,16 +240,6 @@
         #mission-cards {
             gap: 3rem;
             flex-direction: row;
-
-            .mission-card {
-
-                div {
-
-                    img {
-                        max-height: 15rem;
-                    }
-                }
-            }
         }
     }
 
