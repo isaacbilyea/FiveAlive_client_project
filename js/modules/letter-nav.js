@@ -12,7 +12,6 @@ export function letterNav() {
     const letterTo = document.querySelector('#letter-to');
     const letterText = document.querySelector('#letter-text');
     const letterDate = document.querySelector('#letter-date');
-    const letterSection = document.querySelector('#letters-section');
 
     //FUNCTIONS
     function updateContent(index) {
@@ -31,6 +30,8 @@ export function letterNav() {
                 soldierName.textContent = data.from;
                 letterTo.textContent = `To: ${data.to}`;
                 
+                document.querySelector('#full-text').textContent = data.content;
+                document.querySelector('#date-spacer').textContent = data.date;
                 letterText.textContent = '';
                 letterDate.textContent = '';
                 
@@ -39,13 +40,15 @@ export function letterNav() {
                     duration: 0.4,
                     ease: "power2.out",
                     onComplete: () => {
+                        const contentLength = data.content.length;
+                        const typingDuration = contentLength * 0.02;
 
                         tl.to(letterText, {
-                            duration: 2,
+                            duration: typingDuration,
                             text: data.content,
                             ease: "none"
                         }).to(letterDate, {
-                            duration: 0.5,
+                            duration: 0.3,
                             text: data.date,
                             ease: "none"
                         });
@@ -86,7 +89,6 @@ export function letterNav() {
             duration: 1,
             scrollTo: {
                 y: "#letters-section",
-                offsetY: 150
             },
             ease: "power2.inOut"
         });
@@ -99,9 +101,11 @@ export function letterNav() {
         card.addEventListener('click', () => changeCard(card));
     });
 
-    // Add stagger animation for cards
-    gsap.set('.letter-box', { opacity: 0, y: 50 });
-    
+    gsap.set('.letter-box', { 
+        opacity: 0, 
+        y: 20
+    });
+        
     ScrollTrigger.create({
         trigger: '#letter-navigation',
         start: 'top 80%',
@@ -110,9 +114,12 @@ export function letterNav() {
             gsap.to('.letter-box', {
                 opacity: 1,
                 y: 0,
-                duration: 0.8,
-                stagger: 0.2,
-                ease: 'power2.out'
+                duration: 0.15,
+                stagger: {
+                    each: 0.15, 
+                    from: "start" 
+                },
+                ease: "power1.out"
             });
         }
     });

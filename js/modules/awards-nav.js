@@ -107,8 +107,11 @@ export function awardsNav() {
     updateContent(firstCard);
     centerCard(firstCard);
 
-    gsap.set('.award-box', { opacity: 0, y: 50 });
-    
+    gsap.set('.award-box', { 
+        opacity: 0, 
+        y: 20
+    });
+        
     ScrollTrigger.create({
         trigger: '#award-navigation',
         start: 'top 80%',
@@ -117,9 +120,12 @@ export function awardsNav() {
             gsap.to('.award-box', {
                 opacity: 1,
                 y: 0,
-                duration: 0.5,
-                stagger: 0.2,
-                ease: 'power1.out'
+                duration: 0.15,
+                stagger: {
+                    each: 0.15, 
+                    from: "start" 
+                },
+                ease: "power1.out"
             });
         }
     });
