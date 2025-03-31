@@ -43,12 +43,6 @@ export function burgerMenu() {
             historyLink.classList.remove('submenu-active');
             submenu.classList.remove('active');
         }
-
-        if (window.innerWidth < 450) {
-            menuText.style.display = 'none';
-        } else {
-            menuText.style.display = 'block';
-        }
     }
 
 
@@ -56,6 +50,5 @@ export function burgerMenu() {
     hamburgerMenu.addEventListener('click', toggleMenu);
     historyLink.addEventListener('click', toggleSubmenu);
     window.addEventListener('resize', resetMenu);
-    window.addEventListener('load', resetMenu);
 
 }
