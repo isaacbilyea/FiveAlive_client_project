@@ -2,7 +2,8 @@
 
 .bg-hero {
     position: relative;
-    height: calc(100dvh - 6rem); 
+    height: calc(100vh - 6rem);
+    min-height: -webkit-fill-available; 
     overflow: hidden;
     background-color: black;
     background-size: cover;

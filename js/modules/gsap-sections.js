@@ -20,19 +20,4 @@ export function gsapSections() {
         });
     });
 
-    // const backgrounds = document.querySelectorAll('.bg-tertiary, .bg-secondary');
-    // if(backgrounds) {
-    //     backgrounds.forEach(background => {
-    //         gsap.from(background, {
-    //             y: 25,
-    //             opacity: 0,
-    //             duration: 1,
-    //             scrollTrigger: {
-    //                 trigger: background,
-    //                 start: "top 80%",
-    //                 toggleActions: "play none none reverse"
-    //             }
-    //         });
-    //     });
-    // }
 }

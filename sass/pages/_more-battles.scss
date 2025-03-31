@@ -11,8 +11,6 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
-        // opacity: 0;
-        // animation: fadeIn 0.8s ease-out forwards;
     
         button {
             background-color: #1C583F;
@@ -29,7 +27,7 @@
                 background-color: a.$primary-accent-color;
             }
 
-            &:hover {
+            &:hover:not(.active) {
                 background-color: lighten(#1C583F, 10%);
             }
         }
