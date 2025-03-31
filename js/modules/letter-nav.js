@@ -12,6 +12,7 @@ export function letterNav() {
     const letterTo = document.querySelector('#letter-to');
     const letterText = document.querySelector('#letter-text');
     const letterDate = document.querySelector('#letter-date');
+    const lettersSection = document.querySelector('#letters-section');
 
     //FUNCTIONS
     function updateContent(index) {
@@ -89,6 +90,8 @@ export function letterNav() {
             duration: 1,
             scrollTo: {
                 y: "#letters-section",
+                offsetY: window.innerHeight/2 - lettersSection.offsetHeight/2,
+                autoKill: false
             },
             ease: "power2.inOut"
         });

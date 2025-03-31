@@ -10,6 +10,7 @@ export function awardsNav() {
     const medalImg = document.querySelector('#medal-image');
     const soldierImg = document.querySelector('.soldier-img img');
     const awardTitle = document.querySelector('.award-column h3');
+    const awardsSection = document.querySelector('#awards-section');
     
     function updateContent(card) {
         const name = card.querySelector('.soldier-name').textContent;
@@ -92,7 +93,8 @@ export function awardsNav() {
             duration: 1,
             scrollTo: {
                 y: "#awards-section",
-                offsetY: 150
+                offsetY: window.innerHeight/2 - awardsSection.offsetHeight/2,
+                autoKill: false
             },
             ease: "power2.inOut"
         });
