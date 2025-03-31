@@ -58,6 +58,7 @@
             border-radius: 0.5rem;
             margin-top: 1.5rem;
             display: block;
+            width: 100%;
         }
 
         p {
@@ -81,6 +82,10 @@
     #contact-con {
 
         p {
+            width: 90%;
+        }
+        
+        img {
             width: 90%;
         }
 

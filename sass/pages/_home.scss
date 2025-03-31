@@ -260,6 +260,7 @@
     }
 
     #featured-events-con {
+        max-width: 1400px;
         display: flex;
         align-items: center;
     
@@ -301,6 +302,7 @@
     }
 
     #news-con.home-news {
+        max-width: 1400px;
         #articles {
             flex-wrap: nowrap;
             overflow-x: visible;
@@ -352,6 +354,7 @@
     }
 
     #partners-con {
+        max-width: 1400px;
 
         .section-text-con {
             width: 100%;
