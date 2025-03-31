@@ -148,21 +148,15 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 2rem;
-        padding: 0.5rem;
         margin: 0;
         scroll-snap-type: x mandatory;
-        scroll-padding: 0;
         -ms-overflow-style: none;
         scrollbar-width: none;
         box-sizing: border-box;
         width: 100%;
         margin-top: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        width: 100%;
-        margin-top: 3rem;
+        padding: 0 2rem;
+        scroll-padding: 2rem;
 
         &::-webkit-scrollbar {
             display: none;
@@ -207,8 +201,6 @@
 }
 
 #news-con.home-news {
-    padding-left: 0;
-    padding-right: 0;
 
     #articles {
         display: flex;
@@ -216,17 +208,15 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 2rem;
-        padding: 0.5rem;
         margin: 0;
         margin-top: 2rem;
         scroll-snap-type: x mandatory;
-        scroll-padding: 0;
         -ms-overflow-style: none;
         scrollbar-width: none;
         width: 100%;
         box-sizing: border-box;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding: 0 2rem;
+        scroll-padding: 2rem;
         
         .article {
             min-width: 80%;
@@ -319,6 +309,7 @@
 
     #news-con.home-news {
         max-width: 1400px;
+
         #articles {
             flex-wrap: nowrap;
             overflow-x: visible;
