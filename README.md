@@ -16,11 +16,11 @@ Welcome! This is the repository of official website development of the Brothers 
 
 **Officially Published by:**
 
-- Milana Gabbassova - Project Manager, Back-End Developer
 - Timothy Bryle Flores - Graphic Designer, Motion Designer
+- Apapat Juntarattanakamol - Graphic Designer, Social Media Content Creator
+- Bernardo Macapagal - Graphic Designer, Videographer
+- Milana Gabbassova - Project Manager, Back-End Developer
 - Isaac Bilyea - Front-End Developer, Back-End Developer
-- Bernardo Macapagal - Graphic Designer, Motion Designer
-- Apapat Juntarattanakamol - Graphic Designer, Motion Designer
 
 ## Usage :gear:
 
