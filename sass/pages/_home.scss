@@ -157,6 +157,8 @@
         margin-top: 3rem;
         padding: 0 2rem;
         scroll-padding: 2rem;
+        align-items: center;
+        height: fit-content;
 
         &::-webkit-scrollbar {
             display: none;
@@ -174,6 +176,7 @@
             padding: 2rem;
             border-radius: 0.5rem;
             scroll-snap-align: center;
+            position: relative;
             @include a.center;
 
             img {
