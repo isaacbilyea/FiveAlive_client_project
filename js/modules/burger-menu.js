@@ -23,6 +23,7 @@ export function burgerMenu() {
         } else {        
             menuText.textContent = 'Menu';
         }
+        
     };
 
     function toggleSubmenu(e) {
@@ -43,16 +44,18 @@ export function burgerMenu() {
             submenu.classList.remove('active');
         }
 
-        if (window.innerWidth < 412) {
+        if (window.innerWidth < 450) {
             menuText.style.display = 'none';
         } else {
             menuText.style.display = 'block';
         }
     }
 
+
     //EVENT LISTENERS
     hamburgerMenu.addEventListener('click', toggleMenu);
     historyLink.addEventListener('click', toggleSubmenu);
     window.addEventListener('resize', resetMenu);
+    window.addEventListener('load', resetMenu);
 
 }
