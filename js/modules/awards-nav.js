@@ -1,6 +1,7 @@
 export function awardsNav() {
     gsap.registerPlugin(ScrollTrigger);
     
+    //VARIABLES
     const awardNav = document.querySelector('#award-navigation');
     const awardsInfo = document.querySelector('#awards-info');
     const allCards = document.querySelectorAll('.award-box');
@@ -12,8 +13,9 @@ export function awardsNav() {
     const awardTitle = document.querySelector('.award-column h3');
     const awardsSection = document.querySelector('#awards-section');
     
+    //FUNCTIONS
     function updateContent(card) {
-        const name = card.querySelector('.soldier-name').textContent;
+        const cardName = card.querySelector('.soldier-name').textContent;
         const cardRegiment = card.querySelector('.regiment').textContent;
         const cardImage = card.querySelector('.award-image img').src;
 
@@ -26,7 +28,7 @@ export function awardsNav() {
             'flying-cross': {
                 title: 'Flying Cross Recipient',
                 description: 'The Distinguished Flying Cross is awarded to aviators as the highest aerial combat honour for their extraordinary skill and valour in the skies during World War One.',
-                image: 'flying-ace.png'
+                image: 'flying-cross.png'
             },
             'flying-ace': {
                 title: 'Flying Ace',
@@ -50,7 +52,7 @@ export function awardsNav() {
             opacity: 0,
             duration: 0.3,
             onComplete: () => {
-                soldierName.textContent = name;
+                soldierName.textContent = cardName;
                 regiment.textContent = cardRegiment;
                 description.textContent = content.description;
                 awardTitle.textContent = content.title;
@@ -99,16 +101,8 @@ export function awardsNav() {
             ease: "power2.inOut"
         });
     }
-    
-    allCards.forEach(card => {
-        card.addEventListener('click', () => changeCard(card));
-    });
-    
-    const firstCard = document.querySelector('.award-box');
-    firstCard.classList.add('active');
-    updateContent(firstCard);
-    centerCard(firstCard);
 
+    //GSAP
     gsap.set('.award-box', { 
         opacity: 0, 
         y: 20
@@ -130,5 +124,10 @@ export function awardsNav() {
                 ease: "power1.out"
             });
         }
+    });
+
+    //EVENT LISTENERS
+    allCards.forEach(card => {
+        card.addEventListener('click', () => changeCard(card));
     });
 }

@@ -12,7 +12,6 @@ export function burgerMenu() {
     document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
 
     //FUNCTIONS
-
     function toggleMenu() {
         hamburgerMenu.classList.toggle('activate');
         mainNav.classList.toggle('show');
