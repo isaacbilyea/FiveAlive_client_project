@@ -22,7 +22,8 @@ export function contentFilter() {
             duration: 1,
             scrollTo: {
                 y: selectedGroup,
-                offsetY: 150
+                offsetY: window.innerHeight/2 - selectedGroup.offsetHeight/2,
+                autoKill: false
             },
             ease: "power2.out"
         });
