@@ -13,6 +13,8 @@ export function letterNav() {
     const letterText = document.querySelector('#letter-text');
     const letterDate = document.querySelector('#letter-date');
     const lettersSection = document.querySelector('#letters-section');
+    const fullText = document.querySelector('#full-text');
+    const dateSpacer = document.querySelector('#date-spacer');
 
     //FUNCTIONS
     function updateContent(index) {
@@ -31,8 +33,8 @@ export function letterNav() {
                 soldierName.textContent = data.from;
                 letterTo.textContent = `To: ${data.to}`;
                 
-                document.querySelector('#full-text').textContent = data.content;
-                document.querySelector('#date-spacer').textContent = data.date;
+                fullText.textContent = data.content;
+                dateSpacer.textContent = data.date;
                 letterText.textContent = '';
                 letterDate.textContent = '';
                 
@@ -78,10 +80,7 @@ export function letterNav() {
 
         card.classList.add('active');
         
-        let index = 0;
-        allCards.forEach((item, i) => {
-            if (item === card) index = i;
-        });
+        const index = card.dataset.index;
         
         centerCard(card);
         updateContent(index);
@@ -98,12 +97,8 @@ export function letterNav() {
     }
         
     changeCard(firstCard);
-    
-    //EVENT LISTENERS
-    allCards.forEach(card => {
-        card.addEventListener('click', () => changeCard(card));
-    });
 
+    //GSAP
     gsap.set('.letter-box', { 
         opacity: 0, 
         y: 20
@@ -125,6 +120,11 @@ export function letterNav() {
                 ease: "power1.out"
             });
         }
+    });
+
+    //EVENT LISTENERS
+    allCards.forEach(card => {
+        card.addEventListener('click', () => changeCard(card));
     });
 
 }

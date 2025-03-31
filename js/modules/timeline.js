@@ -1,12 +1,14 @@
 export function timeline() {
 
     gsap.registerPlugin(ScrollTrigger);
-        
+    
+    //VARIABLES
     const timeline = document.querySelector('#timeline');
     const progress = document.querySelector('#timeline-progress');
     const timelineItems = document.querySelectorAll('.timeline-item');
     const timelineHeader = document.querySelector('.timeline-header');
 
+    //GSAP
     gsap.from(timelineHeader, {
         y: 25,
         opacity: 0,
@@ -19,7 +21,6 @@ export function timeline() {
         }
     });
 
-    //Progress bar
     gsap.to(progress, {
         height: '100%',
         ease: 'none',
@@ -31,7 +32,6 @@ export function timeline() {
         }
     });
 
-    //Dot triggers
     timelineItems.forEach((item) => {
         const dot = item.querySelector('.timeline-dot');
         const content = item.querySelectorAll('.timeline-content div');

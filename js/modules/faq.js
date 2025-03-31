@@ -3,7 +3,6 @@ export function faq() {
     //VARIABLES
     const questions = document.querySelectorAll('.faq-question');
 
-
     //FUNCTIONS
     function toggleFaq(e) {
         const clickedCard = e.currentTarget.closest('.faq-card');
