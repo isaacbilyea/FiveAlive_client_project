@@ -53,7 +53,6 @@ export function burgerMenu() {
 
 
     //EVENT LISTENERS
-
     hamburgerMenu.addEventListener('click', toggleMenu);
     historyLink.addEventListener('click', toggleSubmenu);
     window.addEventListener('resize', resetMenu);

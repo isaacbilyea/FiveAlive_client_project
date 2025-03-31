@@ -10,9 +10,8 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column-gap: 20px;
     margin: 0 auto;
-    padding-left: 25px;
-    padding-right: 25px;
-    max-width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
  
 .col-span-1	{grid-column: span 1 / span 1;}
@@ -40,8 +39,8 @@
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 20px;
-       padding-left: 30px;
-       padding-right: 30px;
+       padding-left: 40px;
+       padding-right: 40px;
     }
  
     .m-col-span-1	{grid-column: span 1 / span 1;}
@@ -149,8 +148,8 @@
        display: grid; 
        grid-template-columns: repeat(12, minmax(0, 1fr));
        grid-column-gap: 40px;
-       padding-left: 120px;
-       padding-right: 120px;
+       padding-left: 110px;
+       padding-right: 110px;
     }
  
     .l-col-span-1	{grid-column: span 1 / span 1;}
@@ -195,4 +194,27 @@
     .l-col-end-12	{grid-column-end: 12;}
     .l-col-end-13	{grid-column-end: 13;}
  
+}
+
+@media screen and (min-width: 1440px) { 
+ 
+    .grid-con { 
+       display: grid; 
+       grid-template-columns: repeat(12, minmax(0, 1fr));
+       grid-column-gap: 40px;
+       padding-left: 110px;
+       padding-right: 110px;
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+ 
+    .grid-con { 
+       display: grid; 
+       grid-template-columns: repeat(12, minmax(0, 1fr));
+       grid-column-gap: 40px;
+       padding-left: 150px;
+       padding-right: 150px;
+       max-width: 1920px;
+    }
 }

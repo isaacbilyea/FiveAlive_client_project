@@ -27,6 +27,14 @@
                 width: 100%;
             }
 
+            #regiment {
+                margin: 0;
+            }
+
+            #soldier-name {
+                margin-bottom: 0.25rem;
+            }
+
             .soldier-img {
 
                 img {
@@ -38,12 +46,15 @@
             }
 
             .medal-img {
+                box-sizing: border-box;
+                margin-right: 2rem;
+                max-width: 4rem;
+                min-width: 4rem;
                 
                 img {
-                    width: 3rem;
+                    width: 4rem;
                     height: auto;
                     border-radius: 0.5rem;
-                    margin-right: 2rem;
                 }
             }
 
@@ -60,7 +71,6 @@
     display: flex;
     gap: 2rem;
     padding: 5rem 2rem;
-    scroll-behavior: smooth;
     overflow-x: hidden;
 
     .award-box {
@@ -75,7 +85,7 @@
         flex-direction: column;
 
         &.active {
-            transform: translateY(-1rem);
+            transform: translateY(-1rem) !important;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 
             .award-info {

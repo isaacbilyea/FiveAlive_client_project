@@ -19,6 +19,7 @@
     <link rel="manifest" href="/images/site.webmanifest">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     <script type="module" src="js/history.js"></script>
     <title>BIA | History</title>
 </head>
@@ -26,8 +27,8 @@
 <body>
     <!--Header-->
     <h1 class="hidden">History</h1>
-    <div class="bg-tertiary">
-        <header id="main-header" class="grid-con">
+    <div class="bg-tertiary grid-con" id="header-background">
+        <header id="main-header" class="col-span-full">
 
             <a href="index.html" class="logo-anchor">
                 <div class="logo">
@@ -40,8 +41,18 @@
                 <nav id="main-nav">
                     <h2 class="hidden">Main Navigation</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="history.html" class="active">History</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a href="history.html" id="history-submenu">History</a>
+                            <ul class="submenu">
+                                <li><a href="india-involvement.html">India in WW1</a></li>
+                                <li><a href="history.html#timeline">Timeline</a></li>
+                                <li><a href="more-battles.html">More Battles</a></li>
+                                <li><a href="regiments.html">Regiments</a></li>
+                                <li><a href="awards.html">Awardees</a></li>
+                                <li><a href="letters.html">Letters</a></li>
+                            </ul>
+                        </li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="news.html">News &amp; Events</a></li>
                     </ul>
@@ -73,29 +84,26 @@
     </div>
 
     <!--Hero-->
-    <section id="history-hero-con" class="full-width-grid-con">
-        <h2 class="hidden">Hero Section</h2>
-        <div class="section-text-con">
-            <h3 class="hidden">History</h3>
-            <h4 class="section-header">The Untold Story of Brotherhood</h4>
-            <p class="section-text">Indian and Canadian soldiers fought together in pivotal World War I battles, their
-                bravery shaping history yet often overlooked.</p>
-            <a class="section-button" href="donate.html">Support Us</a>
-        </div>
-        <div class="video-con">
-            <div class="video-background">
-                <iframe
-                    src="https://www.youtube.com/embed/PmDn-a5FOjg?autoplay=1&mute=1&loop=1&playlist=PmDn-a5FOjg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=10&iv_load_policy=3&disablekb=1&fs=0"
-                    title="YouTube video player" allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                </iframe>
-            </div>
+    <div class="bg-hero" id="home-hero-con">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="videos/History.webm" type="video/mp4">
+            </video>
             <span class="video-source">Source: Library and Archives Canada</span>
         </div>
-        <div id="image-con">
-            <img src="images/history-hero.png" alt="soldiers marching">
-        </div>
-    </section>
+        <section class="grid-con section-flex hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <p>Welcome to the</p>
+                <h3 class="section-header hero-header">Brothers in Arms</h3>
+                <p class="section-text">A memorial that stands as North America's first tribute honouring
+                    the alliance between Indian and Canadian soldiers during World War I. Your support is vital in
+                    bringing
+                    the Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <a class="section-button" href="donate.html">Support Us</a>
+            </div>
+        </section>
+    </div>
 
     <!--India Support-->
     <section id="india-support-con" class="grid-con section-flex no-reverse">
@@ -131,12 +139,12 @@
     <!--Timeline-->
     <div class="bg-tertiary history-background" id="timeline-wrapper">
         <div class="grid-con">
-            <div class="col-span-full section-text-con">
+            <div class="col-span-full section-text-con" id="timeline-header">
                 <h3 class="icon-header history-icon">The Timeline</h3>
                 <h4 class="section-header">Key Battles &amp; Events</h4>
             </div>
         </div>
-        <section id="timeline">
+        <section id="timeline" class="no-animation">
             <div>
                 <div class="timeline-line">
                     <div id="timeline-progress"></div>
@@ -308,8 +316,8 @@
     </div>
 
     <!--Footer-->
-    <footer id="main-footer">
-        <div id="top-footer">
+    <footer id="main-footer" class="grid-con">
+        <div id="top-footer" class="col-span-full">
             <div id="logo-wrapper">
                 <a href="index.html" class="logo-anchor">
                     <div class="logo">
@@ -317,7 +325,7 @@
                         <p>BROTHERS<br>IN ARMS</p>
                     </div>
                 </a>
-                <p>Honouring the past<br>to inspire tomorrow.</p>
+                <p>Honouring the past<br> to inspire tomorrow.</p>
             </div>
 
             <div>
@@ -361,11 +369,11 @@
                 <p>London, ON</p>
             </div>
         </div>
-        <div id="newsletter-signup">
+        <div id="newsletter-signup" class="col-span-full">
             <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
             <form class="newsletter-form" action="#" method="POST">
                 <input type="email" class="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="section-button">Subscribe</button>
+                <button type="submit" class="section-button green-button">Subscribe</button>
             </form>
         </div>
 
@@ -380,13 +388,13 @@
                         alt="instagram icon"></a>
                 <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img src="images/youtube.svg"
                         alt="youtube icon"></a>
-                <!-- <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin icon"></a> -->
                 <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
                         alt="twitter icon"></a>
             </div>
         </div>
 
-        <div class="line-break col-span-full"></div>
+        <hr class="line-break col-span-full">
+
 
         <div id="bottom-footer" class="col-span-full">
             <p>&copy; 2025 Brothers in Arms Memorial. Managed by Srishti Foundation. All rights reserved.</p>

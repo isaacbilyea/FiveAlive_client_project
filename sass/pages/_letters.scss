@@ -17,6 +17,8 @@
 
     #soldier-info {
         text-align: center;
+        min-width: 15rem;
+        max-width: 15rem;
 
         #soldier-image {
             width: 10rem;
@@ -33,7 +35,7 @@
         }
 
         #soldier-name {
-            margin-bottom: 0.25rem;  
+            margin-bottom: 0.25rem;
             font-size: 1.5rem;
         }
 
@@ -48,31 +50,65 @@
         border-radius: 0.5rem;
         min-width: 23rem;
         max-width: 23rem;
-        height: 25rem; 
+        height: auto; 
+        min-height: 25rem; 
+        display: flex;
+        flex-direction: column;
         background: url('../images/letter-background.png') no-repeat center center/cover;
         box-sizing: border-box;
 
         #letter {
             position: relative;
-            height: 100%;
-            width: 100%;
+            min-height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-            #letter-text {
-                color: a.$body-text-color;
-                font-family: 'Zeyada', cursive;
-                font-size: 1.5rem;
-                margin: 0;
-                min-height: 80%;
+            #letter-text-container {
+                position: relative;
+                flex-grow: 1;
+                
+                #full-text {
+                    visibility: hidden;
+                    font-family: 'Zeyada', cursive;
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+                
+                #letter-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    color: a.$body-text-color;
+                    font-family: 'Zeyada', cursive;
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
             }
 
-            #letter-date {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                text-align: right;
-                font-size: 1.5rem;
-                font-family: 'Zeyada', cursive;
-                margin: 0;
+            #letter-date-container {
+                position: relative;
+                padding-top: 2rem;
+                height: 2rem;
+                
+                #date-spacer {
+                    visibility: hidden;
+                    font-size: 1.5rem;
+                    font-family: 'Zeyada', cursive;
+                    margin: 0;
+                    text-align: right;
+                }
+                
+                #letter-date {
+                    position: absolute;
+                    top: 2rem;
+                    left: 0;
+                    font-size: 1.5rem;
+                    font-family: 'Zeyada', cursive;
+                    margin: 0;
+                    white-space: nowrap;
+                }
             }
         }
     }
@@ -101,7 +137,7 @@
 
         &.active {
             background-color: a.$primary-accent-color;
-            transform: translateY(-1rem);
+            transform: translateY(-1rem) !important;
         }
 
         p {
@@ -148,4 +184,3 @@
         }
     }
 }
-

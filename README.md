@@ -6,7 +6,7 @@ Welcome! This is the repository of official website development of the Brothers 
 
 ## Technologies :desktop_computer:
 
-- Front-End: HTML, CSS (SASS), JavaScript, Vue.js, GreenSock, AJAX, Three.js
+- Front-End: HTML, CSS (SASS), JavaScript, Vue.js, GreenSock, AJAX
 - Back-End: PHP, MySQL, Lumen
 - Design Softwares: Adobe Illustrator, Photoshop, Adobe InDesign
 - Motion Applications: Cinema 4D, Adobe Premiere Pro, After Effects
@@ -16,11 +16,11 @@ Welcome! This is the repository of official website development of the Brothers 
 
 **Officially Published by:**
 
-- Milana Gabbassova - Project Manager, Back-End Developer
 - Timothy Bryle Flores - Graphic Designer, Motion Designer
+- Apapat Juntarattanakamol - Graphic Designer, Social Media Content Creator
+- Bernardo Macapagal - Graphic Designer, Videographer
+- Milana Gabbassova - Project Manager, Back-End Developer
 - Isaac Bilyea - Front-End Developer, Back-End Developer
-- Bernardo Macapagal - Graphic Designer, Motion Designer
-- Apapat Juntarattanakamol - Graphic Designer, Motion Designer
 
 ## Usage :gear:
 

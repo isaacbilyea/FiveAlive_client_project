@@ -10,7 +10,7 @@ export function awardsNav() {
     const medalImg = document.querySelector('#medal-image');
     const soldierImg = document.querySelector('.soldier-img img');
     const awardTitle = document.querySelector('.award-column h3');
-    const lastCard = document.querySelector('.award-box.active');
+    const awardsSection = document.querySelector('#awards-section');
     
     function updateContent(card) {
         const name = card.querySelector('.soldier-name').textContent;
@@ -59,7 +59,8 @@ export function awardsNav() {
 
                 gsap.to(awardsInfo, {
                     opacity: 1,
-                    duration: 0.4,
+                    duration: 0.3,
+                    delay: 0.2,
                     ease: "power2.out"
                 });
             }
@@ -73,21 +74,29 @@ export function awardsNav() {
         const scrollTo = cardLeft - (navWidth/2) + (cardWidth/2);
 
         gsap.to(awardNav, {
-            duration: 0.5,
+            duration: 0.4,
             scrollLeft: scrollTo,
             ease: "power2.inOut"
         });
     }
     
     function changeCard(card) {
-        lastCard.classList.remove('active');
+        const activeCard = document.querySelector('.award-box.active');
+        activeCard.classList.remove('active');
+        
         card.classList.add('active');
+        
         centerCard(card);
         updateContent(card);
         
-        document.querySelector('#awards-section').scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'center'
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: "#awards-section",
+                offsetY: window.innerHeight/2 - awardsSection.offsetHeight/2,
+                autoKill: false
+            },
+            ease: "power2.inOut"
         });
     }
     
@@ -96,6 +105,30 @@ export function awardsNav() {
     });
     
     const firstCard = document.querySelector('.award-box');
+    firstCard.classList.add('active');
     updateContent(firstCard);
     centerCard(firstCard);
+
+    gsap.set('.award-box', { 
+        opacity: 0, 
+        y: 20
+    });
+        
+    ScrollTrigger.create({
+        trigger: '#award-navigation',
+        start: 'top 80%',
+        once: true,
+        onEnter: () => {
+            gsap.to('.award-box', {
+                opacity: 1,
+                y: 0,
+                duration: 0.15,
+                stagger: {
+                    each: 0.15, 
+                    from: "start" 
+                },
+                ease: "power1.out"
+            });
+        }
+    });
 }
