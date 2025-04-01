@@ -264,7 +264,7 @@
 
     <!--Contact-->
     <div class="bg-secondary">
-        <section id="contact-con" class="grid-con">
+        <section id="contact-con" class="grid-con no-animation">
             <h2 class="hidden">Contact Form</h2>
             <div id="contact-text" class="col-span-full">
                 <h3 class="icon-header phone-icon">Contact</h3>
@@ -274,37 +274,45 @@
                     a general inquiry, fill out the form below, and we'll get back to you soon.</p>
                 <img src="images/contact-image.png" alt="contact image">
             </div>
-            <form id="contact-form" action="#" method="POST">
-                <label for="contact-name">Full Name*</label>
-                <input type="text" id="contact-name" name="name" required>
-                <label for="contact-email">Email Address*</label>
-                <input type="email" id="contact-email" class="email" name="email" required>
-                <label for="contact-subject">Subject Line*</label>
-                <select id="contact-subject" name="subject" required>
+            <form @submit.prevent="submitForm" id="contact-form">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" v-model="formData.name">
+
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" v-model="formData.email">
+
+                <label for="subject">Subject Line*</label>
+                <select id="subject" v-model="formData.subject">
                     <option value="" disabled selected>Subject</option>
                     <option value="donation">Donation Inquiry</option>
                     <option value="volunteer">Volunteer Opportunities</option>
                     <option value="sponsorship">Sponsorship</option>
                     <option value="general">General Inquiry</option>
                 </select>
-                <label for="contact-message">Your Message*</label>
-                <textarea id="contact-message" name="message" rows="3" required></textarea>
-                <button type="submit" class="section-button green-button">Submit</button>
+
+                <label for="message">Your Message*</label>
+                <textarea id="message" v-model="formData.message" rows="3"></textarea>
+
+                <input type="text" id="honeypot" v-model="formData.honeypot">
+
+                <button type="submit" class="section-button green-button" :class="{'button__circle': submitted}">
+                    <div class="container">
+                        <span class="tick" v-html="buttonText"></span>
+                    </div>
+                </button>
+
+                <ul v-if="errors" class="error-messages">
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+
+                <p v-if="showRequiredMessage" id="form-required">Please fill in all required fields*</p>
+
+                <div v-if="responseMessage" class="success-message">
+                    {{ responseMessage }}
+                </div>
             </form>
         </section>
     </div>
-
-    <!--Support Banner-->
-    <!-- <div class="bg-tertiary">
-        <section id="support-con" class="grid-con">
-            <h2 class="hidden">Support Banner</h2>
-            <div class="col-span-full">
-                <h3 class="section-header">Support the Memorial</h3>
-                <a class="section-button" href="#donate-form">Make a Donation <img src="images/flower.svg"
-                        alt="flower"></a>
-            </div>
-        </section>
-    </div> -->
 
     <!--Footer-->
     <footer id="main-footer" class="grid-con">
