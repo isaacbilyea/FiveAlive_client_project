@@ -8,9 +8,21 @@
         display: none;
     }
 
+    #honeypot {
+        display: none;
+    }
+
     #contact-form {
         display: flex;
         flex-direction: column;
+
+        .error-messages {
+            padding: 0;
+            
+            li {
+                list-style-type: none;
+            }
+        }
 
         input, textarea, select {
             border: none;

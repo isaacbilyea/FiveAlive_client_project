@@ -195,9 +195,10 @@
             &:first-of-type {
                 
                 img {
-                    height: fit-content;
                     width: 100%;
-                    object-fit: cover;
+                    height: auto;
+                    object-fit: contain;
+                    max-height: 100%;
                 }
             }
 
