@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_left_alt,arrow_right_alt,chevron_left,chevron_right">
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="BIA">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <title>BIA | Other Battles</title>
+</head>
+
+<body>
+    <!--Header-->
+    <h1 class="hidden">Other Battles</h1>
+    <div class="bg-tertiary grid-con" id="header-background">
+        <header id="main-header" class="col-span-full">
+
+            <a href="index.html" class="logo-anchor">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <p>BROTHERS<br>IN ARMS</p>
+                </div>
+            </a>
+
+            <div id="nav-wrapper">
+                <nav id="main-nav">
+                    <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a href="history.html" id="history-submenu">History</a>
+                            <ul class="submenu">
+                                <li><a href="india-involvement.html">India in WW1</a></li>
+                                <li><a href="history.html#timeline">Timeline</a></li>
+                                <li><a href="more-battles.html">More Battles</a></li>
+                                <li><a href="regiments.html">Regiments</a></li>
+                                <li><a href="awards.html">Awardees</a></li>
+                                <li><a href="letters.html">Letters</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News &amp; Events</a></li>
+                    </ul>
+                </nav>
+                <div id="sm-icons-con">
+                    <h3>Follow Us</h3>
+                    <div class="sm-icons">
+                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                                alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
+                                src="images/instagram.svg" alt="instagram icon"></a>
+                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
+                                src="images/youtube.svg" alt="youtube icon"></a>
+                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                                alt="twitter icon"></a>
+                    </div>
+                </div>
+                <a class="donate-btn" href="donate.html">Donate</a>
+                <div id="menu-button">
+                    <span>Menu</span>
+                    <div id="hamburger-menu">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!--Hero-->
+    <div class="bg-subpage-hero">
+        <section class="grid-con section-flex subpage-hero-section">
+            <h2 class="hidden">Hero Section</h2>
+            <div class="col-span-full section-text-con">
+                <h3 class="icon-header info-icon">History</h3>
+                <h4 class="section-header hero-header">Interactive Learning</h4>
+            </div>
+        </section>
+    </div>
+
+    <!--Main Content-->
+    <div class="bg-secondary">
+        <section class="grid-con">
+            <h2 class="hidden">Memory Card Game</h2>
+            <div id="memory-game" class="col-span-full">
+                <div class="memory-card" data-cardpair="card1">
+                    <img class="front-face" src="images/card1.png" alt="Card 1">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card1">
+                    <img class="front-face" src="images/card1.png" alt="Card 1">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+
+                <div class="memory-card" data-cardpair="card2">
+                    <img class="front-face" src="images/card2.png" alt="Card 2">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card2">
+                    <img class="front-face" src="images/card2.png" alt="Card 2">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+
+                <div class="memory-card" data-cardpair="card3">
+                    <img class="front-face" src="images/card3.png" alt="Card 3">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card3">
+                    <img class="front-face" src="images/card3.png" alt="Card 3">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+
+                <div class="memory-card" data-cardpair="card4">
+                    <img class="front-face" src="images/card4.png" alt="Card 4">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card4">
+                    <img class="front-face" src="images/card4.png" alt="Card 4">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+
+                <div class="memory-card" data-cardpair="card5">
+                    <img class="front-face" src="images/card5.png" alt="Card 5">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card5">
+                    <img class="front-face" src="images/card5.png" alt="Card 5">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+
+                <div class="memory-card" data-cardpair="card6">
+                    <img class="front-face" src="images/card6.png" alt="Card 6">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+                <div class="memory-card" data-cardpair="card6">
+                    <img class="front-face" src="images/card6.png" alt="Card 6">
+                    <img class="back-face" src="images/card-back.png" alt="Card Back">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--Footer-->
+    <footer id="main-footer" class="grid-con">
+        <div id="top-footer" class="col-span-full">
+            <div id="logo-wrapper">
+                <a href="index.html" class="logo-anchor">
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="logo">
+                        <p>BROTHERS<br>IN ARMS</p>
+                    </div>
+                </a>
+                <p>Honouring the past<br> to inspire tomorrow.</p>
+            </div>
+
+            <div>
+                <nav id="footer-nav">
+                    <h2 class="hidden">Footer Navigation</h2>
+
+                    <div id="footer-column-1">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="news.html">News &amp; Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="footer-column-2">
+                        <h3>Support Us</h3>
+                        <ul>
+                            <li><a href="donate.html">Donation</a></li>
+                            <li><a href="donate.html#volunteer">Volunteer</a></li>
+                            <li><a href="donate.html#sponsor">Sponsorship</a></li>
+                            <li><a href="news.html">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="footer-column-3">
+                        <h3><a href="thankyou.html">Contact Us</a></h3>
+                        <ul>
+                            <li><a href="mailto:srishticanada@gmail.com">srishticanada@gmail.com</a></li>
+                            <li><a href="tel:+11233455678">+1 123 345 5678</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="google-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d881.0084319270492!2d-81.13081043035716!3d42.965889879562866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDU3JzU3LjIiTiA4McKwMDcnNDguNiJX!5e1!3m2!1sen!2sca!4v1739819949326!5m2!1sen!2sca"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>London, ON</p>
+            </div>
+        </div>
+        <div id="newsletter-signup" class="col-span-full">
+            <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+            <form class="newsletter-form" action="#" method="POST">
+                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" class="section-button green-button">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="line-break col-span-full"></div>
+
+        <div id="middle-footer" class="col-span-full">
+            <h4>Follow Us</h4>
+            <div id="sm-icons">
+                <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
+                        alt="facebook icon"></a>
+                <a href="https://www.instagram.com/srishticanada" target="_blank"><img src="images/instagram.svg"
+                        alt="instagram icon"></a>
+                <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img src="images/youtube.svg"
+                        alt="youtube icon"></a>
+                <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
+                        alt="twitter icon"></a>
+            </div>
+        </div>
+
+        <hr class="line-break col-span-full">
+
+
+        <div id="bottom-footer" class="col-span-full">
+            <p>&copy; 2025 Brothers in Arms Memorial. Managed by Srishti Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
