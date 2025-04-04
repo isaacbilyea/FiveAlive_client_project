@@ -1,3 +1,24 @@
+@use '../abstracts' as a;
+
+#memory-game-section {
+
+
+    .section-text-con {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+
+        p {
+            text-align: center;
+            width: 100%;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    }
+}
+
+
 #memory-game {
     width: 100%;
     max-width: 900px;
@@ -5,62 +26,60 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    padding: 2rem;
-}
 
-.memory-card {
-    width: 100%;
-    aspect-ratio: 3/4;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    cursor: pointer;
-    transform: rotateY(0deg);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    
-    &:hover {
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    .memory-card {
+        width: 100%;
+        aspect-ratio: 3/4;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        cursor: pointer;
+        transform: rotateY(0deg);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        
+        &:hover {
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        &.flip {
+            transform: rotateY(180deg);
+        }
     }
 
-    &.flip {
-        transform: rotateY(180deg);
-    }
-}
-
-.front-face,
-.back-face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 5px;
-    backface-visibility: hidden;
-}
-
-.front-face {
-    transform: rotateY(180deg);
-    padding: 15px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    img {
-        width: 80%;
-        height: 80%;
-        object-fit: contain;
-        border-radius: 3px;
-        border: 2px solid #2a4b3d;
-    }
-}
-
-.back-face {
-    transform: rotateY(0deg);
-    background: #2a4b3d;
-    border: 2px solid #1a2f26;
-    
-    img {
+    .front-face,
+    .back-face {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 0.25rem;
+        background: a.$primary-color;
+        border: 2px solid a.$tertiary-color;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    .front-face {
+        transform: rotateY(180deg);
+        
+        img {
+            width: 70%;
+            height: 50%;
+            object-fit: contain;
+        }
+    }
+
+    .back-face {
+        transform: rotateY(0deg);
+        padding: 0;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
 }
