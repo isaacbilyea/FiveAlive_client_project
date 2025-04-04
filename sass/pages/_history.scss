@@ -61,6 +61,7 @@
 
             img {
                 width: 100%;
+                filter: sepia(70%) saturate(120%) brightness(90%) contrast(90%) hue-rotate(-15deg);
             }
 
             .subpage-text {
