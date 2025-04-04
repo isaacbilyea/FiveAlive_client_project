@@ -108,8 +108,8 @@
                     you complete the puzzle and discover the full narrative?</p>
             </div>
             <div id="memory-game" class="col-span-full">
-                <div v-for="card in cards" class="memory-card" v-bind:class="{ flip: card.flipped }"
-                    @click="flipCard(card)">
+                <div v-for="card in cards" class="memory-card"
+                    v-bind:class="{ flip: card.flipped, matched: card.matched }" @click="flipCard(card)">
                     <div class="front-face">
                         <img v-bind:src="card.image" v-bind:alt="card.alt">
                     </div>
