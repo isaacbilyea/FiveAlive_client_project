@@ -3,18 +3,18 @@ export function memoryGame() {
         data() {
             return {
                 cards: [
-                    { pair: 'card1', flipped: false, image: 'images/card1.png' },
-                    { pair: 'card1', flipped: false, image: 'images/card1.png' },
-                    { pair: 'card2', flipped: false, image: 'images/card2.png' },
-                    { pair: 'card2', flipped: false, image: 'images/card2.png' },
-                    { pair: 'card3', flipped: false, image: 'images/card3.png' },
-                    { pair: 'card3', flipped: false, image: 'images/card3.png' },
-                    { pair: 'card4', flipped: false, image: 'images/card4.png' },
-                    { pair: 'card4', flipped: false, image: 'images/card4.png' },
-                    { pair: 'card5', flipped: false, image: 'images/card5.png' },
-                    { pair: 'card5', flipped: false, image: 'images/card5.png' },
-                    { pair: 'card6', flipped: false, image: 'images/card6.png' },
-                    { pair: 'card6', flipped: false, image: 'images/card6.png' }
+                    { pair: 'card1', flipped: false, matched: false, image: 'images/card1.png' },
+                    { pair: 'card1', flipped: false, matched: false, image: 'images/card1.png' },
+                    { pair: 'card2', flipped: false, matched: false, image: 'images/card2.png' },
+                    { pair: 'card2', flipped: false, matched: false, image: 'images/card2.png' },
+                    { pair: 'card3', flipped: false, matched: false, image: 'images/card3.png' },
+                    { pair: 'card3', flipped: false, matched: false, image: 'images/card3.png' },
+                    { pair: 'card4', flipped: false, matched: false, image: 'images/card4.png' },
+                    { pair: 'card4', flipped: false, matched: false, image: 'images/card4.png' },
+                    { pair: 'card5', flipped: false, matched: false, image: 'images/card5.png' },
+                    { pair: 'card5', flipped: false, matched: false, image: 'images/card5.png' },
+                    { pair: 'card6', flipped: false, matched: false, image: 'images/card6.png' },
+                    { pair: 'card6', flipped: false, matched: false, image: 'images/card6.png' }
                 ],
                 firstCard: null,
                 canFlip: true
@@ -43,8 +43,12 @@ export function memoryGame() {
                 let cardsMatch = this.firstCard.pair === card.pair;
 
                 if(cardsMatch === true) {
-                    this.firstCard = null;
-                    this.canFlip = true;
+                    setTimeout(() => {
+                        card.matched = true;
+                        this.firstCard.matched = true;
+                        this.firstCard = null;
+                        this.canFlip = true;
+                    }, 1000);
                 } 
                 else {     
                     setTimeout(() => {
