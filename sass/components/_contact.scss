@@ -18,10 +18,24 @@
 
         .error-messages {
             padding: 0;
+            color: a.$primary-accent-color;
+            font-weight: 300;
+            font-size: 0.9rem;
 
             li {
                 list-style-type: none;
+                margin: 0.25rem 0;
             }
+        }
+
+        #form-required {
+            color: a.$primary-accent-color;
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        .required {
+            color: a.$primary-accent-color;
         }
 
         input, textarea, select {
