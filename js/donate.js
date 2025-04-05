@@ -4,6 +4,7 @@ import { faq } from "./modules/faq.js";
 import { hideBubble } from './modules/donation-bubble.js';
 import { donationCounter } from "./modules/donation-counter.js";
 import { gsapSections } from "./modules/gsap-sections.js";
+import { contactForm } from "./modules/contact-form.js";
 
 burgerMenu();
 videoPlayer();
@@ -11,3 +12,4 @@ faq();
 hideBubble();
 donationCounter();
 gsapSections();
+contactForm();
