@@ -3,18 +3,18 @@ export function memoryGame() {
         data() {
             return {
                 cards: [
-                    { pair: 'card1', flipped: false, matched: false, image: 'images/card1.png' },
-                    { pair: 'card1', flipped: false, matched: false, image: 'images/card1.png' },
-                    { pair: 'card2', flipped: false, matched: false, image: 'images/card2.png' },
-                    { pair: 'card2', flipped: false, matched: false, image: 'images/card2.png' },
-                    { pair: 'card3', flipped: false, matched: false, image: 'images/card3.png' },
-                    { pair: 'card3', flipped: false, matched: false, image: 'images/card3.png' },
-                    { pair: 'card4', flipped: false, matched: false, image: 'images/card4.png' },
-                    { pair: 'card4', flipped: false, matched: false, image: 'images/card4.png' },
-                    { pair: 'card5', flipped: false, matched: false, image: 'images/card5.png' },
-                    { pair: 'card5', flipped: false, matched: false, image: 'images/card5.png' },
-                    { pair: 'card6', flipped: false, matched: false, image: 'images/card6.png' },
-                    { pair: 'card6', flipped: false, matched: false, image: 'images/card6.png' }
+                    { pair: 'card1', flipped: false, matched: false, image: 'images/card-1.png' },
+                    { pair: 'card1', flipped: false, matched: false, image: 'images/card-1.png' },
+                    { pair: 'card2', flipped: false, matched: false, image: 'images/card-2.png' },
+                    { pair: 'card2', flipped: false, matched: false, image: 'images/card-2.png' },
+                    { pair: 'card3', flipped: false, matched: false, image: 'images/card-3.png' },
+                    { pair: 'card3', flipped: false, matched: false, image: 'images/card-3.png' },
+                    { pair: 'card4', flipped: false, matched: false, image: 'images/card-4.png' },
+                    { pair: 'card4', flipped: false, matched: false, image: 'images/card-4.png' },
+                    { pair: 'card5', flipped: false, matched: false, image: 'images/card-5.png' },
+                    { pair: 'card5', flipped: false, matched: false, image: 'images/card-5.png' },
+                    { pair: 'card6', flipped: false, matched: false, image: 'images/card-6.png' },
+                    { pair: 'card6', flipped: false, matched: false, image: 'images/card-6.png' }
                 ],
                 firstCard: null,
                 canFlip: true
