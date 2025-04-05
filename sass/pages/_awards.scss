@@ -48,11 +48,11 @@
             .medal-img {
                 box-sizing: border-box;
                 margin-right: 2rem;
-                max-width: 4rem;
-                min-width: 4rem;
+                max-width: 6rem;
+                min-width: 6rem;
                 
                 img {
-                    width: 4rem;
+                    width: 100%;
                     height: auto;
                     border-radius: 0.5rem;
                 }
@@ -83,47 +83,6 @@
         transition: all 0.3s ease;
         display: flex;
         flex-direction: column;
-        position: relative;
-        overflow: hidden;
-
-        &:not(.active) {
-            &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background: rgba(0, 0, 0, 0);
-                transition: background-color 0.3s ease;
-                pointer-events: none;
-            }
-
-            &:hover {
-                &::before {
-                    background: rgba(0, 0, 0, 0.7);
-                }
-            }
-
-            &::after {
-                content: url('../images/info-icon.svg') "Learn More";
-                position: absolute;
-                inset: 0;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 5rem;
-                font-size: 1.2rem;
-                font-weight: 600;
-                gap: 0.5rem;
-                opacity: 0;
-                transition: opacity 0.3s ease;
-                z-index: 1;
-                pointer-events: none;
-            }
-
-            &:hover::after {
-                opacity: 1;
-            }
-        }
 
         &.active {
             transform: translateY(-1rem) !important;
@@ -187,9 +146,6 @@
 
                 .medal-img {
                     margin-bottom: 1rem;
-                    img {
-                        width: 3.5rem;
-                    }
                 }
                 
                 &:last-of-type {
