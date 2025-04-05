@@ -31,7 +31,7 @@ export function letterNav() {
             onComplete: () => {
 
                 soldierName.textContent = data.from;
-                letterTo.textContent = `To: ${data.to}`;
+                letterTo.innerHTML = `<b>To:</b> ${data.to}`;
                 
                 fullText.textContent = data.content;
                 dateSpacer.textContent = data.date;

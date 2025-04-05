@@ -12,7 +12,7 @@
 #donation-bubble {
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: -0.5rem;
     z-index: 100;
     cursor: pointer;
     transition: all 0.3s ease;

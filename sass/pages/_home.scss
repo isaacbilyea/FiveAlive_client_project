@@ -49,6 +49,28 @@
     }
 }
 
+#about-con {
+    display: flex;
+    flex-direction: column;
+
+    #about-video-con {
+        margin-top: 4rem;
+
+        .section-text-con {
+            width: 100%;
+
+            h3 {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+    
+        .video-con {
+            aspect-ratio: 16 / 9;
+        }
+    }
+}
+
 #featured-events-con {
     display: flex;
     align-items: center;
@@ -282,6 +304,13 @@
         }
     }
 
+    #about-con {
+
+        #about-video-con {
+            margin-top: 6rem;
+        }
+    }
+
     #featured-events-con {
         max-width: 1400px;
         display: flex;
@@ -411,11 +440,13 @@
         }
     }
 
+    
     #about-con {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
+        #about-video-con {
+            margin-top: 8rem;
+        }
+    }
     
     #history-cards-con {
 

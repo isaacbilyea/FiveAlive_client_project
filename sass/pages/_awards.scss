@@ -48,11 +48,11 @@
             .medal-img {
                 box-sizing: border-box;
                 margin-right: 2rem;
-                max-width: 4rem;
-                min-width: 4rem;
+                max-width: 6rem;
+                min-width: 6rem;
                 
                 img {
-                    width: 4rem;
+                    width: 100%;
                     height: auto;
                     border-radius: 0.5rem;
                 }
@@ -187,9 +187,6 @@
 
                 .medal-img {
                     margin-bottom: 1rem;
-                    img {
-                        width: 3.5rem;
-                    }
                 }
                 
                 &:last-of-type {
