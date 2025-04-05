@@ -22,6 +22,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/TextPlugin.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="js/donate.js"></script>
     <title>BIA | Donate</title>
 </head>
@@ -43,7 +44,7 @@
                 <nav id="main-nav">
                     <h2 class="hidden">Main Navigation</h2>
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li>
                             <a href="history.html" id="history-submenu">History</a>
                             <ul class="submenu">
@@ -275,13 +276,13 @@
                 <img src="images/contact-image.png" alt="contact image">
             </div>
             <form @submit.prevent="submitForm" id="contact-form">
-                <label for="name">Full Name*</label>
+                <label for="name">Full Name<span class="required">*</span></label>
                 <input type="text" id="name" v-model="formData.name">
 
-                <label for="email">Email Address*</label>
+                <label for="email">Email Address<span class="required">*</span></label>
                 <input type="email" id="email" v-model="formData.email">
 
-                <label for="subject">Subject Line*</label>
+                <label for="subject">Subject Line<span class="required">*</span></label>
                 <select id="subject" v-model="formData.subject">
                     <option value="" disabled selected>Subject</option>
                     <option value="donation">Donation Inquiry</option>
@@ -290,7 +291,7 @@
                     <option value="general">General Inquiry</option>
                 </select>
 
-                <label for="message">Your Message*</label>
+                <label for="message">Your Message<span class="required">*</span></label>
                 <textarea id="message" v-model="formData.message" rows="3"></textarea>
 
                 <input type="text" id="honeypot" v-model="formData.honeypot">
