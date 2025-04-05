@@ -11,8 +11,12 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
     
         button {
+            width: fit-content;
             background-color: #1C583F;
             border: none;
             color: a.$alt-text-color;
@@ -21,7 +25,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 500;
-            margin: 0;
+            white-space: nowrap;
     
             &.active {
                 background-color: a.$primary-accent-color;
@@ -106,20 +110,12 @@
     }
 }
 
-// @keyframes fadeIn {
-//     from {
-//         opacity: 0;
-//     }
-//     to {
-//         opacity: 1;
-//     }
-// }
-
 @media screen and (min-width: 768px) {
     #filter-section {
         #filter-bar {
-            justify-content: center;
-
+            gap: 1.5rem;
+            max-width: 800px;
+            
             button {
                 padding: 1rem 2rem;
             }
@@ -162,3 +158,33 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+
+    #filter-section {
+
+        #filter-bar {
+            max-width: 900px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    #filter-section {
+
+        #filter-bar {
+            max-width: 1000px;
+        }
+    }
+}
+
+// @media screen and (min-width: 1800px) {
+    
+//     #filter-section.battles-filter {
+
+//         #filter-bar {
+//             max-width: none;
+//         }
+//     }
+// }
