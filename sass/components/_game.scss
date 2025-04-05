@@ -1,5 +1,17 @@
 @use '../abstracts' as a;
 
+
+#memory-game-con {
+    * {
+        color: a.$secondary-color;
+    }
+
+    img {
+        margin-top: 2rem;
+    }
+}
+
+
 #memory-game-section {
 
 
@@ -35,14 +47,9 @@
         transition: transform 0.5s, opacity 0.5s;
         cursor: pointer;
         transform: rotateY(0deg);
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 0.5rem;
         opacity: 1;
         
-        &:hover {
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
         &.flip {
             transform: rotateY(180deg);
         }
@@ -83,4 +90,37 @@
         transform: rotateY(0deg);
     }
 
+}
+
+@media screen and (min-width: 768px) {
+  
+    #memory-game-con.section-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .section-image-con {
+            width: 48%;
+            margin: 0;
+
+            img {
+                margin-top: 0;
+            }
+        }
+        
+        #game-text-con {
+            width: 48%;
+            margin: 0;
+
+            .section-header {
+                width: 100%;
+            }
+
+            .section-text-con {
+                width: 100%;
+            }
+        }
+    }
 }
