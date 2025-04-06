@@ -107,16 +107,19 @@
                     With each successful pair you find, another piece of their forgotten history will be uncovered. Can
                     you complete the puzzle and discover the full narrative?</p>
             </div>
-            <div id="memory-game" class="col-span-full">
-                <div v-for="card in cards" class="memory-card"
-                    v-bind:class="{ flip: card.flipped, matched: card.matched }" @click="flipCard(card)">
-                    <div class="front-face">
-                        <img v-bind:src="card.image" v-bind:alt="card.alt">
-                    </div>
-                    <div class="back-face">
-                        <img src="images/card-back.png" alt="Card Back">
+            <div id="memory-game-wrapper" class="col-span-full" v-cloak>
+                <div id="memory-game">
+                    <div v-for="card in cards" class="memory-card"
+                        v-bind:class="{ flip: card.flipped, matched: card.matched }" @click="flipCard(card)">
+                        <div class="front-face">
+                            <img v-bind:src="card.image" v-bind:alt="card.alt">
+                        </div>
+                        <div class="back-face">
+                            <img src="images/card-back.png" alt="Card Back">
+                        </div>
                     </div>
                 </div>
+                <div id="match-counter" v-show="showCounter">{{ matchCount }}/6</div>
             </div>
         </section>
     </div>

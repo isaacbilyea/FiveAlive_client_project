@@ -45,6 +45,10 @@ body.menu-open {
     }
 }
 
+[v-cloak] {
+    display: none;
+}
+
 a, button {
     text-decoration: none;
     color: inherit;
