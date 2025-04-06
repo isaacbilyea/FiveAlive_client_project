@@ -17,7 +17,9 @@ export function memoryGame() {
                     { pair: 'card6', flipped: false, matched: false, image: 'images/card-6.png' }
                 ],
                 firstCard: null,
-                canFlip: true
+                canFlip: true,
+                matchCount: 0,
+                showCounter: false
             }
         },
         methods: {
@@ -48,6 +50,8 @@ export function memoryGame() {
                         this.firstCard.matched = true;
                         this.firstCard = null;
                         this.canFlip = true;
+                        this.matchCount++;
+                        this.animateCounter();
                     }, 1000);
                 } 
                 else {     
@@ -61,12 +65,33 @@ export function memoryGame() {
             },
             shuffle() {
                 this.cards.sort(() => Math.random() - 0.5);
+            },
+            animateCounter() {
+                this.showCounter = true;
+                gsap.fromTo("#match-counter", 
+                    { scale: 0, opacity: 0 },
+                    { 
+                        scale: 1, 
+                        opacity: 1, 
+                        duration: 0.5, 
+                        ease: "back.out" 
+                    }
+                );
+                gsap.to("#match-counter", {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: 2,
+                    onComplete: () => {
+                        this.showCounter = false;
+                    }
+                });
             }
         },
         mounted() {
             this.shuffle();
         }
-    }).mount("#memory-game");
+    }).mount("#memory-game-wrapper");
 
     return app;
 }
