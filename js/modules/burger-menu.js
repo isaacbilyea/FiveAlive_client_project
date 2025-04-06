@@ -46,7 +46,9 @@ export function burgerMenu() {
 
     //EVENT LISTENERS
     hamburgerMenu.addEventListener('click', toggleMenu);
-    submenuToggle.addEventListener('click', toggleSubmenu);
+    if(submenuToggle) {
+        submenuToggle.addEventListener('click', toggleSubmenu);
+    }
     window.addEventListener('resize', resetMenu);
 
 }

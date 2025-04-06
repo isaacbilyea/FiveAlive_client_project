@@ -122,6 +122,7 @@
                 </div>
                 <div id="match-counter" v-show="showCounter">{{ matchCount }}/6</div>
                 <div id="game-complete-popup" v-show="gameComplete" class="game-popup">
+                    <img :src="confettiSrc" alt="celebration confetti" id="confetti" v-if="showConfetti">
                     <div class="popup-content">
                         <h4>Congratulations!</h4>
                         <p>{{ currentFact }}</p>
