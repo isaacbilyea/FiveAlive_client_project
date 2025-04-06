@@ -127,14 +127,16 @@
         #confetti {
             position: absolute;
             width: 100%;
-            max-width: calc(80% + 4rem);
+            max-width: 50%;
             height: 100%;
-            top: -20%;
+            top: -25%;
             left: 50%;
             transform: translateX(-50%);
             z-index: -1;
             pointer-events: none;
             object-fit: contain;
+            -webkit-mask-image: radial-gradient(circle at center 70%, black 10%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.4) 37%, transparent 45%);
+            mask-image: radial-gradient(circle at center 70%, black 10%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.4) 37%, transparent 45%);
         }
         
         .popup-content {
