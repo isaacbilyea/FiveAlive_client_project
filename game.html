@@ -103,9 +103,10 @@
             <div class="col-span-full section-text-con">
                 <h3 class="icon-header info-icon hidden">Interactive History</h3>
                 <h4 class="section-header">Uncovering The Past</h4>
-                <p class="section-text">Match the cards to reveal the hidden story of Indian soldiers in World War I.
-                    With each successful pair you find, another piece of their forgotten history will be uncovered. Can
-                    you complete the puzzle and discover the full narrative?</p>
+                <p class="section-text">Match the cards to reveal interesting facts about Indian soldiers in World War
+                    I. With each game you complete, you'll discover a new piece of their forgotten history. Play
+                    multiple
+                    times to collect all the historical facts and uncover the full story of their contributions.</p>
             </div>
             <div id="memory-game-wrapper" class="col-span-full" v-cloak>
                 <div id="memory-game">
@@ -120,6 +121,13 @@
                     </div>
                 </div>
                 <div id="match-counter" v-show="showCounter">{{ matchCount }}/6</div>
+                <div id="game-complete-popup" v-show="gameComplete" class="game-popup">
+                    <div class="popup-content">
+                        <h4>Congratulations!</h4>
+                        <p>{{ currentFact }}</p>
+                        <button class="section-button" @click="resetGame">Play Again</button>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
