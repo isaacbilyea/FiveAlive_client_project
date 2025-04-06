@@ -108,6 +108,8 @@
         text-align: center;
         width: 100%;
         pointer-events: none;
+        -webkit-text-stroke: 7.5px white;
+        paint-order: stroke fill;
     }
 
     .game-popup {
@@ -122,12 +124,26 @@
         z-index: 200;
         border-radius: 1rem;
         
+        #confetti {
+            position: absolute;
+            width: 100%;
+            max-width: calc(80% + 4rem);
+            height: 100%;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            pointer-events: none;
+            object-fit: contain;
+        }
+        
         .popup-content {
             background-color: a.$primary-color;
             padding: 2rem;
             border-radius: 1rem;
             text-align: center;
             max-width: 80%;
+            position: relative;
             
             h4 {
                 color: a.$tertiary-color;

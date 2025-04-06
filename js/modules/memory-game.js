@@ -30,7 +30,9 @@ export function memoryGame() {
                     "Did you know many Indian soldiers kept diaries and wrote letters describing their experiences, providing valuable historical records?"
                 ],
                 currentFactIndex: 0,
-                currentFact: ""
+                currentFact: "",
+                confettiSrc: 'images/game-confetti.gif',
+                showConfetti: false
             }
         },
         methods: {
@@ -79,6 +81,8 @@ export function memoryGame() {
                 this.cards.sort(() => Math.random() - 0.5);
             },
             animateCounter() {
+                gsap.killTweensOf("#match-counter");
+                
                 this.showCounter = true;
                 gsap.fromTo("#match-counter", 
                     { scale: 0, opacity: 0 },
@@ -111,6 +115,8 @@ export function memoryGame() {
                     setTimeout(() => {
                         this.gameComplete = true;
                         this.currentFact = this.getNextFact();
+                        this.confettiSrc = `images/game-confetti.gif?v=${this.currentFactIndex}`;
+                        this.showConfetti = true;
                         this.animatePopup();
                     }, 500);
                 }
@@ -129,15 +135,20 @@ export function memoryGame() {
             },
             
             resetGame() {
+                this.showConfetti = false;
+                this.gameComplete = false;
                 this.cards.forEach(card => {
                     card.flipped = false;
                     card.matched = false;
                 });
                 this.shuffle();
-                this.gameComplete = false;
                 this.matchCount = 0;
                 this.firstCard = null;
                 this.canFlip = true;
+            },
+            handleGameComplete() {
+                this.gameComplete = true;
+                this.showConfetti = true;
             }
         },
         mounted() {
