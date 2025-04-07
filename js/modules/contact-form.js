@@ -19,6 +19,7 @@ export function contactForm() {
         },
         methods: {
             submitForm() {
+                
                 fetch('email.php', {
                     method: 'POST',
                     headers: {

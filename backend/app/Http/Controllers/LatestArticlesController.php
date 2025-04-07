@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\News;
+use App\Models\Event;
+
+class LatestArticlesController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+
+     public function getLatest() {
+
+        $news = News::select('id', 'title', 'published_date', 'card_content', 'image_main')
+        ->get()
+        ->map(function($item) {
+            $item->type = 'News';
+            return $item;
+        });
+        
+        $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
+            ->get()
+            ->map(function($item) {
+                $item->type = 'Event';
+                return $item;
+            });
+
+        $combined = $news->concat($events)
+            ->sortByDesc('published_date')
+            ->take(3)
+            ->values();
+
+        return response()->json([
+            'articles' => $combined
+        ]);
+    }
+}

@@ -2,6 +2,7 @@
 
 header('Content-Type: application/json');
 
+
 // Receive data directly from $_POST, not from a non-existent $data variable
 $name    = trim(htmlspecialchars($_POST['name'] ?? '', ENT_QUOTES, 'UTF-8'));
 $email   = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
