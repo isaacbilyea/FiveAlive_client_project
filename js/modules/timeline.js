@@ -6,7 +6,7 @@ export function timeline() {
     const timeline = document.querySelector('#timeline');
     const progress = document.querySelector('#timeline-progress');
     const timelineItems = document.querySelectorAll('.timeline-item');
-    const timelineHeader = document.querySelector('.timeline-header');
+    const timelineHeader = document.querySelector('#timeline-header');
 
     //GSAP
     gsap.from(timelineHeader, {
