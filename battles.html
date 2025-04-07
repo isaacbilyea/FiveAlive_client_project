@@ -19,15 +19,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
     <link rel="manifest" href="images/site.webmanifest">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
     <script type="module" src="js/battles.js"></script>
-    <title>BIA | Liberation of Haifa</title>
+    <title>BIA | Battle Name</title>
 </head>
 
 <body>
     <!--Header-->
-    <h1 class="hidden">Liberation of Haifa</h1>
+    <h1 class="hidden">Battle Name</h1>
     <div class="bg-tertiary grid-con" id="header-background">
         <header id="main-header" class="col-span-full">
 
@@ -96,149 +97,37 @@
             <h2 class="hidden">Hero Section</h2>
             <div class="col-span-full section-text-con">
                 <h3 class="icon-header info-icon">History</h3>
-                <h4 class="section-header hero-header">Liberation of Haifa</h4>
+                <h4 class="section-header hero-header">Battle</h4>
             </div>
         </section>
     </div>
 
     <!--Main Content-->
-    <div>
-        <h2 class="hidden">Liberation of Haifa</h2>
+    <div id="battles-app" v-cloak>
+        <h2 class="hidden">Battle Details</h2>
 
-        <div class="bg-secondary">
-            <section class="battle-section grid-con">
+        <div v-if="loading" class="loading">Loading battle information...</div>
+        <div v-if="errors" class="error">{{ errors }}</div>
+
+        <div v-if="!loading && !errors">
+            <section v-for="section in battleSections" :key="section.index" class="battle-section grid-con" :class="{ 
+                        'bg-secondary': section.index % 2 === 0,
+                        'special-layout': section.images.length === 1 
+                    }">
+                <h3 v-if="section.index === 0" class="col-span-full" id="battle-start">{{ battle.year }}</h3>
+
                 <div class="col-span-full">
-                    <p class="col-span-full" id="battle-start">1918</p>
-                    <h3 class="section-header">Indian Cavalry in Haifa</h3>
-                    <p class="section-text">On September 23, 1918, the Indian Cavalry captured Haifa, ending 400 years
-                        of Ottoman rule and securing the region for Christian and Jewish communities while preventing
-                        the destruction of Baha'i shrines. Part of the 5th Cavalry Division, the 15th Imperial Service
-                        Cavalry Brigade, including the Jodhpur, Mysore, and Hyderabad Lancers, played a key role in this
-                        pivotal victory. The battle, which cost 900 Indian lives, contributed to the success of
-                        Allenby’s forces in Palestine, Lebanon, and Syria and is remembered as the last successful
-                        cavalry charge in military history.</p>
-                    <div class="image-container">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
+                    <div class="content">
+                        <h4 class="section-header">{{ section.heading }}</h4>
+                        <p class="section-text">{{ section.description }}</p>
                     </div>
-                </div>
-            </section>
-        </div>
 
-        <section class="battle-section grid-con">
-            <div class="col-span-full">
-                <h3 class="section-header">Events during the liberation</h3>
-                <p class="section-text">On September 22, 1918, 700 Turkish soldiers from the Haifa garrison attempted to
-                    reach Tiberias but were attacked by the 18th Lancers at the 13th Cavalry Brigade’s outposts. Many
-                    were killed, and 311 were captured, along with four machine guns. Aerial reconnaissance later
-                    confirmed Haifa's evacuation. Meanwhile, a detachment of Light Armoured Cars, led by Brigadier
-                    General A. D'A. King, advanced to occupy Haifa but faced barricades, artillery, and gun fire from
-                    Mount Carmel, forcing a withdrawal.</p>
-                <p class="section-text">On September 23, 1918, the 14th and 15th Cavalry Brigades handed over their line
-                    to the 3rd Australian Light Horse Brigade and began marching toward Haifa. The 15th Cavalry Brigade
-                    faced fire from 77mm guns on Mount Carmel while crossing the boggy River Kishon. By midday, the 14th
-                    Cavalry Brigade occupied the Kishon Railway Bridge and Harosheth of the Gentiles. The Jodhpur
-                    Lancers with the 'B' Battery H.A.C. attacked Haifa. Meanwhile, the Mysore Lancers, supported by
-                    Sherwood Rangers, captured two naval guns and charged enemy machine gun positions.</p>
-                <div class="image-container">
-                    <img src="images/indian-involvement.png" alt="indians supporting the war">
-                    <img src="images/indian-involvement.png" alt="indians supporting the war">
-                </div>
-            </div>
-        </section>
-
-        <div class="bg-secondary">
-            <section class="battle-section grid-con">
-                <div class="col-span-full">
-                    <h3 class="section-header">The Heroic Action of Major Dalpat</h3>
-                    <p class="section-text">Major Dalpat Singh Shekhawat Thakur, commander of the Jodhpur Lancers, led
-                        the
-                        final successful cavalry charge in military history during the war. He is remembered as the
-                        "Hero of
-                        Haifa" for his pivotal role in the city's liberation. For his bravery, he was posthumously
-                        awarded
-                        the Military Cross.</p>
-                    <p class="section-text">At a critical moment, Major Dalpat entrusted the vital task of capturing the
-                        defile to his most senior officer, Captain Bahadur Aman Singh. Leading a fearless charge,
-                        Captain
-                        Singh eliminated over 30 enemy troops and captured two machine guns and two camel guns. This
-                        decisive assault secured the narrow defile, a pivotal operation for the success of the battle,
-                        and
-                        cleared the main road into Haifa.</p>
-                    <p class="section-text">Brigadier Harbord ordered the Jodhpur Lancers to advance near Beled Esh
-                        Sheikh
-                        but came under fire crossing the Acre railway line. Lt. Col. Holden directed Major Dalpat to
-                        charge
-                        the machine guns on Mount Carmel’s lower slopes. During the maneuver, he was shot in the spine
-                        and
-                        later died.</p>
-                    <div class="image-container">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
+                    <div v-if="section.images.length > 1" class="image-container">
+                        <img v-for="image in section.images" :src="'images/' + image" :alt="section.heading">
                     </div>
-                </div>
-            </section>
-        </div>
 
-        <section class="battle-section grid-con">
-            <div class="col-span-full">
-                <h3 class="section-header">'Abdu'l-Baha of Bahá’í Faith </h3>
-                <p class="section-text">‘Abdu’l-Bahá, son of Bahá’u’lláh, the founder of the Bahá’í Faith, was its
-                    spiritual leader and resided in Haifa, present-day Israel. Under his leadership, the faith, which
-                    originated in the Ottoman Empire in the 19th century, grew in influence through his humanitarian
-                    efforts. Alarmed by his popularity, Turkish commander Jamal Pasha threatened to crucify him on Mount
-                    Carmel and destroy all Bahá’í shrines.</p>
-                <p class="section-text">With Haifa’s liberation, the threat to his life was averted, preserving Bahá’í
-                    holy sites in Haifa and nearby Acre. Haifa held spiritual significance for the Bahá’í Faith, which
-                    had grown within the Ottoman Empire. ‘Abdu’l-Bahá’s humanitarian work had drawn Ottoman attention,
-                    leading to threats of his execution.</p>
-                <div class="image-container">
-                    <img src="images/indian-involvement.png" alt="indians supporting the war">
-                    <img src="images/indian-involvement.png" alt="indians supporting the war">
-                </div>
-            </div>
-        </section>
-
-        <div class="bg-secondary">
-            <section class="battle-section special-layout grid-con">
-                <div class="content">
-                    <h3 class="section-header">The Capture of Two Regiments</h3>
-                    <p class="section-text">This capture of the two regiments resulted in 1,350 German and Ottoman
-                        prisoners. The Allies seized 17 artillery guns, along with 11 machine guns. Their own casualties
-                        included eight killed, 34 wounded, 60 horses killed, and 83 horses injured.</p>
-                </div>
-                <div class="image-container">
-                    <img src="images/indian-involvement.png" alt="indians supporting the war">
-                </div>
-            </section>
-        </div>
-
-        <section class="battle-section special-layout grid-con">
-            <div class="image-container">
-                <img src="images/indian-involvement.png" alt="indians supporting the war">
-            </div>
-            <div class="content">
-                <h3 class="section-header">Under the Turkish Ottoman Rule</h3>
-                <p class="section-text">Haifa had a population of 24,634, including 9,377 Muslims, 8,863 Christians,
-                    6,230 Jews, and 164 others. The city developed as an industrial port with increased trade
-                    facilitated by the railway, and the construction of the Technion Institute of Technology, a Jewish
-                    technical school.</p>
-            </div>
-        </section>
-
-        <div class="bg-secondary">
-            <section class="battle-section grid-con">
-                <div class="col-span-full">
-                    <h3 class="section-header">Generals of the Ottoman Army</h3>
-                    <p class="section-text">General Otto Liman von Sanders (1855–1929) was the German commander
-                        responsible for modernizing the Ottoman Army. General Mustafa Kemal (1881–1938), later known as
-                        Atatürk, was a skilled career soldier who played a crucial role in the Ottoman success at
-                        Gallipoli in 1915. General Edward Allenby was also a key figure in the military operations of
-                        the time.
-                    </p>
-                    <div class="image-container">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
-                        <img src="images/indian-involvement.png" alt="indians supporting the war">
+                    <div v-else-if="section.images.length === 1" class="image-container">
+                        <img :src="'images/' + section.images[0]" :alt="section.heading">
                     </div>
                 </div>
             </section>
