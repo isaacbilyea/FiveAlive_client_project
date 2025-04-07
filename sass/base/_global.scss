@@ -196,7 +196,7 @@ input, textarea {
     filter: sepia(70%) saturate(120%) brightness(90%) contrast(90%) hue-rotate(-15deg);
 }
 
-.error {
+.error, .errors {
     color: a.$primary-accent-color;
 }
 

@@ -68,6 +68,8 @@ $router->get('/battles/{id}', 'BattleController@getOne');
 //Battles-section
 $router->get('/battles-sections', 'BattleSectionController@getAll');
 
+//Latest Articles
+$router->get('/latest-articles', 'LatestArticlesController@getLatest');
 
 
 

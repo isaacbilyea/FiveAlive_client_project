@@ -165,41 +165,16 @@
                 </div>
             </div>
             <div id="articles" class="col-span-full">
-
-                <div href="news-article.html" class="article news-article">
-                    <img src="images/updates-news-1.png" alt="new statue">
+                <div v-if="loading" class="loading">Loading...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else v-for="article in articles" :key="article.id" class="article" :class="article.type">
+                    <img :src="'images/' + article.image_main" :alt="article.title">
                     <div class="article-text">
                         <div>
-                            <h5>News</h5>
-                            <h6>New Statue</h6>
-                            <span>March 17, 2025</span>
-                            <p>The introduction of a new installation for the brothers in arms memorial site.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-1.png" alt="charity run">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Charity Run</h6>
-                            <span>March 16, 2025</span>
-                            <p>Our new upcoming event with a track and field race in the memorial park.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-2.png" alt="field trips">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Field Trips</h6>
-                            <span>March 15, 2025</span>
-                            <p>Summer opportunities for historical and educational trips to the memorial.</p>
+                            <h5>{{ article.type }}</h5>
+                            <h6>{{ article.title }}</h6>
+                            <span>{{ article.published_date }}</span>
+                            <p>{{ article.card_content }}</p>
                         </div>
                         <a class="article-cta">Read More</a>
                     </div>
