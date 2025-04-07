@@ -192,6 +192,10 @@ input, textarea {
     }
 }
 
+.sepia-filter {
+    filter: sepia(70%) saturate(120%) brightness(90%) contrast(90%) hue-rotate(-15deg);
+}
+
 #support-con {
     text-align: center;
     padding-top: 7rem;
