@@ -36,6 +36,14 @@ class EventController extends Controller {
       return response()->json($event);
    }
 
+   public function getLatest() {
+      $event = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
+          ->orderBy('published_date', 'desc')
+          ->first();
+      
+      return response()->json($event);
+  }
+
 //    public function save(Request $request) {
 //       $this->validate($request, [
 //          'title' => 'required',
