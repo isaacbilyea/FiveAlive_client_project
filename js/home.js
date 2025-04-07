@@ -5,6 +5,7 @@ import { videoPlayer } from "./modules/video-player.js";
 import { centerCards } from "./modules/center-cards.js";
 import { contactForm } from "./modules/contact-form.js";
 import { getLatestArticles } from "./api/latest-articles.js";
+import { getLatestEvent } from "./api/latest-event.js";
 
 burgerMenu();
 donationCounter();
@@ -13,3 +14,4 @@ videoPlayer();
 centerCards();
 contactForm();
 getLatestArticles();
+getLatestEvent();
