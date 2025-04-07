@@ -46,7 +46,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" class="active" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu" class="active">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -54,6 +59,7 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -122,11 +128,13 @@
                 </div>
                 <div id="match-counter" v-show="showCounter">{{ matchCount }}/6</div>
                 <div id="game-complete-popup" v-show="gameComplete" class="game-popup">
-                    <img :src="confettiSrc" alt="celebration confetti" id="confetti" v-if="showConfetti">
-                    <div class="popup-content">
-                        <h4>Congratulations!</h4>
-                        <p>{{ currentFact }}</p>
-                        <button class="section-button" @click="resetGame">Play Again</button>
+                    <div class="popup-container">
+                        <img :src="confettiSrc" alt="celebration confetti" id="confetti" v-if="showConfetti">
+                        <div class="popup-content">
+                            <h4>Congratulations!</h4>
+                            <p>{{ currentFact }}</p>
+                            <button class="section-button" @click="resetGame">Play Again</button>
+                        </div>
                     </div>
                 </div>
             </div>
