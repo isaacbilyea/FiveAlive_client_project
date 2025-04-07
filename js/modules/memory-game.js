@@ -103,13 +103,6 @@ export function memoryGame() {
                     }
                 });
             },
-            getNextFact() {
-                const fact = this.facts[this.currentFactIndex];
-                
-                this.currentFactIndex = (this.currentFactIndex + 1) % this.facts.length;
-                
-                return fact;
-            },
             checkGameComplete() {
                 if (this.matchCount === 6) {
                     setTimeout(() => {
@@ -121,7 +114,6 @@ export function memoryGame() {
                     }, 500);
                 }
             },
-            
             animatePopup() {
                 gsap.fromTo("#game-complete-popup", 
                     { scale: 0, opacity: 0 },
@@ -133,7 +125,6 @@ export function memoryGame() {
                     }
                 );
             },
-            
             resetGame() {
                 this.showConfetti = false;
                 this.gameComplete = false;
@@ -146,10 +137,13 @@ export function memoryGame() {
                 this.firstCard = null;
                 this.canFlip = true;
             },
-            handleGameComplete() {
-                this.gameComplete = true;
-                this.showConfetti = true;
-            }
+            getNextFact() {
+                const fact = this.facts[this.currentFactIndex];
+                
+                this.currentFactIndex = (this.currentFactIndex + 1) % this.facts.length;
+                
+                return fact;
+            },
         },
         mounted() {
             this.shuffle();
