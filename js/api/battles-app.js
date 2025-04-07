@@ -1,5 +1,5 @@
 export function battlesApp() {
-    const app = Vue.createApp({
+    const battles = Vue.createApp({
         created() {
             const urlParams = new URLSearchParams(window.location.search);
             const battleId = urlParams.get('id') || 1;
@@ -58,5 +58,5 @@ export function battlesApp() {
         }
     }).mount('#battles-app');
 
-    return app;
+    return battles;
 }

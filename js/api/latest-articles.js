@@ -1,7 +1,7 @@
 export function getLatestArticles() {
-    const app = Vue.createApp({
+    const latestArticles = Vue.createApp({
         created() {
-            fetch('http://localhost:8888/FiveAlive_client_project/backend/public/latest-articles')
+            fetch('http://localhost:8888/FiveAlive_client_project/backend/public/articles/latest')
                 .then(response => response.json())
                 .then(data => {
                     data.articles.forEach(article => {
@@ -29,5 +29,5 @@ export function getLatestArticles() {
         }
     }).mount('#articles');
 
-    return app;
+    return latestArticles;
 }

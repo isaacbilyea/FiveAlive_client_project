@@ -1,5 +1,5 @@
 export function getLatestEvent() {
-    const app = Vue.createApp({
+    const latestEvent = Vue.createApp({
         created() {
             fetch('http://localhost:8888/FiveAlive_client_project/backend/public/events/latest-event')
                 .then(response => response.json())
@@ -29,5 +29,5 @@ export function getLatestEvent() {
         }
     }).mount('#featured-events-con');
 
-    return app;
+    return latestEvent;
 }

@@ -6,13 +6,37 @@ use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Event;
 
-class LatestArticlesController extends Controller
+class ArticlesController extends Controller
 {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
+     public function getAll() {
+        $news = News::select('id', 'title', 'published_date', 'card_content', 'image_main')
+            ->get()
+            ->map(function($item) {
+                $item->type = 'News';
+                return $item;
+            });
+        
+        $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
+            ->get()
+            ->map(function($item) {
+                $item->type = 'Event';
+                return $item;
+            });
+
+        $combined = $news->concat($events)
+            ->sortByDesc('published_date')
+            ->values();
+
+        return response()->json([
+            'articles' => $combined
+        ]);
+    }
 
      public function getLatest() {
 
