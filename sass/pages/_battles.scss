@@ -1,13 +1,15 @@
 @use '../abstracts' as a;
 
-#battle-start {
-    font-size: 1.25rem;
-    margin: 0;
-}
-
 .battle-section {
     #support-quote {
         margin: 2rem auto;
+    }
+
+    #battle-start {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-family: a.$body-font-family;
     }
 
     .image-container {
@@ -25,8 +27,10 @@
     }
 
     &.special-layout {
-        display: flex;
-        flex-direction: column;
+        .col-span-full {
+            display: flex;
+            flex-direction: column;
+        }
         .image-container {
             margin-bottom: 2rem;
         }
@@ -49,8 +53,13 @@
         }
 
         &.special-layout {
-            flex-direction: row;
-            align-items: center;
+            
+            .col-span-full {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 3rem;
+            }
 
             .image-container {
                 margin-top: 0;
