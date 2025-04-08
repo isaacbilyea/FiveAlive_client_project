@@ -1,5 +1,9 @@
 @use '../abstracts' as a;
 
+.battle-section-wrapper:nth-of-type(odd) {
+    background-color: a.$secondary-color;
+}
+
 .battle-section {
     #support-quote {
         margin: 2rem auto;
@@ -27,10 +31,17 @@
     }
 
     &.special-layout {
+
+        &#mobilization {
+            display: flex;
+            flex-direction: column;
+        }
+
         .col-span-full {
             display: flex;
             flex-direction: column;
         }
+
         .image-container {
             margin-bottom: 2rem;
         }
@@ -54,11 +65,24 @@
 
         &.special-layout {
             
+            &#mobilization {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+            }
+            
             .col-span-full {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 3rem;
+            }
+
+            &:nth-of-type(even) {
+                .col-span-full {
+                    flex-direction: row-reverse;
+                }
             }
 
             .image-container {
@@ -73,7 +97,6 @@
 
             .content {
                 width: 50%;
-                margin-left: 1rem;
             }
         }
     }
