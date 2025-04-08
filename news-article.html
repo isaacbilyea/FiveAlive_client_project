@@ -134,21 +134,13 @@
         <div id="related-articles" class="col-span-full">
             <h3>Related Articles</h3>
             <div id="related-articles-grid">
-                <div class="related-article">
-                    <img src="images/news-3.png" alt="Design approval meeting">
+                <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="related-article">
+                    <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
                     <div class="related-text">
-                        <h4>Memorial Design Receives Final Approval</h4>
-                        <p class="date">March 25, 2025</p>
-                        <a href="news-article.html" class="section-button">Read More</a>
-                    </div>
-                </div>
-
-                <div class="related-article">
-                    <img src="images/events-1.png" alt="Fundraising gala">
-                    <div class="related-text">
-                        <h4>Fundraising Gala Exceeds Target by 25%</h4>
-                        <p class="date">February 18, 2025</p>
-                        <a href="event-article.html" class="section-button">Read More</a>
+                        <h4>{{ relatedArticle.title }}</h4>
+                        <p class="date">{{ relatedArticle.published_date }}</p>
+                        <a :href="relatedArticle.type === 'Event' ? 'event-article.html?id=' + relatedArticle.id : 'news-article.html?id=' + relatedArticle.id"
+                            class="section-button">Read More</a>
                     </div>
                 </div>
             </div>

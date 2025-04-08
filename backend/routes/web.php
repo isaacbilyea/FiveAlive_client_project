@@ -41,9 +41,11 @@ $router->delete('/events/delete/{id}', 'EventController@delete');
 //Joined table Media for Events
 $router->get('/media', 'MediaController@getMedia');
 
-//Conbined Articles
+//Combined Articles
 $router->get('/articles', 'ArticlesController@getAll');
 $router->get('/articles/latest', 'ArticlesController@getLatest');
+$router->get('/articles/latest-news', 'ArticlesController@getLatestNews');
+$router->get('/articles/latest-events', 'ArticlesController@getLatestEvents');
 
 //Volunteers
 $router->get('/volunteers', 'VolunteerController@getAll');
