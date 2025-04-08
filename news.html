@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
     <link href="css/main.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search">
     <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -102,13 +99,10 @@
         <section class="grid-con section-flex hero-section">
             <h2 class="hidden">Hero Section</h2>
             <div class="col-span-full section-text-con">
-                <p>Welcome to the</p>
-                <h3 class="section-header hero-header">Brothers in Arms</h3>
-                <p class="section-text">A memorial that stands as North America's first tribute honouring
-                    the
-                    alliance between Indian and Canadian soldiers during World War I. Your support is vital in bringing
-                    the
-                    Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <p>Stay Updated With Our</p>
+                <h3 class="section-header hero-header">News and Events</h3>
+                <p class="section-text">Find out more about the latest announcements and happenings from the memorial
+                    site, the Srishti Foundation, and additional developments related to the ongoing project.</p>
                 <a class="section-button" href="donate.html">Support Us</a>
             </div>
         </section>
@@ -129,9 +123,8 @@
                 <div v-else-if="error" class="error">{{ error }}</div>
                 <div v-else>
                     <section id="articles" class="col-span-full">
-                        <article v-for="article in pageArticles" :key="article.id" class="article"
-                            :class="article.type">
-                            <img :src="'images/' + article.image_main" :alt="article.title">
+                        <article v-for="article in pageArticles" class="article" :class="article.type">
+                            <img :src="`images/${article.image_main}`" :alt="article.title">
                             <div class="article-text">
                                 <div>
                                     <h5>{{ article.type }}</h5>
@@ -146,8 +139,8 @@
                     </section>
 
                     <nav id="pager" class="col-span-full" v-if="totalPages > 1">
-                        <span v-for="page in totalPages" :key="page" class="page-number"
-                            :class="{ active: page === currentPage }" @click="changePage(page)">
+                        <span v-for="page in totalPages" class="page-number" :class="{ active: page === currentPage }"
+                            @click="changePage(page)">
                             {{ page }}
                         </span>
                     </nav>

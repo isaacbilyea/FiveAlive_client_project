@@ -99,7 +99,7 @@
             <p>{{ error }}</p>
         </div>
 
-        <template v-else-if="article">
+        <div v-else-if="article" class="col-span-full">
             <div id="article-header" class="col-span-full">
                 <div id="article-meta">
                     <p id="article-category">News</p>
@@ -109,13 +109,13 @@
             </div>
 
             <div id="article-featured-image" class="col-span-full">
-                <img :src="'images/' + article.image_main" :alt="article.title">
+                <img :src="`images/${article.image_main}`" :alt="article.title">
             </div>
 
             <div id="article-content" class="col-span-full">
-                <div v-html="article.content"></div>
+                <div>{{ article.content }}</div>
             </div>
-        </template>
+        </div>
         <div class="article-cta col-span-full">
             <a href="donate.html" class="section-button">Support the Memorial</a>
         </div>
@@ -134,16 +134,16 @@
         <div class="col-span-full related-articles">
             <h3>Related Articles</h3>
             <div id="articles" class="related-articles-grid">
-                <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="article">
-                    <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
+                <div v-for="relatedArticle in relatedArticles" class="article">
+                    <img :src="`images/${relatedArticle.image_main}`" :alt="relatedArticle.title">
                     <div class="article-text">
                         <div>
                             <h6>{{ relatedArticle.title }}</h6>
                             <span>{{ relatedArticle.published_date }}</span>
                             <p>{{ relatedArticle.card_content }}</p>
                         </div>
-                        <a :href="relatedArticle.type === 'Event' ? 'event-article.html?id=' + relatedArticle.id : 'news-article.html?id=' + relatedArticle.id"
-                            class="article-cta card-cta">Read More</a>
+                        <a :href="`news-article.html?id=${relatedArticle.id}`" class="article-cta card-cta">Read
+                            More</a>
                     </div>
                 </div>
             </div>

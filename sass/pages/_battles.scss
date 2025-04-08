@@ -1,5 +1,26 @@
 @use '../abstracts' as a;
 
+.battle-section-wrapper:nth-of-type(odd) {
+    background-color: a.$secondary-color;
+    position: relative;
+    isolation: isolate; 
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/main-background.png');
+        background-repeat: repeat;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.85;
+        mix-blend-mode: multiply; 
+    }
+}
+
 .battle-section {
     #support-quote {
         margin: 2rem auto;
@@ -75,12 +96,6 @@
                 gap: 3rem;
             }
 
-            &:nth-of-type(even) {
-                .col-span-full {
-                    flex-direction: row-reverse;
-                }
-            }
-
             .image-container {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -96,4 +111,11 @@
             }
         }
     }
+
+    .battle-section-wrapper:nth-last-of-type(2) {
+        .battle-section.special-layout .col-span-full {
+            flex-direction: row-reverse;
+        }
+    }   
+
 }
