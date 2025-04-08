@@ -91,10 +91,8 @@
             <div class="col-span-full section-text-con">
                 <p>Welcome to the</p>
                 <h3 class="section-header hero-header">Brothers in Arms</h3>
-                <p class="section-text">A memorial that stands as North America's first tribute honouring
-                    the alliance between Indian and Canadian soldiers during World War I. Your support is vital in
-                    bringing
-                    the Brothers in Arms Memorial to life and preserving it for future generations.</p>
+                <p class="section-text">A memorial that stands as North America's first tribute, honouring the alliance
+                    between Indian and Canadian soldiers during World War I and commemorating their sacrifice.</p>
                 <a class="section-button" href="donate.html">Support Us</a>
             </div>
         </section>
@@ -167,8 +165,8 @@
             <div id="articles" class="col-span-full">
                 <div v-if="loading" class="loading">Loading...</div>
                 <div v-else-if="error" class="error">{{ error }}</div>
-                <div v-else v-for="article in articles" :key="article.id" class="article" :class="article.type">
-                    <img :src="'images/' + article.image_main" :alt="article.title">
+                <div v-else v-for="article in articles" class="article" :class="article.type">
+                    <img :src="`images/${article.image_main}`" :alt="article.title">
                     <div class="article-text">
                         <div>
                             <h5>{{ article.type }}</h5>
@@ -197,10 +195,10 @@
                         <h3 class="icon-header calendar-icon">Featured Event</h3>
                         <h4 class="section-header">{{ event.title }}</h4>
                         <p class="section-text">{{ event.card_content }}</p>
-                        <a class="section-button" :href="'event-article.html?id=' + event.id">Learn More</a>
+                        <a class="section-button" :href="`event-article.html?id=${event.id}`">Learn More</a>
                     </div>
                     <div class="col-span-full section-image-con">
-                        <img :src="'images/' + event.image_main" :alt="event.title">
+                        <img :src="`images/${event.image_main}`" :alt="event.title">
                     </div>
                 </div>
             </div>
@@ -224,7 +222,7 @@
 
         <div id="history-cards-con" class="col-span-full">
             <div class="history-card">
-                <img src="images/key-battles.jpg" alt="key battles">
+                <img src="images/key-battles.jpg" class="sepia-filter" alt="key battles">
                 <div>
                     <h5>Key Battles</h5>
                     <p>Indian and Canadian soldiers fought together in pivotal World War I battles, their bravery
@@ -234,7 +232,7 @@
             </div>
 
             <div class="history-card">
-                <img src="images/soldier-regiments.jpg" alt="soldier-regiments">
+                <img src="images/soldier-regiments.jpg" class="sepia-filter" alt="soldier-regiments">
                 <div>
                     <h5>Soldier Regiments</h5>
                     <p>Indian regiments played a key role in World War One showing resilience and strategic importance
@@ -244,7 +242,7 @@
             </div>
 
             <div class="history-card">
-                <img src="images/letters-awardees.jpg" alt="letters and awardees">
+                <img src="images/letters-awardees.jpg" class="sepia-filter" alt="letters and awardees">
                 <div>
                     <h5>Letters and Awardees</h5>
                     <p>The stories and experiences of Indian soldiers during World War One with the prominent heroes and

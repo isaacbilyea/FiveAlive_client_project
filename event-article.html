@@ -99,7 +99,7 @@
             <p>{{ error }}</p>
         </div>
 
-        <template v-else-if="article">
+        <div v-else-if="article" class="col-span-full">
             <div id="article-header" class="col-span-full">
                 <div id="article-meta">
                     <p id="article-category">Event</p>
@@ -107,30 +107,30 @@
                 </div>
                 <h2 id="article-title">{{ article.title }}</h2>
                 <div id="event-details">
-                    <p><b>Date:</b> {{ article.eventDate }} | <b>Time:</b> {{ article.time }} |
+                    <p><b>Date:</b> {{ article.event_date }} | <b>Time:</b> {{ article.time }} |
                         <b>Location:</b> {{ article.location }}
                     </p>
                 </div>
             </div>
 
             <div id="article-featured-image" class="col-span-full">
-                <img :src="'images/' + article.image_main" :alt="article.title">
+                <img :src="`images/${article.image_main}`" :alt="article.title">
             </div>
 
             <div id="article-content" class="col-span-full">
-                <div v-html="article.content"></div>
+                <div>{{ article.content }}</div>
             </div>
 
             <div class="article-cta col-span-full">
                 <a href="donate.html" class="section-button">Support Future Events</a>
             </div>
 
-            <div v-if="article.gallery && article.gallery.length > 0" id="event-gallery" class="col-span-full">
+            <div v-if="article.gallery" id="event-gallery" class="col-span-full">
                 <h3>Event Gallery</h3>
                 <div class="gallery-grid">
-                    <div v-for="(image, index) in article.gallery" :key="index"
-                        :class="['gallery-item', index === 0 ? 'main' : '']">
-                        <img :src="'images/' + image.image" :alt="image.alt">
+                    <div v-for="(image, index) in article.gallery"
+                        :class="{ 'gallery-item': true, 'main': index === 0 }">
+                        <img :src="`images/${image.image}`" :alt="image.alt">
                         <p class="caption">{{ image.alt }}</p>
                     </div>
                 </div>
@@ -156,21 +156,21 @@
             <div class="col-span-full related-articles">
                 <h3>Related Events</h3>
                 <div id="articles" class="related-articles-grid">
-                    <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="article">
-                        <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
+                    <div v-for="relatedArticle in relatedArticles" class="article">
+                        <img :src="`images/${relatedArticle.image_main}`" :alt="relatedArticle.title">
                         <div class="article-text">
                             <div>
                                 <h6>{{ relatedArticle.title }}</h6>
                                 <span>{{ relatedArticle.published_date }}</span>
                                 <p>{{ relatedArticle.card_content }}</p>
                             </div>
-                            <a :href="'event-article.html?id=' + relatedArticle.id" class="article-cta card-cta">Read
+                            <a :href="`event-article.html?id=${relatedArticle.id}`" class="article-cta card-cta">Read
                                 More</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </template>
+        </div>
     </section>
 
     <!--Footer-->

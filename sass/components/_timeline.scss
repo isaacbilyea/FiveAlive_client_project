@@ -79,9 +79,10 @@
         .timeline-content {
             display: flex;
             flex-direction: column;
-            width: 60%;
+            width: 70%;
             margin: 0 auto;
             margin-right: 2rem;
+            margin-left: 15vw;
             padding: 2rem;
             gap: 2rem;
     
@@ -233,14 +234,14 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                gap: 5rem;
+                gap: 3rem;
                 width: 90%;
                 margin: 0 auto;
                 padding: 2rem 0;
 
                 div {
                     &.timeline-image, &.timeline-text {
-                        flex: 0 0 47.5%;
+                        flex: 0 0 60%;
                     }
                 }
             }
@@ -261,13 +262,13 @@
         .timeline-item {
             .timeline-content {
                 width: 100%;
-                padding: 2rem 10%;
+                padding: 1rem;
                 margin: 0;
                 gap: 0;
 
                 div {
                     &.timeline-image, &.timeline-text {
-                        flex: 0 0 35%;
+                        flex: 0 0 42.5%;
                     }
                 }
             }
