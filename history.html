@@ -11,12 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
@@ -43,7 +43,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" class="active" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu" class="active">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -51,6 +56,7 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -87,7 +93,7 @@
     <div class="bg-hero" id="home-hero-con">
         <div class="video-background">
             <video autoplay loop muted playsinline>
-                <source src="videos/History.webm" type="video/mp4">
+                <source src="videos/History.mp4" type="video/mp4">
             </video>
             <span class="video-source">Source: Library and Archives Canada</span>
         </div>
@@ -160,7 +166,7 @@
                             <h3>Battle of 2nd Ypres</h3>
                             <p class="timeline-year">(April 1915 - May 1915)</p>
                             <p>Notable for the first large-scale use of poison gas by the Germans.</p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=4" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +182,7 @@
                             <p class="timeline-year">(September 1915 - October 1915)</p>
                             <p>Part of the Western Front during World War I, where Indian soldiers played a key role.
                             </p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=2" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -193,7 +199,7 @@
                             <p>A major Mesopotamian campaign where British and Indian troops were besieged by Ottoman
                                 forces.
                             </p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=5" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -209,7 +215,7 @@
                             <p class="timeline-year">(July 1916 – November 1916)</p>
                             <p>One of the largest and bloodiest battles of World War I, with significant involvement
                                 from Indian and Canadian forces.</p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=1" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -225,7 +231,7 @@
                             <p class="timeline-year">(April 1917)</p>
                             <p>A defining moment for Canadian forces, known for strategic victory and innovative
                                 tactics.</p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=3" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -241,7 +247,7 @@
                             <p class="timeline-year">(September 1918)</p>
                             <p>Indian cavalry played a key role in capturing the city from Ottoman forces during the
                                 Sinai and Palestine Campaign.</p>
-                            <a href="battles.html" class="section-button">Learn More</a>
+                            <a href="battles.html?id=7" class="section-button">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -333,7 +339,6 @@
             </div>
         </section>
     </div>
-
 
     <!--Footer-->
     <footer id="main-footer" class="grid-con">

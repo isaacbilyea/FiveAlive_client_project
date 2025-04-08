@@ -43,7 +43,7 @@
                 transform: scale(1.1);
             }
 
-            &.news-article .article-text h5 {
+            &.News .article-text h5 {
                 background-color: a.$primary-accent-color;
             }
             
@@ -89,6 +89,8 @@
                 span {
                     font-size: 0.8rem;
                     font-weight: 300;
+                    display: inline-block;
+                    margin-top: 0.5rem;
                 }
     
                 p {

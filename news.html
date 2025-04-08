@@ -13,14 +13,16 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search">
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollToPlugin.min.js"></script>
     <script type="module" src="js/news.js"></script>
     <title>BIA | News &amp; Events</title>
 </head>
@@ -44,7 +46,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -52,6 +59,7 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -88,7 +96,7 @@
     <div class="bg-hero" id="news-hero-con">
         <div class="video-background">
             <video autoplay loop muted playsinline>
-                <source src="videos/Events.webm" type="video/mp4">
+                <source src="videos/Events.mp4" type="video/mp4">
             </video>
         </div>
         <section class="grid-con section-flex hero-section">
@@ -116,92 +124,33 @@
                     <h4 class="section-header">Announcements</h4>
                 </div>
             </div>
-            <div id="articles" class="col-span-full">
-                <div class="article news-article">
-                    <img src="images/updates-news-1.png" alt="new statue">
-                    <div class="article-text">
-                        <div>
-                            <h5>News</h5>
-                            <h6>New Statue</h6>
-                            <span>March 17, 2025</span>
-                            <p>The introduction of a new installation for the brothers in arms memorial site.</p>
-                        </div>
-                        <a href="news-article.html" class="article-cta">Read More</a>
-                    </div>
-                </div>
+            <div id="news-articles-app" class="col-span-full">
+                <div v-if="loading" class="loading">Loading...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else>
+                    <section id="articles" class="col-span-full">
+                        <article v-for="article in pageArticles" :key="article.id" class="article"
+                            :class="article.type">
+                            <img :src="'images/' + article.image_main" :alt="article.title">
+                            <div class="article-text">
+                                <header>
+                                    <h5>{{ article.type }}</h5>
+                                    <h6>{{ article.title }}</h6>
+                                    <time>{{ article.published_date }}</time>
+                                </header>
+                                <p>{{ article.card_content }}</p>
+                                <a :href="`${article.type.toLowerCase()}-article.html?id=${article.id}`">Read More</a>
+                            </div>
+                        </article>
+                    </section>
 
-                <div class="article event-article">
-                    <img src="images/updates-events-1.png" alt="charity run">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Charity Run</h6>
-                            <span>March 16, 2025</span>
-                            <p>Our new upcoming event with a track and field race in the memorial park.</p>
-                        </div>
-                        <a href="event-article.html" class="article-cta">Read More</a>
-                    </div>
+                    <nav id="pager" class="col-span-full" v-if="totalPages > 1">
+                        <span v-for="page in totalPages" :key="page" class="page-number"
+                            :class="{ active: page === currentPage }" @click="changePage(page)">
+                            {{ page }}
+                        </span>
+                    </nav>
                 </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-2.png" alt="field trips">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Field Trips</h6>
-                            <span>March 15, 2025</span>
-                            <p>Summer opportunities for historical and educational trips to the memorial.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="news-article.html" class="article news-article">
-                    <img src="images/updates-news-1.png" alt="new statue">
-                    <div class="article-text">
-                        <div>
-                            <h5>News</h5>
-                            <h6>New Statue</h6>
-                            <span>March 17, 2025</span>
-                            <p>The introduction of a new installation for the brothers in arms memorial site.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-1.png" alt="charity run">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Charity Run</h6>
-                            <span>March 16, 2025</span>
-                            <p>Our new upcoming event with a track and field race in the memorial park.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-2.png" alt="field trips">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Field Trips</h6>
-                            <span>March 15, 2025</span>
-                            <p>Summer opportunities for historical and educational trips to the memorial.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="pager" class="col-span-full">
-                <span class="page-number active">1</span>
-                <span class="page-number">2</span>
-                <span class="page-number">3</span>
-                <span class="page-number">4</span>
-                <span class="page-number">5</span>
             </div>
         </section>
     </div>

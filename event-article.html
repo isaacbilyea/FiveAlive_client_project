@@ -11,21 +11,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script type="module" src="js/article.js"></script>
-    <title>BIA | Annual Remembrance Gala</title>
+    <script type="module" src="js/event-article.js"></script>
+    <title>BIA | Event Article</title>
 </head>
 
 <body>
     <!--Header-->
-    <h1 class="hidden">Event Article</h1>
+    <h1 class="hidden page-header">Event Article</h1>
     <div class="bg-tertiary grid-con" id="header-background">
         <header id="main-header" class="col-span-full">
 
@@ -42,7 +43,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -50,6 +56,7 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -84,171 +91,77 @@
 
     <!-- Article Content -->
     <section id="article-section" class="grid-con">
-        <div id="article-header" class="col-span-full">
-            <div id="article-meta">
-                <p id="article-category">Event</p>
-                <p id="article-date">March 23rd, 2025</p>
-            </div>
-            <h2 id="article-title">Holi 2025: London's Biggest Festival of Colours Celebration Yet</h2>
-            <div id="event-details">
-                <p><b>Date:</b> April 27, 2025 | <b>Time:</b> 12:00 PM to 5:00 PM |
-                    <b>Location:</b> Victoria Park, London, ON
-                </p>
-            </div>
+        <div v-if="loading" class="col-span-full">
+            <p>Loading...</p>
         </div>
 
-        <div id="article-featured-image" class="col-span-full">
-            <img src="images/holi-main-1.jpg" alt="Crowd celebrating Holi with colorful powder">
+        <div v-else-if="error" class="col-span-full">
+            <p>{{ error }}</p>
         </div>
 
-        <div id="article-content" class="col-span-full">
-            <p>For the 12th consecutive year since 2012, Srishti Foundation transformed downtown London into a vibrant
-                celebration of Holi, drawing approximately 4,000 people to Victoria Park. This ancient Dharmic festival
-                brought together people from all backgrounds in a joyous riot of colours, music, and dance.</p>
-
-            <h3>A Day of Unity and Celebration</h3>
-
-            <p>The celebration kicked off at noon with a traditional Ganesh Puja performed by Pandit Tiwari Ji, setting
-                the tone for a day of unity in diversity, love, and happiness. The event was honored by the presence of
-                London Mayor Josh Morgan, along with city councillors and members of Parliament and Provincial
-                Legislature.</p>
-
-            <blockquote>
-                "Holi represents the best of our community - a celebration where everyone comes together, regardless of
-                background, in pure joy and unity."
-                <cite>— Josh Morgan, Mayor of London</cite>
-            </blockquote>
-
-            <div class="article-image">
-                <img src="images/holi-main-2.jpg" alt="Synchronized colour throw at Holi celebration">
-                <p class="image-caption">Thousands of attendees participate in synchronized colour throws throughout the
-                    day.</p>
+        <template v-else-if="article">
+            <div id="article-header" class="col-span-full">
+                <div id="article-meta">
+                    <p id="article-category">Event</p>
+                    <p id="article-date">{{ article.published_date }}</p>
+                </div>
+                <h2 id="article-title">{{ article.title }}</h2>
+                <div id="event-details">
+                    <p><b>Date:</b> {{ article.eventDate }} | <b>Time:</b> {{ article.time }} |
+                        <b>Location:</b> {{ article.location }}
+                    </p>
+                </div>
             </div>
 
-            <h3>Entertainment and Activities</h3>
+            <div id="article-featured-image" class="col-span-full">
+                <img :src="'images/' + article.image_main" :alt="article.title">
+            </div>
 
-            <p>The festival featured:</p>
+            <div id="article-content" class="col-span-full">
+                <div v-html="article.content"></div>
+            </div>
 
-            <ul>
-                <li>High-energy folk dance performances</li>
-                <li>Live drummers and DJ music</li>
-                <li>Synchronized colour throws</li>
-                <li>Traditional food vendors</li>
-                <li>Community youth performances</li>
-            </ul>
-
-            <h3>Cultural Significance</h3>
-
-            <p>The event concluded with a traditional Aarti at 5:00 PM, with participants joining in devotional dance.
-                Throughout the day, attendees enjoyed a variety of Indian and multicultural cuisines from on-site food
-                vendors.</p>
-
-            <div class="article-cta">
+            <div class="article-cta col-span-full">
                 <a href="donate.html" class="section-button">Support Future Events</a>
             </div>
-        </div>
 
-        <div id="event-gallery" class="col-span-full">
-            <h3>Event Highlights</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item main">
-                    <img src="images/holi-1.jpg" alt="Aerial view of Holi celebration at Victoria Park">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-2.jpg" alt="Traditional Ganesh Puja ceremony">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-3.jpg" alt="Folk dance performance">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-4.jpg" alt="Mayor Josh Morgan addressing the crowd">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-5.jpg" alt="Food vendors serving traditional cuisine">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-6.jpg" alt="Evening Aarti ceremony">
-                    <p class="caption">Sample Text</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/holi-7.jpg" alt="Evening Aarti ceremony">
-                    <p class="caption">Sample Text</p>
-                </div>
-            </div>
-
-            <div class="article-cta">
-                <a href="https://photos.google.com/share/AF1QipNQz6xvo2DiFhYCJtg8p9rAQKqepEliZUo9djvdO0pqjPatYrORHoDAMcqIJYJQ4w?key=U1B6RFhQMnhYTjVJM2xOM3hjbkk4YXBWdTl2ZVRB"
-                    target="_blank" class="section-button">More Photos</a>
-            </div>
-        </div>
-
-        <div id="article-share" class="col-span-full">
-            <p>Share this article:</p>
-            <div id="share-icons">
-                <a href="https://www.facebook.com/SrishtiCanada/"><img src="images/facebook.svg"
-                        alt="Facebook icon"></a>
-                <a href="https://www.instagram.com/srishticanada"><img src="images/instagram.svg"
-                        alt="Instagram icon"></a>
-                <a href="https://x.com/srishticanada"><img src="images/twitter.svg" alt="Twitter icon"></a>
-            </div>
-        </div>
-
-        <div id="related-articles" class="col-span-full">
-            <h3>Related Events</h3>
-            <div id="related-articles-grid">
-                <div class="related-article">
-                    <img src="images/updates-events-1.png" alt="Community tree planting day">
-                    <div class="related-text">
-                        <h4>Upcoming: Community Tree Planting Day</h4>
-                        <p class="date">June 12, 2025</p>
-                        <a href="event-article.html" class="section-button">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="related-article">
-                    <img src="images/featured-event.png" alt="Holi celebration">
-                    <div class="related-text">
-                        <h4>Holi Festival of Colours Celebration</h4>
-                        <p class="date">April 26, 2025</p>
-                        <a href="event-article.html" class="section-button">View Event</a>
+            <div v-if="article.gallery && article.gallery.length > 0" id="event-gallery" class="col-span-full">
+                <h3>Event Gallery</h3>
+                <div class="gallery-grid">
+                    <div v-for="(image, index) in article.gallery" :key="index"
+                        :class="['gallery-item', index === 0 ? 'main' : '']">
+                        <img :src="'images/' + image.image" :alt="image.alt">
+                        <p class="caption">{{ image.alt }}</p>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div id="article-share" class="col-span-full">
+                <p>Share this event:</p>
+                <div id="share-icons">
+                    <a href="https://www.facebook.com/SrishtiCanada/"><img src="images/facebook.svg"
+                            alt="Facebook icon"></a>
+                    <a href="https://www.instagram.com/srishticanada"><img src="images/instagram.svg"
+                            alt="Instagram icon"></a>
+                    <a href="https://x.com/srishticanada"><img src="images/twitter.svg" alt="Twitter icon"></a>
+                </div>
+            </div>
+
+            <div id="related-articles" class="col-span-full">
+                <h3>Related Events</h3>
+                <div id="related-articles-grid">
+                    <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="related-article">
+                        <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
+                        <div class="related-text">
+                            <h4>{{ relatedArticle.title }}</h4>
+                            <p class="date">{{ relatedArticle.published_date }}</p>
+                            <a :href="'event-article.html?id=' + relatedArticle.id" class="section-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
     </section>
-
-    <!--Newsletter-->
-    <!-- <div class="bg-accent">
-        <section id="newsletter-con" class="grid-con">
-            <div id="newsletter-text" class="col-span-full">
-                <h3>Subscribe to our Newsletter</h3>
-                <p>Subscribe to receive updates on our memorial, stories of courage, and upcoming events. Don't miss
-                    out—sign up today!</p>
-            </div>
-
-            <form class="newsletter-form col-span-full" action="#" method="POST">
-                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="section-button">Subscribe</button>
-            </form>
-        </section>
-    </div> -->
-
-    <!--Support Banner-->
-    <!-- <div class="bg-tertiary">
-        <section id="support-con" class="grid-con">
-            <h2 class="hidden">Support Banner</h2>
-            <div class="col-span-full">
-                <h3 class="section-header">Support the Memorial</h3>
-                <a class="section-button" href="donate.html">Make a Donation <img src="images/flower.svg"
-                        alt="flower"></a>
-            </div>
-        </section>
-    </div> -->
 
     <!--Footer-->
     <footer id="main-footer" class="grid-con">

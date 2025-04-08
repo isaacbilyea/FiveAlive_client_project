@@ -11,21 +11,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script type="module" src="js/article.js"></script>
+    <script type="module" src="js/news-article.js"></script>
     <title>BIA | Memorial Progress Update</title>
 </head>
 
 <body>
     <!--Header-->
-    <h1 class="hidden">News Article</h1>
+    <h1 class="hidden page-header">News Article</h1>
     <div class="bg-tertiary grid-con" id="header-background">
         <header id="main-header" class="col-span-full">
 
@@ -42,7 +43,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li>
-                            <a href="history.html" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -50,6 +56,7 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
@@ -84,77 +91,33 @@
 
     <!-- Article Content -->
     <section id="article-section" class="grid-con">
-        <div id="article-header" class="col-span-full">
-            <div id="article-meta">
-                <p id="article-category">News</p>
-                <p id="article-date">April 16, 2025</p>
-            </div>
-            <h2 id="article-title">Memorial Construction Reaches Milestone: Foundation Complete</h2>
+        <div v-if="loading" class="col-span-full">
+            <p>Loading...</p>
         </div>
 
-        <div id="article-featured-image" class="col-span-full">
-            <img src="images/news-article-1.jpg" alt="Progress of the memorial sculpture">
+        <div v-else-if="error" class="col-span-full">
+            <p>{{ error }}</p>
         </div>
 
-        <div id="article-content" class="col-span-full">
-            <p>The Brothers in Arms Memorial project has reached a significant milestone this week as construction crews
-                completed the foundation work for the main monument area. This achievement marks the successful
-                completion of Phase 1 of the memorial construction, setting the stage for the granite installations
-                scheduled to begin next month.</p>
-
-            <p>The foundation, designed to support the 15-ton granite centerpiece, required specialized engineering to
-                ensure stability in the varied soil conditions of Veterans Memorial Parkway. "This foundation isn't just
-                concrete and steel—it's the literal groundwork for a lasting tribute that will stand for generations,"
-                said Chief Engineer Rajiv Singh.</p>
-
-            <h3>Community Participation</h3>
-
-            <p>Local residents participated in a special ceremony last weekend, where community members were invited to
-                place small mementos and written messages into a time capsule that has been embedded within the
-                foundation. Over 200 people attended, including veterans' families and school children who have been
-                learning about the shared history of Indian and Canadian soldiers.</p>
-
-            <blockquote>
-                "To see so many people from different backgrounds coming together for this foundation ceremony shows
-                exactly why this memorial matters. It's not just about the past—it's about building a shared future
-                based on understanding and respect."
-                <cite>— Colonel James Williams (Ret.), Memorial Committee</cite>
-            </blockquote>
-
-            <div class="article-image">
-                <img src="images/news-article-2.jpg" alt="close up of memorial sculpture">
-                <p class="image-caption">Community members placing items in the time capsule during the foundation
-                    ceremony.</p>
+        <template v-else-if="article">
+            <div id="article-header" class="col-span-full">
+                <div id="article-meta">
+                    <p id="article-category">News</p>
+                    <p id="article-date">{{ article.published_date }}</p>
+                </div>
+                <h2 id="article-title">{{ article.title }}</h2>
             </div>
 
-            <h3>Looking Ahead</h3>
-
-            <p>With the foundation now complete, the project will move to Phase 2, which includes:</p>
-
-            <ul>
-                <li>Installation of the main granite monument</li>
-                <li>Landscaping of the surrounding memorial gardens</li>
-                <li>Planting of the first 36 heritage trees (of the planned 108)</li>
-                <li>Construction of accessible pathways throughout the site</li>
-            </ul>
-
-            <p>The memorial remains on schedule for completion in November 2025, with the official dedication ceremony
-                planned for Remembrance Day 2025.</p>
-
-            <h3>How You Can Contribute</h3>
-
-            <p>The Brothers in Arms Memorial Foundation continues to seek community support for the remaining phases of
-                construction. Opportunities to contribute include:</p>
-
-            <ul>
-                <li>Sponsoring a heritage tree ($500 each)</li>
-                <li>Purchasing an engraved paver for the Memory Path ($250)</li>
-                <li>Volunteering for upcoming planting days in June</li>
-            </ul>
-
-            <div class="article-cta">
-                <a href="donate.html" class="section-button">Support the Memorial</a>
+            <div id="article-featured-image" class="col-span-full">
+                <img :src="'images/' + article.image_main" :alt="article.title">
             </div>
+
+            <div id="article-content" class="col-span-full">
+                <div v-html="article.content"></div>
+            </div>
+        </template>
+        <div class="article-cta col-span-full">
+            <a href="donate.html" class="section-button">Support the Memorial</a>
         </div>
 
         <div id="article-share" class="col-span-full">
@@ -171,54 +134,18 @@
         <div id="related-articles" class="col-span-full">
             <h3>Related Articles</h3>
             <div id="related-articles-grid">
-                <div class="related-article">
-                    <img src="images/news-3.png" alt="Design approval meeting">
+                <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="related-article">
+                    <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
                     <div class="related-text">
-                        <h4>Memorial Design Receives Final Approval</h4>
-                        <p class="date">March 25, 2025</p>
-                        <a href="news-article.html" class="section-button">Read More</a>
-                    </div>
-                </div>
-
-                <div class="related-article">
-                    <img src="images/events-1.png" alt="Fundraising gala">
-                    <div class="related-text">
-                        <h4>Fundraising Gala Exceeds Target by 25%</h4>
-                        <p class="date">February 18, 2025</p>
-                        <a href="event-article.html" class="section-button">Read More</a>
+                        <h4>{{ relatedArticle.title }}</h4>
+                        <p class="date">{{ relatedArticle.published_date }}</p>
+                        <a :href="relatedArticle.type === 'Event' ? 'event-article.html?id=' + relatedArticle.id : 'news-article.html?id=' + relatedArticle.id"
+                            class="section-button">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!--Newsletter-->
-    <!-- <div class="bg-accent">
-        <section id="newsletter-con" class="grid-con">
-            <div id="newsletter-text" class="col-span-full">
-                <h3>Subscribe to our Newsletter</h3>
-                <p>Subscribe to receive updates on our memorial, stories of courage, and upcoming events. Don't miss
-                    out—sign up today!</p>
-            </div>
-
-            <form class="newsletter-form col-span-full" action="#" method="POST">
-                <input type="email" class="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="section-button">Subscribe</button>
-            </form>
-        </section>
-    </div> -->
-
-    <!--Support Banner-->
-    <!-- <div class="bg-tertiary">
-        <section id="support-con" class="grid-con">
-            <h2 class="hidden">Support Banner</h2>
-            <div class="col-span-full">
-                <h3 class="section-header">Support the Memorial</h3>
-                <a class="section-button" href="donate.html">Make a Donation <img src="images/flower.svg"
-                        alt="flower"></a>
-            </div>
-        </section>
-    </div> -->
 
     <!--Footer-->
     <footer id="main-footer" class="grid-con">

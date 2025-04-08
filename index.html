@@ -11,12 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-title" content="BIA">
-    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
     <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
@@ -46,7 +46,12 @@
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
                         <li>
-                            <a href="history.html" id="history-submenu">History</a>
+                            <div class="history-menu-container">
+                                <a href="history.html" id="history-submenu">History</a>
+                                <div class="submenu-toggle">
+                                    <img src="images/menu-arrow.svg" alt="toggle submenu">
+                                </div>
+                            </div>
                             <ul class="submenu">
                                 <li><a href="india-involvement.html">India in WW1</a></li>
                                 <li><a href="history.html#timeline">Timeline</a></li>
@@ -54,25 +59,13 @@
                                 <li><a href="regiments.html">Regiments</a></li>
                                 <li><a href="awards.html">Awardees</a></li>
                                 <li><a href="letters.html">Letters</a></li>
+                                <li><a href="game.html">Match &amp; Learn</a></li>
                             </ul>
                         </li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="news.html">News &amp; Events</a></li>
                     </ul>
                 </nav>
-                <div id="sm-icons-con">
-                    <h3>Follow Us</h3>
-                    <div class="sm-icons">
-                        <a href="https://www.facebook.com/SrishtiCanada/" target="_blank"><img src="images/facebook.svg"
-                                alt="facebook icon"></a>
-                        <a href="https://www.instagram.com/srishticanada" target="_blank"><img
-                                src="images/instagram.svg" alt="instagram icon"></a>
-                        <a href="https://www.youtube.com/@srishtifoundation9053" target="_blank"><img
-                                src="images/youtube.svg" alt="youtube icon"></a>
-                        <a href="https://x.com/srishticanada" target="_blank"><img src="images/twitter.svg"
-                                alt="twitter icon"></a>
-                    </div>
-                </div>
                 <a class="donate-btn" href="donate.html">Donate</a>
                 <div id="menu-button">
                     <span>Menu</span>
@@ -90,7 +83,7 @@
     <div class="bg-hero" id="home-hero-con">
         <div class="video-background">
             <video autoplay loop muted playsinline>
-                <source src="videos/Home.webm" type="video/mp4">
+                <source src="videos/Home.mp4" type="video/mp4">
             </video>
         </div>
         <section class="grid-con section-flex hero-section">
@@ -172,41 +165,16 @@
                 </div>
             </div>
             <div id="articles" class="col-span-full">
-
-                <div href="news-article.html" class="article news-article">
-                    <img src="images/updates-news-1.png" alt="new statue">
+                <div v-if="loading" class="loading">Loading...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else v-for="article in articles" :key="article.id" class="article" :class="article.type">
+                    <img :src="'images/' + article.image_main" :alt="article.title">
                     <div class="article-text">
                         <div>
-                            <h5>News</h5>
-                            <h6>New Statue</h6>
-                            <span>March 17, 2025</span>
-                            <p>The introduction of a new installation for the brothers in arms memorial site.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-1.png" alt="charity run">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Charity Run</h6>
-                            <span>March 16, 2025</span>
-                            <p>Our new upcoming event with a track and field race in the memorial park.</p>
-                        </div>
-                        <a class="article-cta">Read More</a>
-                    </div>
-                </div>
-
-                <div href="event-article.html" class="article event-article">
-                    <img src="images/updates-events-2.png" alt="field trips">
-                    <div class="article-text">
-                        <div>
-                            <h5>Event</h5>
-                            <h6>Field Trips</h6>
-                            <span>March 15, 2025</span>
-                            <p>Summer opportunities for historical and educational trips to the memorial.</p>
+                            <h5>{{ article.type }}</h5>
+                            <h6>{{ article.title }}</h6>
+                            <span>{{ article.published_date }}</span>
+                            <p>{{ article.card_content }}</p>
                         </div>
                         <a class="article-cta">Read More</a>
                     </div>
@@ -220,16 +188,20 @@
     <div class="bg-tertiary" id="event-background">
         <section id="featured-events-con" class="grid-con section-flex">
             <h2 class="hidden">Featured Events Section</h2>
-            <div id="event-wrapper">
-                <div class="col-span-full section-text-con">
-                    <h3 class="icon-header calendar-icon">Featured Event</h3>
-                    <h4 class="section-header">Holi Festival of Colours</h4>
-                    <p class="section-text">Celebrate with us on April 28, 2025
-                        at Victoria Park, London, Ontario</p>
-                    <a class="section-button" href="event-article.html">Learn More</a>
-                </div>
-                <div class="col-span-full section-image-con">
-                    <img src="images/featured-event.png" alt="photo of cultural festival">
+            <div>
+                <div v-if="loading" class="loading">Loading...</div>
+                <div v-else-if="error" class="error">{{ error }}</div>
+                <div v-else-if="event" id="event-wrapper">
+                    <div class="col-span-full section-text-con">
+                        <h3 class="icon-header calendar-icon">Featured Event</h3>
+                        <h4 class="section-header">{{ event.title }}</h4>
+                        <p class="section-text">{{ event.card_content }}</p>
+                        <p class="section-text">{{ event.published_date }}</p>
+                        <a class="section-button" :href="'event-article.html?id=' + event.id">Learn More</a>
+                    </div>
+                    <div class="col-span-full section-image-con">
+                        <img :src="'images/' + event.image_main" :alt="event.title">
+                    </div>
                 </div>
             </div>
         </section>
