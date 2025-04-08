@@ -15,6 +15,7 @@ export function letterNav() {
     const lettersSection = document.querySelector('#letters-section');
     const fullText = document.querySelector('#full-text');
     const dateSpacer = document.querySelector('#date-spacer');
+    const soldierImage = document.querySelector('#soldier-image img');
 
     //FUNCTIONS
     function updateContent(index) {
@@ -29,7 +30,9 @@ export function letterNav() {
             opacity: 0,
             duration: 0.3,
             onComplete: () => {
-
+                
+                soldierImage.src = `images/${data.image}`;
+                
                 soldierName.textContent = data.from;
                 letterTo.innerHTML = `<b>To:</b> ${data.to}`;
                 

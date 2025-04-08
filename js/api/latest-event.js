@@ -29,22 +29,19 @@ export function getLatestEvent() {
             },
 
             getEvent() {
-                fetch('http://localhost:8888/FiveAlive_client_project/backend/public/events/latest-event')
+                fetch('http://localhost:8888/FiveAlive_client_project/backend/public/events/latest/event')
                     .then(response => response.json())
                     .then(data => {
-                        if (data > 0) {
-                            const publishedDate = this.formatDate(data.published_date);
 
-                            this.event = {
-                                id: data.id,
-                                title: data.title,
-                                published_date: publishedDate,
-                                card_content: data.card_content,
-                                image_main: data.image_main
-                            };
-                        } else {
-                            this.error = "No events found";
-                        }
+                        const publishedDate = this.formatDate(data.published_date);
+
+                        this.event = {
+                            id: data.id,
+                            title: data.title,
+                            card_content: data.card_content,
+                            image_main: data.image_main
+                        };
+
                         this.loading = false;
                     })
                     .catch(error => {

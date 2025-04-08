@@ -51,6 +51,58 @@ section {
     &.phone-icon::before {
         background-image: url('../images/phone-icon.svg');
     }
+
+    &.behind-icon::before {
+        background-image: url('../images/behind-icon.svg');
+    }
+
+    &.construction-icon::before {
+        background-image: url('../images/construction-icon.svg');
+    }
+
+    &.legacy-icon::before {
+        background-image: url('../images/legacy-icon.svg');
+    }
+
+    &.mission-icon::before {
+        background-image: url('../images/mission-icon.svg');
+    }
+
+    &.organization-icon::before {
+        background-image: url('../images/organization-icon.svg');
+    }
+
+    &.vision-icon::before {
+        background-image: url('../images/vision-icon.svg');
+    }
+
+    &.visit-icon::before {
+        background-image: url('../images/visit-icon.svg');
+    }
+
+    &.volunteer-icon::before {
+        background-image: url('../images/volunteer-icon.svg');
+    }
+
+    &.sponsor-icon::before {
+        background-image: url('../images/sponsor-icon.svg');
+    }
+
+    &.faq-icon::before {
+        background-image: url('../images/faq-icon.svg');
+    }
+
+    &.poppy-icon::before {
+        background-image: url('../images/poppy-icon.svg');
+    }
+
+    &.timeline-icon::before {
+        background-image: url('../images/timeline-icon.svg');
+    }
+
+    &.game-icon::before {
+        background-image: url('../images/game-icon.svg');
+    }
 }
 
 .section-flex {
