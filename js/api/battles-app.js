@@ -5,55 +5,58 @@ export function battlesApp() {
             const battleId = urlParams.get('id') || 1;
             this.getBattle(battleId);
         },
+
         data() {
             return {
                 battle: {
-                    title: "",
-                    year: ""
+                    title: '',
+                    year: ''
                 },
                 battleSections: [],
-                errors: "",
-                loading: true
+                loading: true,
+                error: ''
             }
         },
+
         methods: {
             getBattle(id) {
                 this.loading = true;
-                this.errors = "";
+                this.error = '';
 
                 fetch(`http://localhost:8888/FiveAlive_client_project/backend/public/battles/${id}`)
-                .then(response => response.json())
-                .then(data => {
-                    const battleData = data[0];
-                    this.battle.title = battleData.title;
-                    this.battle.year = battleData.year;
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.length > 0) {
+                            const battleData = data[0];
+                            this.battle.title = battleData.title;
+                            this.battle.year = battleData.year;
 
-                    document.title = `BIA | ${this.battle.title}`;
-                    const heroHeader = document.querySelector('.hero-header');
-                    heroHeader.textContent = this.battle.title;
-
-                    data.forEach((section, index) => {
-                        let images = [];
-                        
-                        if(section.image) {
-                            const imageArray = section.image.split(',');
-                            images = imageArray.map(img => img.trim());
+                            document.title = `BIA | ${this.battle.title}`;
+                            const heroHeader = document.querySelector('.hero-header');
+                            heroHeader.textContent = this.battle.title;
+                            
+                            this.battleSections = [];
+                            data.forEach(sectionData => {
+                                const images = sectionData.image.split(',');
+                                
+                                const section = {
+                                    heading: sectionData.heading,
+                                    description: sectionData.description,
+                                    images,
+                                    index: sectionData.index
+                                };
+                                this.battleSections.push(section);
+                            });
+                        } else {
+                            this.error = 'Battle not found';
                         }
-
-                        this.battleSections.push({
-                            heading: section.heading,
-                            description: section.description,
-                            images,
-                            index
-                        });
+                        this.loading = false;
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        this.error = 'Failed to load battle data';
+                        this.loading = false;
                     });
-                    this.loading = false;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    this.errors = "Error loading battle data";
-                    this.loading = false;
-                });
             }
         }
     }).mount('#battles-app');
