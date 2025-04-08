@@ -109,7 +109,7 @@
         <div v-if="loading" class="loading">Loading battle information...</div>
         <div v-if="errors" class="error">{{ errors }}</div>
 
-        <div v-for="section in battleSections" :key="section.index" class="battle-section-wrapper">
+        <div v-for="section in battleSections" :key="section.index" class="{ 'bg-secondary': section.index % 2 === 0 }">
             <section class="battle-section grid-con" :class="{ 'special-layout': section.images.length === 1 }">
                 <h3 v-if="section.index === 0" class="col-span-full" id="battle-start">{{ battle.year }}</h3>
 
