@@ -33,7 +33,7 @@ $router->get('/events', 'EventController@getMainInfo');
 $router->get('/events-cards', 'EventController@getCards');
 $router->get('/events/{id}', 'EventController@getOne');
 $router->get('/events-card/{id}', 'EventController@getOneCard');
-$router->get('/events/latest-event', 'EventController@getLatest');
+// $router->get('/events/latest-event', 'EventController@getLatest');
 $router->post('/events/add', 'EventController@save');
 $router->post('/events/edit/{id}', 'EventController@update');
 $router->delete('/events/delete/{id}', 'EventController@delete');
