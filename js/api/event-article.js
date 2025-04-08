@@ -3,13 +3,9 @@ export function getEventArticle() {
         created() {
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
-            if (id) {
-                this.getEvent(id);
-                this.getRelatedEvents();
-            } else {
-                this.error = 'No event ID provided';
-                this.loading = false;
-            }
+            this.getEvent(id);
+            this.getRelatedEvents();
+
         },
 
         data() {

@@ -22,7 +22,7 @@ class EventController extends Controller {
 
     
      public function getCards() {
-      $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')->orderBy('published_date', 'desc')->get();
+      $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')->orderBy('published_date', 'desc')->first();
       return response()->json($events);
    }
 
@@ -36,13 +36,13 @@ class EventController extends Controller {
       return response()->json($event);
    }
 
-//    public function getLatest() {
-//       $event = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
-//           ->orderBy('published_date', 'desc')
-//           ->first();
+   public function getLatest() {
+      $event = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
+          ->orderBy('published_date', 'desc')
+          ->first();
       
-//       return response()->json($event);
-//   }
+      return response()->json($event);
+  }
 
 //    public function save(Request $request) {
 //       $this->validate($request, [
