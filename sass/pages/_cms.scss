@@ -1,0 +1,20 @@
+.cms-heading {
+    text-align: center;
+}
+
+.admin-sections-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.admin-row, .view-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.admin-actions, .view-actions {
+    display: flex;
+    gap: 30px;
+}
