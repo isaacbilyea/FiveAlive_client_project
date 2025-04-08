@@ -1,15 +1,25 @@
 export function imageChanger(type) {
     //VARIABLES
     const battleImages = [
-        'images/more-battles-1.png',
-        'images/more-battles-2.png',
-        'images/more-battles-3.png'
+        'images/1_OtherWarsSelection.jpg',
+        'images/2_OtherWarsSelection.jpg',
+        'images/3_OtherWarsSelection.jpg',
+        'images/4_OtherWarsSelection.png',
+        'images/5_OtherWarsSelection.jpg',
+        'images/6_OtherWarsSelection.jpg',
+        'images/7_OtherWarsSelection.jpg',
     ];
 
     const regimentImages = [
-        'images/regiments-1.png',
-        'images/regiments-2.png',
-        'images/regiments-3.png'
+        'images/1_Regiment_Selection.jpg',
+        'images/2_Regiment_Selection.jpg',
+        'images/3_Regiment_Selection.jpg',
+        'images/4_Regiment_Selection.jpg',
+        'images/5_Regiment_Selection.jpg',
+        'images/6_Regiment_Selection.jpg',
+        'images/7_Regiment_Selection.jpg',
+        'images/8_Regiment_Selection.png',
+        'images/9_Regiment_Selection.jpg'
     ];
 
     const images = type === 'battle' ? battleImages : regimentImages;

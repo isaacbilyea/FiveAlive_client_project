@@ -96,7 +96,7 @@
         <section class="grid-con section-flex subpage-hero-section">
             <h2 class="hidden">Hero Section</h2>
             <div class="col-span-full section-text-con">
-                <h3 class="icon-header info-icon">History</h3>
+                <h3 class="icon-header poppy-icon">History</h3>
                 <h4 class="section-header hero-header">Battle</h4>
             </div>
         </section>
@@ -109,11 +109,8 @@
         <div v-if="loading" class="loading">Loading battle information...</div>
         <div v-if="errors" class="error">{{ errors }}</div>
 
-        <div v-if="!loading && !errors">
-            <section v-for="section in battleSections" :key="section.index" class="battle-section grid-con" :class="{ 
-                        'bg-secondary': section.index % 2 === 0,
-                        'special-layout': section.images.length === 1 
-                    }">
+        <div v-for="section in battleSections" :key="section.index" class="battle-section-wrapper">
+            <section class="battle-section grid-con" :class="{ 'special-layout': section.images.length === 1 }">
                 <h3 v-if="section.index === 0" class="col-span-full" id="battle-start">{{ battle.year }}</h3>
 
                 <div class="col-span-full">
@@ -123,11 +120,12 @@
                     </div>
 
                     <div v-if="section.images.length > 1" class="image-container">
-                        <img v-for="image in section.images" :src="'images/' + image" :alt="section.heading">
+                        <img v-for="image in section.images" :key="image" :src="'images/' + image" class="sepia-filter"
+                            :alt="section.heading">
                     </div>
 
                     <div v-else-if="section.images.length === 1" class="image-container">
-                        <img :src="'images/' + section.images[0]" :alt="section.heading">
+                        <img :src="'images/' + section.images[0]" class="sepia-filter" :alt="section.heading">
                     </div>
                 </div>
             </section>
