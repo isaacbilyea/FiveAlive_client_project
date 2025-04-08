@@ -16,10 +16,14 @@
                 background-color: a.$primary-accent-color;
                 color: a.$alt-text-color;
                 padding: 0.25rem 0.75rem;
-                border-radius: 1rem;
+                border-radius: 0.5rem;
                 margin: 0;
                 font-weight: 600;
                 font-size: 0.85rem;
+
+                &.event-type {
+                    background-color: a.$secondary-accent-color;
+                }
             }
             
             #article-date {

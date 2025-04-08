@@ -122,7 +122,7 @@
                 <div v-if="loading" class="loading">Loading...</div>
                 <div v-else-if="error" class="error">{{ error }}</div>
                 <div v-else>
-                    <section id="articles" class="col-span-full">
+                    <div id="articles" class="col-span-full">
                         <article v-for="article in pageArticles" class="article" :class="article.type">
                             <img :src="`images/${article.image_main}`" :alt="article.title">
                             <div class="article-text">
@@ -136,7 +136,7 @@
                                     class="article-cta">Read More</a>
                             </div>
                         </article>
-                    </section>
+                    </div>
 
                     <nav id="pager" class="col-span-full" v-if="totalPages > 1">
                         <span v-for="page in totalPages" class="page-number" :class="{ active: page === currentPage }"
