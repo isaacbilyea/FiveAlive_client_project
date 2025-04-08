@@ -133,13 +133,14 @@
                             :class="article.type">
                             <img :src="'images/' + article.image_main" :alt="article.title">
                             <div class="article-text">
-                                <header>
+                                <div>
                                     <h5>{{ article.type }}</h5>
                                     <h6>{{ article.title }}</h6>
                                     <time>{{ article.published_date }}</time>
-                                </header>
+                                </div>
                                 <p>{{ article.card_content }}</p>
-                                <a :href="`${article.type.toLowerCase()}-article.html?id=${article.id}`">Read More</a>
+                                <a :href="`${article.type.toLowerCase()}-article.html?id=${article.id}`"
+                                    class="article-cta">Read More</a>
                             </div>
                         </article>
                     </section>

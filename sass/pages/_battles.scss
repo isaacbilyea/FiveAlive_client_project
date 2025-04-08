@@ -1,9 +1,5 @@
 @use '../abstracts' as a;
 
-.battle-section-wrapper:nth-of-type(odd) {
-    background-color: a.$secondary-color;
-}
-
 .battle-section {
     #support-quote {
         margin: 2rem auto;

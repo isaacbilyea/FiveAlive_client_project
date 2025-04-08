@@ -60,7 +60,6 @@
                 background-color: a.$primary-color;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
                 padding: 1.5rem;
                 flex: 1;
                 height: 100%;
@@ -79,14 +78,15 @@
                 }
             
                 h6 {
-                    font-size: 1.75rem;
+                    font-size: 1.5rem;
                     font-weight: 600;
                     margin: 0;
                     font-family: a.$heading-font-family;
                     margin-bottom: -0.35rem;
+                    line-height: 1.2;
                 }
     
-                span {
+                time, span {
                     font-size: 0.8rem;
                     font-weight: 300;
                     display: inline-block;
@@ -96,11 +96,12 @@
                 p {
                     margin: 0;
                     margin-top: 0.5rem;
+                    margin-bottom: 1rem;
                 }
 
                 .article-cta {
                     font-weight: 500;
-                    margin-top: 1rem;
+                    margin-top: auto;
                     position: relative;
                     width: fit-content;
                     padding-bottom: 2px;
