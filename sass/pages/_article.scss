@@ -118,7 +118,7 @@
     
     }
 
-    .article-cta {
+    .article-cta:not(.card-cta) {
         text-align: center;
         margin: 5rem auto 3rem auto;
 
@@ -168,55 +168,47 @@
         }
     }
     
-    #related-articles {
+    .related-articles {
         margin: 3rem 0 2rem;
         
         h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: a.$heading-text-color;
         }
         
-        #related-articles-grid {
+        .related-articles-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
-        }
-        
-        .related-article {
-            background-color: a.$secondary-color;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
             
-            img {
-                width: 100%;
-                height: 15rem;
-                object-fit: cover;
-            }
-            
-            .related-text {
-                padding: 1rem 1.5rem 1.5rem;
+            .article {
+                all: unset;
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;
-                
-                h4 {
-                    font-size: 1.15rem;
-                    margin: 0 0 0.5rem;
-                    color: a.$heading-text-color;
-                }
-                
-                .date {
-                    font-size: 0.85rem;
-                    color: a.$body-text-color;
-                    margin: 0 0 1rem;
-                }
+                align-items: stretch;
+                border-radius: 0.75rem;
+                overflow: hidden;
+                min-height: 28rem;
 
-                .section-button {
-                    margin-top: auto;
+                &:hover img {
+                    transform: scale(1.1);
+                }
+                
+                img {
+                    width: 100%;
+                    height: 15rem;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+                
+                .article-text {
+                    background-color: a.$secondary-color;
+                    padding: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex: 1;
                 }
             }
         }
@@ -315,18 +307,12 @@
             }
         }
         
-        #related-articles {
+        .related-articles {
             margin: 4rem 0 2rem;
             
-            #related-articles-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .related-articles-grid {
+                grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
-            }
-
-            .related-article {
-                img {
-                    height: 12rem;
-                }
             }
         }
     }
@@ -340,6 +326,15 @@
                     height: 500px;
                 }
             }
+        }
+    }
+
+    .related-articles {
+        margin: 4rem 0 2rem;
+        
+        .related-articles-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
         }
     }
 }
@@ -385,10 +380,11 @@
             margin-bottom: 4rem;
         }
         
-        #related-articles {
+        .related-articles {
             margin: 5rem 0 3rem;
             
-            #related-articles-grid {
+            .related-articles-grid {
+                grid-template-columns: repeat(3, 1fr);
                 gap: 3rem;
             }
             
@@ -396,27 +392,22 @@
                 font-size: 2rem;
                 margin-bottom: 2rem;
             }
-            
-            .related-article {
-                img {
-                    height: 15rem;
-                }
-                
-                .related-text {
-                    padding: 1.25rem 1.75rem 1.75rem;
-                    
-                    h4 {
-                        font-size: 1.25rem;
-                        margin-bottom: 0.75rem;
-                    }
-                }
-            }
+        
         }
     }
 
     #event-gallery {
         .gallery-grid {
             grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .related-articles {
+        margin: 5rem 0 3rem;
+        
+        .related-articles-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
         }
     }
 }

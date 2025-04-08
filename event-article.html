@@ -153,15 +153,19 @@
                 </div>
             </div>
 
-            <div id="related-articles" class="col-span-full">
+            <div class="col-span-full related-articles">
                 <h3>Related Events</h3>
-                <div id="related-articles-grid">
-                    <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="related-article">
+                <div id="articles" class="related-articles-grid">
+                    <div v-for="relatedArticle in relatedArticles" :key="relatedArticle.id" class="article">
                         <img :src="'images/' + relatedArticle.image_main" :alt="relatedArticle.title">
-                        <div class="related-text">
-                            <h4>{{ relatedArticle.title }}</h4>
-                            <p class="date">{{ relatedArticle.published_date }}</p>
-                            <a :href="'event-article.html?id=' + relatedArticle.id" class="section-button">Read More</a>
+                        <div class="article-text">
+                            <div>
+                                <h6>{{ relatedArticle.title }}</h6>
+                                <span>{{ relatedArticle.published_date }}</span>
+                                <p>{{ relatedArticle.card_content }}</p>
+                            </div>
+                            <a :href="'event-article.html?id=' + relatedArticle.id" class="article-cta card-cta">Read
+                                More</a>
                         </div>
                     </div>
                 </div>
