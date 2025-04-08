@@ -176,7 +176,8 @@
                             <span>{{ article.published_date }}</span>
                             <p>{{ article.card_content }}</p>
                         </div>
-                        <a class="article-cta">Read More</a>
+                        <a :href="`${article.type.toLowerCase()}-article.html?id=${article.id}`"
+                            class="article-cta">Read More</a>
                     </div>
                 </div>
             </div>

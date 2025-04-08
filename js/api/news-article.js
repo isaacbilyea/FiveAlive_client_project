@@ -74,6 +74,7 @@ export function getNewsArticle() {
                                 const article = {
                                     id: articleData.id,
                                     title: articleData.title,
+                                    card_content: articleData.card_content,
                                     image_main: articleData.image_main,
                                     type: articleData.type,
                                     published_date: this.formatDate(articleData.published_date)

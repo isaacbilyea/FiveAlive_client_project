@@ -86,6 +86,7 @@ export function getEventArticle() {
                                 const event = {
                                     id: eventData.id,
                                     title: eventData.title,
+                                    card_content: eventData.card_content,
                                     image_main: eventData.image_main,
                                     type: eventData.type,
                                     published_date: this.formatDate(eventData.published_date)
