@@ -63,4 +63,34 @@ class ArticlesController extends Controller
             'articles' => $combined
         ]);
     }
+
+    public function getLatestNews() {
+        $news = News::select('id', 'title', 'published_date', 'card_content', 'image_main')
+            ->orderByDesc('published_date')
+            ->take(3)
+            ->get()
+            ->map(function($item) {
+                $item->type = 'News';
+                return $item;
+            });
+
+        return response()->json([
+            'articles' => $news
+        ]);
+    }
+
+    public function getLatestEvents() {
+        $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
+            ->orderByDesc('published_date')
+            ->take(3)
+            ->get()
+            ->map(function($item) {
+                $item->type = 'Event';
+                return $item;
+            });
+
+        return response()->json([
+            'articles' => $events
+        ]);
+    }
 }
