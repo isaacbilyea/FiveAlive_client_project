@@ -116,7 +116,7 @@
                 <div class="col-span-full">
                     <div class="content">
                         <h4 class="section-header">{{ section.heading }}</h4>
-                        <p class="section-text">{{ section.description }}</p>
+                        <p class="section-text" v-html="section.description"></p>
                     </div>
 
                     <div v-if="section.images.length > 1" class="image-container">
