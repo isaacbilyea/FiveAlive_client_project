@@ -4,7 +4,6 @@ import { adminVolunteers } from './modules/admin.js';
 import { adminDonors } from './modules/admin.js';
 import { adminNewsletters } from './modules/admin.js';
 
-
 adminNews();
 adminEvents();
 adminVolunteers();
