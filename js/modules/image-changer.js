@@ -22,8 +22,14 @@ export function imageChanger(type) {
         'images/9_Regiment_Selection.jpg'
     ];
 
-    const images = type === 'battle' ? battleImages : regimentImages;
     let currentIndex = 0;
+    let images ='';
+
+    if (type === 'battle') {
+    images = battleImages;
+    } else {
+    images = regimentImages;
+    }
 
     //FUNCTIONS
     function changeImage() {
