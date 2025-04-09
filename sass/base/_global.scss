@@ -145,9 +145,16 @@ input, textarea {
     background-color: rgba(a.$primary-accent-color,0.9);
 }
 
+#video-con {
+    width: 100%;
+}
+
 .video-con {
     overflow: hidden;
     border-radius: 0.75rem;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     
     .plyr--video {
         --plyr-color-main: #BE1E2D;
