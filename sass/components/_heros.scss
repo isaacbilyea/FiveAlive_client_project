@@ -91,7 +91,7 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-image: url('../images/subpage-banner.png');
+    background-image: url('../images/battle-banner.png');
     max-height: 275px;
     position: relative;
     display: flex;
@@ -126,6 +126,18 @@
 
     &#game-banner {
         background-image: url('../images/game-banner.jpg');
+    }
+    
+    &#involvement-banner {
+        background-image: url('../images/involvement-banner.png');
+    }
+
+    &#more-battles-banner {
+        background-image: url('../images/more-battles-banner.png');
+    }
+
+    &#regiments-banner {
+        background-image: url('../images/regiment-banner.png');
     }
 
     .subpage-hero-section {
