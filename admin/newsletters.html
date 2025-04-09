@@ -31,7 +31,7 @@
   <section class="admin-sections-container">
     <h2 class="hidden">Subscribers List</h2>
     <div id="admin-newsletters-list">
-      <div v-for="subscriber in newslettersData" :key="subscriber.id" class="view-row">
+      <div v-for="subscriber in newslettersData" class="view-row">
         <div class="view-list">{{ subscriber.email }}</div>
         <div class="view-actions">
           <a :href="`newsletters-edit.html?id=${subscriber.id}`" class="edit-button">Edit</a>

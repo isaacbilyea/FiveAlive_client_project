@@ -31,7 +31,7 @@
   <section class="admin-sections-container">
     <h2 class="hidden">News Articles List</h2>
     <div id="admin-news-list">
-      <div v-for="news in newsData" :key="news.id" class="view-row">
+      <div v-for="news in newsData" class="view-row">
         <div class="view-list">{{ news.title }}</div>
         <div class="view-actions">
           <a :href="`news-edit.html?id=${news.id}`" class="edit-button">Edit</a>

@@ -31,7 +31,7 @@
   <section class="admin-sections-container">
     <h2 class="hidden">Volunteers List</h2>
     <div id="admin-volunteers-list">
-      <div v-for="volunteer in volunteersData" :key="volunteer.id" class="view-row">
+      <div v-for="volunteer in volunteersData" class="view-row">
         <div class="view-list">{{ volunteer.name }}</div>
         <div class="view-actions">
           <a :href="`volunteers-edit.html?id=${volunteer.id}`" class="edit-button">Edit</a>
