@@ -221,12 +221,17 @@
     
     #donation-video-con {
 
+        > div {
+            width: 100%;
+        }
+
         .section-text-con {
             width: 100%;
         }
         
         .video-con {
             margin: 0 auto;
+            width: 100%;
         }
     }
 

@@ -148,6 +148,7 @@ input, textarea {
 .video-con {
     overflow: hidden;
     border-radius: 0.75rem;
+    max-width: 1600px;
     
     .plyr--video {
         --plyr-color-main: #BE1E2D;

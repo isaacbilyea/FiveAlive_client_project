@@ -7,6 +7,23 @@
     color: a.$cms-primary-color;
 }
 
+.dashboard-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: a.$cms-secondary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+
+    &:hover {
+        background: darken(a.$cms-secondary-color, 10%);
+    }
+}
+
 .admin-sections-container {
     max-width: 1000px;
     width: 95%;
