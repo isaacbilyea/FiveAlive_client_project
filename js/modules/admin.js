@@ -8,7 +8,7 @@ export function adminNews() {
       };
     },
     created() {
-      fetch('http://localhost/bia_api/public/news')
+      fetch('http://localhost:8888/FiveAlive_client_project/backend/public/news')
         .then((response) => response.json())
         .then((data) => {
           this.newsData = data;
@@ -27,7 +27,7 @@ export function adminEvents() {
       };
     },
     created() {
-      fetch('http://localhost/bia_api/public/events')
+      fetch('http://localhost:8888/FiveAlive_client_project/backend/public/events')
         .then((response) => response.json())
         .then((data) => {
           this.eventsData = data;
@@ -46,7 +46,7 @@ export function adminVolunteers() {
       };
     },
     created() {
-      fetch('http://localhost/bia_api/public/volunteers')
+      fetch('http://localhost:8888/FiveAlive_client_project/backend/public/volunteers')
         .then((response) => response.json())
         .then((data) => {
           this.volunteersData = data;
@@ -65,7 +65,7 @@ export function adminDonors() {
       };
     },
     created() {
-      fetch('http://localhost/bia_api/public/donors')
+      fetch('http://localhost:8888/FiveAlive_client_project/backend/public/donors')
         .then((response) => response.json())
         .then((data) => {
           this.donorsData = data;
@@ -84,7 +84,7 @@ export function adminNewsletters() {
       };
     },
     created() {
-      fetch('http://localhost/bia_api/public/newsletters')
+      fetch('http://localhost:8888/FiveAlive_client_project/backend/public/newsletters')
         .then((response) => response.json())
         .then((data) => {
           this.newslettersData = data;

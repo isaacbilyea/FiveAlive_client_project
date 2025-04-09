@@ -33,8 +33,8 @@
       <div v-for="donor in donorsData" :key="donor.id" class="view-row">
         <div class="view-list">{{ donor.name }}</div>
         <div class="view-actions">
-          <a :href="`donors-edit.html?id=${donor.id}`">Edit</a>
-          <a href="delete.html">Delete</a>
+          <a :href="`donors-edit.html?id=${donor.id}`" class="edit-button">Edit</a>
+          <a href="delete.html" class="delete-button">Delete</a>
         </div>
       </div>
     </div>

@@ -33,8 +33,8 @@
       <div v-for="subscriber in newslettersData" :key="subscriber.id" class="view-row">
         <div class="view-list">{{ subscriber.email }}</div>
         <div class="view-actions">
-          <a :href="`newsletters-edit.html?id=${subscriber.id}`">Edit</a>
-          <a href="delete.html">Delete</a>
+          <a :href="`newsletters-edit.html?id=${subscriber.id}`" class="edit-button">Edit</a>
+          <a href="delete.html" class="delete-button">Delete</a>
         </div>
       </div>
     </div>
