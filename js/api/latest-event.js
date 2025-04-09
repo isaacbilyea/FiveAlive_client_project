@@ -19,21 +19,11 @@ export function getLatestEvent() {
         },
 
         methods: {
-            formatDate(dateString) {
-                return new Date(dateString).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    timeZone: 'UTC'
-                });
-            },
 
             getEvent() {
                 fetch('http://localhost:8888/FiveAlive_client_project/backend/public/events/latest/event')
                     .then(response => response.json())
                     .then(data => {
-
-                        const publishedDate = this.formatDate(data.published_date);
 
                         this.event = {
                             id: data.id,

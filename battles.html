@@ -107,7 +107,7 @@
         <h2 class="hidden">Battle Details</h2>
 
         <div v-if="loading" class="loading">Loading battle information...</div>
-        <div v-if="errors" class="error">{{ errors }}</div>
+        <div v-if="error" class="error">{{ error }}</div>
 
         <div v-for="section in battleSections" class="battle-section-wrapper">
             <section class="battle-section grid-con" :class="{ 'special-layout': section.images.length === 1}">

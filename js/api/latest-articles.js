@@ -13,8 +13,8 @@ export function getLatestArticles() {
         },
 
         methods: {
-            formatDate(dateString) {
-                return new Date(dateString).toLocaleDateString('en-US', {
+            formatDate(date) {
+                return new Date(date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
