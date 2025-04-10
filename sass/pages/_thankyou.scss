@@ -1,5 +1,7 @@
 #thankyou-body {
-    padding: 0rem 3rem;
+    padding: 0rem 4rem;
+    max-width: 1200px;
+    transform: scale(0.9);
 }
 
 #thankyou {
@@ -41,7 +43,7 @@
 }
 
 .info {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     margin-left: 0.5rem;
     
     .info-text {
@@ -76,7 +78,7 @@
 }
 
 hr {
-    margin: 0.5rem 0.5rem 1.5rem 0;
+    margin: 0.5rem 0.5rem 1rem 0;
     border: 0;
     height: 1.2px;
     background-color: rgba(0, 0, 0, 0.1);

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>3D Walkthrough</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="BIA">
+  <link rel="manifest" href="images/site.webmanifest">
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+  </style>
+  <link rel="stylesheet" href="vendor/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="multiple-scenes ">
+
+  <div id="pano"></div>
+
+  <div id="sceneList">
+    <ul class="scenes">
+
+      <a href="javascript:void(0)" class="scene" data-id="0-park-sign">
+        <li class="text">Park Sign</li>
+      </a>
+
+      <a href="javascript:void(0)" class="scene" data-id="1-sponsorship-opportunity">
+        <li class="text">Sponsorship Opportunity</li>
+      </a>
+
+      <a href="javascript:void(0)" class="scene" data-id="2-pond-lookout">
+        <li class="text">Pond Lookout</li>
+      </a>
+
+      <a href="javascript:void(0)" class="scene" data-id="3-interpretive-trail-signage">
+        <li class="text">Interpretive Trail Signage</li>
+      </a>
+
+      <a href="javascript:void(0)" class="scene" data-id="4-brothers-in-arms-memorial">
+        <li class="text">Brothers In Arms Memorial</li>
+      </a>
+
+    </ul>
+  </div>
+
+  <div id="titleBar">
+    <h1 class="sceneName"></h1>
+  </div>
+
+  <a href="javascript:void(0)" id="autorotateToggle">
+    <img class="icon off" src="img/play.png">
+    <img class="icon on" src="img/pause.png">
+  </a>
+
+  <a href="javascript:void(0)" id="fullscreenToggle">
+    <img class="icon off" src="img/fullscreen.png">
+    <img class="icon on" src="img/windowed.png">
+  </a>
+
+  <a href="javascript:void(0)" id="sceneListToggle">
+    <img class="icon off" src="img/expand.png">
+    <img class="icon on" src="img/collapse.png">
+  </a>
+
+  <a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon" src="img/up.png">
+  </a>
+  <a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon" src="img/down.png">
+  </a>
+  <a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon" src="img/left.png">
+  </a>
+  <a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon" src="img/right.png">
+  </a>
+  <a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon" src="img/plus.png">
+  </a>
+  <a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon" src="img/minus.png">
+  </a>
+
+  <script src="vendor/screenfull.min.js"></script>
+  <script src="vendor/bowser.min.js"></script>
+  <script src="vendor/marzipano.js"></script>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
