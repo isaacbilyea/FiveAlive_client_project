@@ -96,7 +96,7 @@
     <div class="bg-subpage-hero" id="game-banner">
         <section class="grid-con section-flex subpage-hero-section">
             <h2 class="hidden">Hero Section</h2>
-            <div class="col-span-full section-text-con">
+            <div class="col-span-full">
                 <h3 class="icon-header info-icon">History</h3>
                 <h4 class="section-header hero-header">Interactive History</h4>
             </div>
@@ -106,15 +106,31 @@
     <!--Main Content-->
     <div class="bg-secondary">
         <section class="grid-con" id="memory-game-section">
-            <div class="col-span-full section-text-con">
-                <h3 class="icon-header info-icon hidden">Interactive History</h3>
-                <h4 class="section-header">Uncovering The Past</h4>
-                <p class="section-text">Match the cards to reveal interesting facts about Indian soldiers in World War
-                    I. With each game you complete, you'll discover a new piece of their forgotten history. Play
-                    multiple
-                    times to collect all the historical facts and uncover the full story of their contributions.</p>
-            </div>
             <div id="memory-game-wrapper" class="col-span-full" v-cloak>
+                <div v-if="showWelcome" class="welcome-overlay">
+                    <div class="welcome-content">
+                        <h4>Uncovering The Past</h4>
+                        <p>Match the cards to reveal interesting facts about Indian soldiers in World War I. With each
+                            game you complete, you'll discover a new piece of their forgotten history. Play multiple
+                            times to collect all the historical facts and uncover the full story of their contributions.
+                        </p>
+                        <button class="section-button" @click="startGame">Play Now</button>
+                    </div>
+                </div>
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Moves:</span>
+                        <span class="stat-value">{{ moves }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Time:</span>
+                        <span class="stat-value">{{ formatTime }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Best Score:</span>
+                        <span class="stat-value">{{ bestScore }}</span>
+                    </div>
+                </div>
                 <div id="memory-game">
                     <div v-for="card in cards" class="memory-card"
                         :class="{ flip: card.flipped, matched: card.matched }" @click="flipCard(card)">
