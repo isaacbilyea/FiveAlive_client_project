@@ -8,62 +8,76 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        margin-bottom: 5rem;
+        align-items: center;
 
-        .award-column {
+        .award-column-left, .award-column-middle, .award-column-right {
             text-align: left;
+        }
+
+        .award-column-left {
+            .medal-info {
+                h3 {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    font-size: 2.5rem;
+                    line-height: 1.2;
+                    font-family: a.$heading-font-family;
+                }
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        .award-column-middle {
             display: flex;
             justify-content: center;
-            flex-direction: column;
-
-            h3 {
-                margin: 0;
-                margin-bottom: 1rem;
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-
-            p {
-                width: 100%;
-            }
-
-            #regiment {
-                margin: 0;
-            }
-
-            #soldier-name {
-                margin-bottom: 0.25rem;
-            }
-
+            align-items: flex-start;
+            
             .soldier-img {
-
+                width: 100%;
+                max-width: 500px;
+                
                 img {
                     width: 100%;
                     min-height: 25rem;
                     object-fit: cover;
                     max-height: 25rem;
                     border-radius: 0.5rem;
+                }
+            }
+        }
+
+        .award-column-right {
+            .soldier-info {
+                h3 {
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+                    font-size: 2.5rem;
+                    font-family: a.$heading-font-family;
+                }
+
+                p {
+                    margin: 0.25rem 0;
+                    font-size: 1.1rem;
+                }
+
+                strong {
+                    font-weight: 600;
+                }
+
+                .medal-img {
+                    box-sizing: border-box;
                     margin-bottom: 1rem;
+                    max-width: 5rem;
+                    min-width: 5rem;
+                    
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
                 }
-            }
-
-            .medal-img {
-                box-sizing: border-box;
-                margin-right: 2rem;
-                max-width: 6rem;
-                min-width: 6rem;
-                
-                img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 0.5rem;
-                }
-            }
-
-            &:last-of-type {
-                justify-content: flex-start;
-                flex-direction: row;
-                align-items: center;
             }
         }
     }
@@ -171,6 +185,14 @@
                 color: a.$body-text-color;
                 font-style: italic;
                 margin: 0;
+
+                strong {
+                    display: none;
+                }
+            }
+
+            .rank, .lifespan {
+                display: none;
             }
         }
     }
@@ -184,17 +206,11 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
             margin: 0 auto;
-
-            .award-column {
-
-                .medal-img {
-                    margin-bottom: 1rem;
-                }
-                
-                &:last-of-type {
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: flex-start;
+            align-items: center;
+            
+            .award-column-middle {
+                .soldier-img {
+                    max-width: 100%;
                 }
             }
         }
@@ -202,7 +218,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-
     #awards-section {
         #awards-info {
             gap: 5rem;
