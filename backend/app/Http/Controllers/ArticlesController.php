@@ -67,7 +67,7 @@ class ArticlesController extends Controller
     public function getLatestNews() {
         $news = News::select('id', 'title', 'published_date', 'card_content', 'image_main')
             ->orderByDesc('published_date')
-            ->take(3)
+            ->take(4)
             ->get()
             ->map(function($item) {
                 $item->type = 'News';
@@ -82,7 +82,7 @@ class ArticlesController extends Controller
     public function getLatestEvents() {
         $events = Event::select('id', 'title', 'published_date', 'card_content', 'image_main')
             ->orderByDesc('published_date')
-            ->take(3)
+            ->take(4)
             ->get()
             ->map(function($item) {
                 $item->type = 'Event';

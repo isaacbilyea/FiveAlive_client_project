@@ -69,18 +69,20 @@ export function getNewsArticle() {
                 fetch('http://localhost:8888/FiveAlive_client_project/backend/public/articles/latest-news')
                     .then(response => response.json())
                     .then(data => {
-                        this.relatedArticles = [];
-                        data.articles.forEach(articleData => {
-                                const article = {
-                                    id: articleData.id,
-                                    title: articleData.title,
-                                    card_content: articleData.card_content,
-                                    image_main: articleData.image_main,
-                                    type: articleData.type,
-                                    published_date: this.formatDate(articleData.published_date)
-                                };
-                                this.relatedArticles.push(article);
-                            });
+                        this.relatedArticles = []
+                        data.articles
+                            .filter(a => a.id !== this.article.id)
+                            .slice(0, 3)                        
+                            .forEach(articleData => {
+                                this.relatedArticles.push({
+                                    id:            articleData.id,
+                                    title:         articleData.title,
+                                    card_content:  articleData.card_content,
+                                    image_main:    articleData.image_main,
+                                    type:          articleData.type,
+                                    published_date:this.formatDate(articleData.published_date)
+                                })
+                            })
                     })
                     .catch(error => {
                         console.error(error);
