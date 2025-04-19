@@ -82,16 +82,18 @@ export function getEventArticle() {
                     .then(response => response.json())
                     .then(data => {
                         this.relatedArticles = [];
-                        data.articles.forEach(eventData => {
-                                const event = {
-                                    id: eventData.id,
-                                    title: eventData.title,
-                                    card_content: eventData.card_content,
-                                    image_main: eventData.image_main,
-                                    type: eventData.type,
+                        data.articles
+                            .filter(e => e.id !== this.article.id)  
+                            .slice(0, 3)                        
+                            .forEach(eventData => {
+                                this.relatedArticles.push({
+                                    id:             eventData.id,
+                                    title:          eventData.title,
+                                    card_content:   eventData.card_content,
+                                    image_main:     eventData.image_main,
+                                    type:           eventData.type,
                                     published_date: this.formatDate(eventData.published_date)
-                                };
-                                this.relatedArticles.push(event);
+                                });
                             });
                     })
                     .catch(error => {

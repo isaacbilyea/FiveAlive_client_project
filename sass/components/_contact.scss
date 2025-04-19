@@ -58,6 +58,14 @@
                 color: a.$body-text-color;
             }
         }
+
+        select {
+            appearance: none;
+            background-image: url('../images/arrow-down.svg');
+            background-repeat: no-repeat;
+            background-size: 2%;
+            background-position: right 1rem center;
+        }
         
         textarea {
             min-height: 10rem;
