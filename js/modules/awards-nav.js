@@ -7,16 +7,20 @@ export function awardsNav() {
     const allCards = document.querySelectorAll('.award-box');
     const soldierName = document.querySelector('#soldier-name');
     const regiment = document.querySelector('#regiment');
+    const soldierRank = document.querySelector('#soldier-rank');
+    const soldierLifespan = document.querySelector('#soldier-lifespan');
     const description = document.querySelector('#award-description');
     const medalImg = document.querySelector('#medal-image');
     const soldierImg = document.querySelector('.soldier-img img');
-    const awardTitle = document.querySelector('.award-column h3');
+    const awardTitle = document.querySelector('.medal-info h3');
     const awardsSection = document.querySelector('#awards-section');
-    
+
     //FUNCTIONS
     function updateContent(card) {
         const cardName = card.querySelector('.soldier-name').textContent;
-        const cardRegiment = card.querySelector('.regiment').textContent;
+        const cardRegiment = card.querySelector('.regiment').innerHTML;
+        const cardRank = card.querySelector('.rank').innerHTML;
+        const cardLifespan = card.querySelector('.lifespan').innerHTML;
         const cardImage = card.querySelector('.award-image img').src;
 
         const awardContent = {
@@ -47,25 +51,50 @@ export function awardsNav() {
         }
         
         const content = awardContent[awardType];
-        
-        gsap.to(awardsInfo, {
-            opacity: 0,
-            duration: 0.3,
-            onComplete: () => {
-                soldierName.textContent = cardName;
-                regiment.textContent = cardRegiment;
-                description.textContent = content.description;
-                awardTitle.textContent = content.title;
-                medalImg.src = `images/${content.image}`;
-                soldierImg.src = cardImage;
 
-                gsap.to(awardsInfo, {
-                    opacity: 1,
-                    duration: 0.3,
-                    delay: 0.2,
-                    ease: "power2.out"
-                });
-            }
+        soldierName.textContent = cardName;
+        regiment.innerHTML = cardRegiment;
+        soldierRank.innerHTML = cardRank;
+        soldierLifespan.innerHTML = cardLifespan;
+        description.textContent = content.description;
+        awardTitle.textContent = content.title;
+        soldierImg.src = cardImage;
+        
+
+        const tl = gsap.timeline();
+
+        medalImg.src = `images/${content.image}`;
+            
+        gsap.set(medalImg, { 
+            transformOrigin: "top center",
+            rotation: 0
+        });
+        
+
+        tl.to(medalImg, {
+            rotation: -8,
+            duration: 0.20,
+            ease: "power2.out"
+        })
+        .to(medalImg, {
+            rotation: 8,
+            duration: 0.35,
+            ease: "power1.out"
+        })
+        .to(medalImg, {
+            rotation: -4,
+            duration: 0.3,
+            ease: "power1.out"
+        })
+        .to(medalImg, {
+            rotation: 2,
+            duration: 0.25,
+            ease: "power2.out"
+        })
+        .to(medalImg, {
+            rotation: 0,
+            duration: 0.2,
+            ease: "power2.out"
         });
     }
 
