@@ -1,5 +1,15 @@
 @use '../abstracts' as a;
 
+#game-banner {
+    * {
+        color: a.$primary-color;
+    }
+
+    .subpage-hero-section {
+        z-index: 2;
+    }
+}
+
 
 #memory-game-con {
     * {
@@ -34,6 +44,46 @@
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    background-color: rgba(a.$tertiary-color, 0.5);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 2px solid a.$tertiary-color;
+
+    .game-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        color: a.$primary-color;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: a.$tertiary-color;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .stat-item {
+            text-align: center;
+
+            .stat-label {
+                display: block;
+                color: a.$primary-color;
+                font-weight: bold;
+                margin-bottom: 0.25rem;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+            }
+
+            .stat-value {
+                display: inline-block;
+                min-width: 4ch;
+                color: a.$primary-color;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 0.25rem 0.75rem;
+                border-radius: 0.25rem;
+            }
+        }
+    }
 
     #memory-game {
         width: 100%;
@@ -48,12 +98,12 @@
             aspect-ratio: 3/4;
             position: relative;
             transform-style: preserve-3d;
-            transition: transform 0.5s, opacity 0.3s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             transform: rotateY(0deg);
             border-radius: 0.5rem;
             opacity: 1;
-            
+
             &.flip {
                 transform: rotateY(180deg);
             }
@@ -96,6 +146,91 @@
 
     }
 
+    .game-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(a.$primary-color, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border-radius: 0.5rem;
+        padding: 2rem;
+
+        .overlay-content {
+            text-align: center;
+            max-width: 600px;
+            
+            h4 {
+                color: a.$tertiary-color;
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: a.$tertiary-color;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
+
+            .section-button {
+                background: a.$tertiary-color;
+                color: a.$primary-color;
+                padding: 0.75rem 2.5rem;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+
+                &:hover {
+                    background: transparent;
+                    color: a.$tertiary-color;
+                    border-color: a.$tertiary-color;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+
+    .welcome-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lighten(a.$primary-color, 10%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, a.$primary-color 0%, darken(a.$primary-color, 10%) 100%);
+
+        .welcome-content {
+            text-align: center;
+            max-width: 600px;
+            
+            h4 {
+                color: a.$tertiary-color;
+                font-size: 1.8rem;
+                margin: 0;
+            }
+
+            p {
+                color: a.$tertiary-color;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+            }
+
+            .section-button {
+                margin: 0 auto;
+            }
+        }
+    }
+
     #match-counter {
         position: absolute;
         top: 50%;
@@ -120,7 +255,6 @@
         align-items: center;
         justify-content: center;
         z-index: 1000;
-        margin-top: -7rem;
 
         .popup-container {
             display: flex;

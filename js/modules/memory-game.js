@@ -1,4 +1,6 @@
 export function memoryGame() {
+    gsap.registerPlugin(ScrollToPlugin);
+
     const app = Vue.createApp({
         data() {
             return {
@@ -32,20 +34,26 @@ export function memoryGame() {
                 currentFactIndex: 0,
                 currentFact: "",
                 confettiSrc: 'images/game-confetti.gif',
-                showConfetti: false
+                showConfetti: false,
+                moves: 0,
+                timer: 0,
+                timerInterval: null,
+                bestScore: '---',
+                formatTime: '00:00',
+                showWelcome: true,
             }
         },
         methods: {
             flipCard(card) {
-
-                if(this.canFlip === false) {
+                if(this.canFlip === false || card.flipped === true) {
                     return;
                 }
 
-                if(card.flipped === true) {
-                    return;
+                if (this.moves === 0) {
+                    this.startTimer();
                 }
 
+                this.moves++;
                 card.flipped = true;
 
                 if(this.firstCard === null) {
@@ -78,7 +86,12 @@ export function memoryGame() {
                 }
             },
             shuffle() {
-                this.cards.sort(() => Math.random() - 0.5);
+                const randomValue = () => Math.random() - 0.5;
+                const times = Math.floor(Math.random() * 3) + 2;
+                
+                for(let i = 0; i < times; i++) {
+                    this.cards.sort(randomValue);
+                }
             },
             animateCounter() {
                 gsap.killTweensOf("#match-counter");
@@ -105,6 +118,12 @@ export function memoryGame() {
             },
             checkGameComplete() {
                 if (this.matchCount === 6) {
+                    clearInterval(this.timerInterval);
+
+                    if (this.bestScore === '---' || this.moves < this.bestScore) {
+                        this.bestScore = this.moves;
+                    }
+
                     setTimeout(() => {
                         this.gameComplete = true;
                         this.currentFact = this.getNextFact();
@@ -126,6 +145,10 @@ export function memoryGame() {
                 );
             },
             resetGame() {
+                clearInterval(this.timerInterval);
+                this.timer = 0;
+                this.moves = 0;
+                this.formatTime = '00:00';
                 this.showConfetti = false;
                 this.gameComplete = false;
                 this.cards.forEach(card => {
@@ -137,6 +160,10 @@ export function memoryGame() {
                 this.firstCard = null;
                 this.canFlip = true;
             },
+            startGame() {
+                this.showWelcome = false;
+                this.resetGame();
+            },
             getNextFact() {
                 const fact = this.facts[this.currentFactIndex];
                 
@@ -144,9 +171,38 @@ export function memoryGame() {
                 
                 return fact;
             },
+            startTimer() {
+                this.timerInterval = setInterval(() => {
+                    this.timer++;
+                    this.formatTime = this.getFormattedTime();
+                }, 1000);
+            },
+            getFormattedTime() {
+                const minutes = Math.floor(this.timer / 60);
+                const seconds = this.timer % 60;
+                return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            },
+            scrollToGame() {
+                const gameWrapper = document.querySelector('#memory-game-wrapper');
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: {
+                        y: "#memory-game-wrapper",
+                        offsetY: window.innerHeight/2 - gameWrapper.offsetHeight/2,
+                        autoKill: false
+                    },
+                    ease: "power2.inOut"
+                });
+            }
         },
         mounted() {
             this.shuffle();
+            
+            if (document.readyState === 'complete') {
+                this.scrollToGame();
+            } else {
+                window.addEventListener('load', () => this.scrollToGame());
+            }
         }
     }).mount("#memory-game-wrapper");
 

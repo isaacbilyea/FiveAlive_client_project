@@ -22,10 +22,26 @@ html, body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Alexandria","Inter",sans-serif;
   font-size: 16px;
-  background-color: #000;
-  color: #fff;
+  background-color: #fffdfb;
+  color: #2c2c29;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/main-background.png");
+  background-repeat: repeat;
+  z-index: -1;
+  opacity: .85;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 a, a:hover, a:active, a:visited {
@@ -79,8 +95,8 @@ body.multiple-scenes.mobile #titleBar {
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
+  background-color: rgba(8,66,42,0.9);
+  color: #fffdfb;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -103,8 +119,7 @@ body.multiple-scenes.mobile #titleBar {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(8,66,42,0.8);
 }
 
 .mobile #fullscreenToggle {
@@ -122,6 +137,7 @@ body.fullscreen-enabled #fullscreenToggle {
   right: 5px;
   width: 30px;
   height: 30px;
+  filter: brightness(0) invert(1);
 }
 
 .mobile #fullscreenToggle .icon {
@@ -153,8 +169,7 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(8,66,42,0.8);
 }
 
 .mobile #autorotateToggle {
@@ -177,6 +192,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   right: 5px;
   width: 30px;
   height: 30px;
+  filter: brightness(0) invert(1);
 }
 
 .mobile #autorotateToggle .icon {
@@ -207,8 +223,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(8,66,42,0.8);
 }
 
 .mobile #sceneListToggle {
@@ -230,6 +245,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   right: 5px;
   width: 30px;
   height: 30px;
+  filter: brightness(0) invert(1);
 }
 
 .mobile #sceneListToggle .icon {
@@ -256,9 +272,9 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 #sceneList {
   position: absolute;
   top: 0;
-  left: -220px;
+  left: -250px;
   padding-top: 40px;
-  width: 220px;
+  width: 250px;
   max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -273,8 +289,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 #sceneList .scenes {
   width: 100%;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
+  background-color: rgba(8,66,42,0.9);
 }
 
 .mobile #sceneList {
@@ -292,7 +307,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 #sceneList.enabled {
-  margin-left: 220px;
+  margin-left: 250px;
 }
 
 #sceneList .scene {
@@ -313,6 +328,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-family: "Alexandria","Inter",sans-serif;
+  color: #fffdfb;
 }
 
 .mobile #sceneList .scene .text {
@@ -320,13 +337,11 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(190,30,45,0.6);
 }
 
 #sceneList .scene.current {
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(190,30,45,0.8);
 }
 
 /* Hide scene list when only a single scene exists */
@@ -359,6 +374,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  filter: brightness(0) invert(1);
 }
 
 .link-hotspot-tooltip {
@@ -376,10 +392,10 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
   border-radius: 5px;
 
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
-
-  color: #fff;
+  background-color: rgba(8,66,42,0.9);
+  color: #fffdfb;
+  font-family: "Alexandria","Inter",sans-serif;
+  border: 1px solid rgba(255,253,251,0.2);
 
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -453,7 +469,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: rgb(103,115,131);
+  background-color: rgba(8,66,42,0.9);
+  border: 1px solid rgba(255,253,251,0.2);
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
                       border-radius 0.3s ease-in-out 0.5s;
@@ -521,7 +538,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 .desktop .info-hotspot.visible .info-hotspot-title-wrapper,
 .desktop.no-touch .info-hotspot .info-hotspot-header:hover .info-hotspot-title-wrapper {
-  width: 220px;
+  width: 250px;
   padding: 0 5px;
   -webkit-transition: width 0s 0.4s,
                       padding 0s 0.4s;
@@ -539,6 +556,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
+  font-family: "Alexandria","Inter",sans-serif;
+  color: #fffdfb;
 
   -moz-user-select: text;
   -webkit-user-select: text;
@@ -553,7 +572,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   width: 40px;
   border-top-right-radius: 5px;
-  background-color: rgb(78,88,104);
+  background-color: #be1e2d;
   visibility: hidden;
   -ms-transform: perspective(200px) rotateY(90deg);
   -webkit-transform: perspective(200px) rotateY(90deg);
@@ -600,9 +619,10 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   top: 40px;
   left: 0;
   padding: 10px;
-  background-color: rgb(58,68,84);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  background-color: rgba(8,66,42,0.95);
+  color: #fffdfb;
+  border: 1px solid rgba(255,253,251,0.2);
+  border-radius: 0 0 5px 5px;
   overflow-y: auto;
   visibility: hidden;
   /* rotate(90deg) causes transition flicker on Firefox 58 */
@@ -682,8 +702,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 10px;
   width: auto;
   height: 50px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(8,66,42,0.95);
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
   transition: opacity 0.3s ease-in-out 0.2s;
@@ -726,6 +745,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot-modal .info-hotspot-title {
   display: inline-block;
   vertical-align: middle;
+  font-family: "Alexandria","Inter",sans-serif;
+  color: #fffdfb;
 
   -moz-user-select: text;
   -webkit-user-select: text;
@@ -739,8 +760,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 0;
   width: 50px;
   height: 50px;
-  background-color: rgb(78,88,104);
-  background-color: rgba(78,88,104,0.8);
+  background-color: #be1e2d;
   cursor: pointer;
 }
 
@@ -757,8 +777,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   left: 10px;
   right: 10px;
   padding: 10px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
+  background-color: rgba(8,66,42,0.95);
+  color: #fffdfb;
+  font-family: "Alexandria","Inter",sans-serif;
   overflow-y: auto;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -786,8 +807,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: rgba(8,66,42,0.8);
 }
 
 body.view-control-buttons .viewControlButton {
@@ -807,6 +827,7 @@ body.view-control-buttons .viewControlButton {
   right: 5px;
   width: 30px;
   height: 30px;
+  filter: brightness(0) invert(1);
 }
 
 /* Center is at margin-left: -20px */
