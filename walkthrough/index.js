@@ -70,8 +70,20 @@
   // Initialize viewer.
   var viewer = new Marzipano.Viewer(panoElement, viewerOpts);
 
+  // Initialize Plyr
+  const videoPlayer = new Plyr('#demoVideo', {
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+  });
+
   // Create scenes.
   var scenes = data.scenes.map(function(data) {
+    if (data.type === 'video') {
+      return {
+        data: data,
+        type: 'video'
+      };
+    }
+
     var urlPrefix = "tiles";
     var source = Marzipano.ImageUrlSource.fromString(
       urlPrefix + "/" + data.id + "/{z}/{f}/{y}/{x}.jpg",
@@ -145,10 +157,11 @@
     showSceneList();
   }
 
-  // Set handler for scene switch.
-  scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+  // Set handler for scene switch
+  document.querySelectorAll('#sceneList .scene').forEach(function(el) {
     el.addEventListener('click', function() {
+      var sceneId = el.getAttribute('data-id');
+      var scene = findSceneById(sceneId);
       switchScene(scene);
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
@@ -184,9 +197,33 @@
 
   function switchScene(scene) {
     stopAutorotate();
-    scene.view.setParameters(scene.data.initialViewParameters);
-    scene.scene.switchTo();
-    startAutorotate();
+    const videoContainer = document.querySelector('#videoContainer');
+    const panoElement = document.querySelector('#pano');
+    const videoElement = document.querySelector('#demoVideo');
+    const controls = document.querySelectorAll('.viewControlButton');
+
+    if (scene.type === 'video') {
+      panoElement.style.display = 'none';
+      videoContainer.style.display = 'flex';
+      videoElement.querySelector('source').src = scene.data.videoSrc;
+      videoElement.load();
+      videoElement.play();
+      controls.forEach(control => control.style.display = 'none');
+      document.body.classList.add('video-mode');
+      hideSceneList(); // Auto-close menu in video mode
+    } else {
+      panoElement.style.display = 'block';
+      videoContainer.style.display = 'none';
+      controls.forEach(control => control.style.display = '');
+      document.body.classList.remove('video-mode');
+      if (videoElement) {
+        videoElement.pause();
+      }
+      scene.view.setParameters(scene.data.initialViewParameters);
+      scene.scene.switchTo();
+      startAutorotate();
+    }
+    
     updateSceneName(scene);
     updateSceneList(scene);
   }

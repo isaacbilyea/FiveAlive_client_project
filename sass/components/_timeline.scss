@@ -52,6 +52,7 @@
         align-items: center;
         z-index: 2;
         margin-top: 3rem;
+        scroll-margin-top: 120px;
     
         .timeline-dot {
             position: absolute;
@@ -283,11 +284,15 @@
 
       .timeline-item {
 
-          .timeline-text {
+            .timeline-content {
+                width: 90vw;
+            }
+
+            .timeline-text {
             h3 {
                 font-size: 2rem;
             }
-  
+
             .timeline-year {
                 font-size: 1rem;
             }

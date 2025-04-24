@@ -69,6 +69,48 @@
     }
 }
 
+#battles-app {
+    position: relative;
+}
+
+.back-to-timeline {
+    position: absolute;
+    left: 2rem;
+    color: a.$tertiary-color;
+    text-decoration: none;
+    font-family: a.$body-font-family;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: a.$tertiary-color;
+        transition: all 0.3s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    &:hover {
+        color: darken(a.$tertiary-color, 10%)
+    }
+
+    &.top {
+        top: 1rem;
+    }
+
+    &.bottom {
+        bottom: 1rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .battle-section {
         .image-container {

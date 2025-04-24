@@ -849,3 +849,91 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-6 {
   margin-left: 105px;
 }
+
+#video-con {
+  width: 100%;
+}
+
+.video-con {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.video-con .plyr--video {
+  --plyr-color-main: #BE1E2D;
+  --plyr-control-icon-size: 1rem;
+  --plyr-control-radius: 1.25rem;
+  --plyr-font-family: 'Alexandria', 'Inter', sans-serif;
+  --plyr-control-spacing: 1rem;
+  --plyr-range-fill-background: #fff;
+  --plyr-range-thumb-background: #BE1E2D;
+}
+
+/* Video Player Styles */
+.video-container {
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background-color: #000;
+  z-index: 10;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plyr__video-embed {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 40px);
+}
+
+/* Plyr Custom Styles */
+.plyr--video {
+  --plyr-color-main: #BE1E2D;
+  --plyr-control-icon-size: 1rem;
+  --plyr-control-radius: 1.25rem;
+  --plyr-font-family: "Alexandria", "Inter", sans-serif;
+  --plyr-control-spacing: 1rem;
+  --plyr-range-fill-background: #fff;
+  --plyr-range-thumb-background: #BE1E2D;
+  --plyr-video-controls-background: linear-gradient(rgba(8,66,42,0.8), rgba(8,66,42,0.9));
+}
+
+.plyr--video .plyr__controls {
+  background: var(--plyr-video-controls-background);
+  padding: 1rem;
+}
+
+/* Adjust toolbar background */
+#titleBar .sceneName {
+  background-color: rgba(8,66,42,0.9);
+}
+
+.mobile .video-container {
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+
+/* Ensure menu works in video mode */
+body.video-mode #sceneList {
+  z-index: 11;
+}
+
+body.video-mode #sceneListToggle {
+  z-index: 11;
+}
+
+body.video-mode #titleBar {
+  z-index: 11;
+}

@@ -55,21 +55,11 @@
         min-height: 25rem; 
         display: flex;
         flex-direction: column;
-        background: url('../images/letter-background.png') no-repeat center center/cover;
+        background: url('../images/letter-background-shadow.png') no-repeat center center/100% 100%;
         box-sizing: border-box;
         position: relative;
         margin-bottom: 30px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('../images/paper-shadow-short.png') no-repeat center center/100% 100%; // Changed to 100% width and height
-            z-index: -1;
-        }
+        z-index: 2;
 
         #letter {
             position: relative;
@@ -110,6 +100,7 @@
                 position: relative;
                 padding-top: 2rem;
                 height: 2rem;
+                padding-bottom: 2rem;
                 
                 #date-spacer {
                     opacity: 0;

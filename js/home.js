@@ -6,6 +6,7 @@ import { contactForm } from "./modules/contact-form.js";
 import { getLatestArticles } from "./api/latest-articles.js";
 import { getLatestEvent } from "./api/latest-event.js";
 import { gsapSections } from "./modules/gsap-sections.js";
+import { backToTop } from "./modules/back-to-top.js";
 
 burgerMenu();
 donationCounter();
@@ -15,3 +16,4 @@ contactForm();
 getLatestArticles();
 getLatestEvent();
 gsapSections();
+backToTop();

@@ -1,5 +1,10 @@
 @use '../abstracts' as a;
 
+#game-content {
+    background-image: url('../images/game-background.png');
+    background-size: 110%;
+}
+
 #game-banner {
     * {
         color: a.$primary-color;
@@ -42,10 +47,10 @@
 #memory-game-wrapper {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 650px;
     margin: 0 auto;
-    background-color: rgba(a.$tertiary-color, 0.5);
-    padding: 1rem;
+    background-color: rgba(#fff, 0.4);
+    padding: 2rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
     border: 2px solid a.$tertiary-color;
@@ -227,6 +232,8 @@
 
             .section-button {
                 margin: 0 auto;
+
+                
             }
         }
     }

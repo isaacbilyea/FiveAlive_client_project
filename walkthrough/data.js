@@ -154,6 +154,12 @@ var APP_DATA = {
       },
       "linkHotspots": [],
       "infoHotspots": []
+    },
+    {
+      "id": "5-vr-demonstration",
+      "name": "VR Demonstration",
+      "type": "video",
+      "videoSrc": "videos/vr-demo.mp4"
     }
   ],
   "name": "Project Title",
