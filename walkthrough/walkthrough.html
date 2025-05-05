@@ -18,12 +18,20 @@
     }
   </style>
   <link rel="stylesheet" href="vendor/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="multiple-scenes ">
 
   <div id="pano"></div>
+  <div id="videoContainer" class="video-container">
+    <div class="video-wrapper">
+      <video id="demoVideo" class="plyr__video-embed">
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
 
   <div id="sceneList">
     <ul class="scenes">
@@ -46,6 +54,10 @@
 
       <a href="javascript:void(0)" class="scene" data-id="4-brothers-in-arms-memorial">
         <li class="text">Brothers In Arms Memorial</li>
+      </a>
+
+      <a href="javascript:void(0)" class="scene" data-id="5-vr-demonstration">
+        <li class="text">VR Demonstration</li>
       </a>
 
     </ul>
@@ -89,6 +101,7 @@
     <img class="icon" src="img/minus.png">
   </a>
 
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
   <script src="vendor/screenfull.min.js"></script>
   <script src="vendor/bowser.min.js"></script>
   <script src="vendor/marzipano.js"></script>

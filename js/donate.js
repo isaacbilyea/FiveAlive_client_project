@@ -5,6 +5,7 @@ import { hideBubble } from './modules/donation-bubble.js';
 import { donationCounter } from "./modules/donation-counter.js";
 import { contactForm } from "./modules/contact-form.js";
 import { gsapSections } from "./modules/gsap-sections.js";
+import { backToTop } from "./modules/back-to-top.js";
 
 burgerMenu();
 videoPlayer();
@@ -13,3 +14,4 @@ hideBubble();
 donationCounter();
 contactForm();
 gsapSections();
+backToTop();

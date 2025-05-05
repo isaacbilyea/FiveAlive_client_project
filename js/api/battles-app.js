@@ -3,11 +3,13 @@ export function battlesApp() {
         created() {
             const urlParams = new URLSearchParams(window.location.search);
             const battleId = urlParams.get('id') || 1;
+            this.id = urlParams.get('id');
             this.getBattle(battleId);
         },
 
         data() {
             return {
+                id: null,
                 battle: {
                     title: '',
                     year: ''
@@ -17,7 +19,6 @@ export function battlesApp() {
                 error: ''
             }
         },
-
         methods: {
             getBattle(id) {
                 this.loading = true;

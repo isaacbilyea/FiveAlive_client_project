@@ -55,6 +55,7 @@
 
     #about-video-con {
         margin-top: 4rem;
+        border: none;
 
         .section-text-con {
             width: 100%;
@@ -67,6 +68,8 @@
     
         .video-con {
             aspect-ratio: 16 / 9;
+            margin: 0 auto;
+            border: none;
         }
     }
 }

@@ -1,0 +1,59 @@
+@use '../abstracts' as a;
+
+.back-to-top {
+  position: fixed;
+  bottom: -3.75rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: lighten(a.$tertiary-color, 10%);
+  // background-color: lighten(a.$primary-accent-color, 10%);
+  // background-color: a.$primary-accent-color;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 99;
+  border: none;
+  
+  &.show {
+    bottom: 1.25rem;
+    opacity: 1;
+  }
+  
+  &:hover {
+    // background-color: darken(a.$primary-accent-color, 10%);
+    background-color: darken(a.$tertiary-color, 0%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.1875rem);
+  }
+  
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .back-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    right: 1.5rem;
+    
+    &.show {
+      bottom: 1.5rem;
+    }
+    
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

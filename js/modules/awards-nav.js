@@ -22,7 +22,7 @@ export function awardsNav() {
         const cardRank = card.querySelector('.rank').innerHTML;
         const cardLifespan = card.querySelector('.lifespan').innerHTML;
         const cardImage = card.querySelector('.award-image img').src;
-
+    
         const awardContent = {
             'victoria-cross': {
                 title: 'Victoria Cross Recipient',
@@ -40,7 +40,7 @@ export function awardsNav() {
                 image: 'flying-ace.png'
             }
         };
-
+    
         let awardType = "";
         if (card.classList.contains('flying-cross')){
             awardType = 'flying-cross';
@@ -51,50 +51,61 @@ export function awardsNav() {
         }
         
         const content = awardContent[awardType];
-
-        soldierName.textContent = cardName;
-        regiment.innerHTML = cardRegiment;
-        soldierRank.innerHTML = cardRank;
-        soldierLifespan.innerHTML = cardLifespan;
-        description.textContent = content.description;
-        awardTitle.textContent = content.title;
-        soldierImg.src = cardImage;
-        
-
-        const tl = gsap.timeline();
-
-        medalImg.src = `images/${content.image}`;
-            
-        gsap.set(medalImg, { 
-            transformOrigin: "top center",
-            rotation: 0
-        });
-        
-
-        tl.to(medalImg, {
-            rotation: -8,
-            duration: 0.20,
-            ease: "power2.out"
-        })
-        .to(medalImg, {
-            rotation: 8,
-            duration: 0.35,
-            ease: "power1.out"
-        })
-        .to(medalImg, {
-            rotation: -4,
+    
+        gsap.to(awardsInfo, {
+            opacity: 0,
             duration: 0.3,
-            ease: "power1.out"
-        })
-        .to(medalImg, {
-            rotation: 2,
-            duration: 0.25,
-            ease: "power2.out"
-        })
-        .to(medalImg, {
-            rotation: 0,
-            duration: 0.2,
-            ease: "power2.out"
+            ease: "power2.out",
+            onComplete: () => {
+                soldierName.textContent = cardName;
+                regiment.innerHTML = cardRegiment;
+                soldierRank.innerHTML = cardRank;
+                soldierLifespan.innerHTML = cardLifespan;
+                description.textContent = content.description;
+                awardTitle.textContent = content.title;
+                soldierImg.src = cardImage;
+                medalImg.src = `images/${content.image}`;
+    
+                const tl = gsap.timeline();
+                
+                gsap.set(medalImg, { 
+                    transformOrigin: "top center",
+                    rotation: 0
+                });
+    
+                gsap.to(awardsInfo, {
+                    opacity: 1,
+                    duration: 0.3,
+                    delay: 0.2,
+                    ease: "power2.out"
+                });
+    
+                tl.to(medalImg, {
+                    rotation: -8,
+                    duration: 0.20,
+                    ease: "power2.out"
+                })
+                .to(medalImg, {
+                    rotation: 8,
+                    duration: 0.35,
+                    ease: "power1.out"
+                })
+                .to(medalImg, {
+                    rotation: -4,
+                    duration: 0.3,
+                    ease: "power1.out"
+                })
+                .to(medalImg, {
+                    rotation: 2,
+                    duration: 0.25,
+                    ease: "power2.out"
+                })
+                .to(medalImg, {
+                    rotation: 0,
+                    duration: 0.2,
+                    ease: "power2.out"
+                });
+            }
         });
     }
 
@@ -158,5 +169,17 @@ export function awardsNav() {
     //EVENT LISTENERS
     allCards.forEach(card => {
         card.addEventListener('click', () => changeCard(card));
+    });
+
+    window.addEventListener('load', () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: "#awards-section",
+                offsetY: window.innerHeight/2 - awardsSection.offsetHeight/2,
+                autoKill: false
+            },
+            ease: "power2.inOut"
+        });
     });
 }
